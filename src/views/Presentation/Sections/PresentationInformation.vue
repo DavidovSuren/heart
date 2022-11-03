@@ -36,6 +36,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               icon="content_copy"
               title="Санатории"
               description="Санатории Кисловодска отлично подходят для лечения."
+              link="https://ya.ru"
             />
             <DefaultInfoCard
               icon="flip_to_front"

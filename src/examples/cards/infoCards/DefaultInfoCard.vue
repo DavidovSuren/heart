@@ -25,11 +25,20 @@ defineProps({
     text: String,
     class: String,
   },
+  link: {
+    type: [String, Object],
+    required: true,
+    text: String,
+    class: String,
+  },
   col: {
     type: String,
     default: "",
   },
 });
+const goto = (l) => {
+  window.location.href = l;
+};
 </script>
 <script>
 export default {
@@ -37,7 +46,7 @@ export default {
 };
 </script>
 <template>
-  <div :class="`${col ? col : 'col-md-6'}`">
+  <div :class="`${col ? col : 'col-md-6'}`" @click="goto(link)">
     <div v-bind="$attrs" class="info">
       <i
         v-if="icon"
