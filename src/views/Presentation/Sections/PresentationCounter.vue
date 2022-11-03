@@ -37,6 +37,8 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
                 :count="40"
                 suffix="+"
                 :duration="3000"
+                @click="alert(1)"
+                link="https://www.russia-otdih.ru/"
               />
             </div>
           </div>
