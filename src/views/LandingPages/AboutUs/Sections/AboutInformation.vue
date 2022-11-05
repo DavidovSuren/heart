@@ -12,40 +12,35 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
             <DefaultInfoCard
               color="info"
               icon="public"
-              title="Fully integrated"
-              description="We get insulted by others, lose trust for those We get back
-                  freezes"
+              title="Прокат велосипедов"
+              description="Что может быть приятнее легкой прогулки по парку в солнечный денек? Только велопрогулка."
             />
             <DefaultInfoCard
               color="info"
               icon="payments"
-              title="Payments functionality"
-              description="We get insulted by others, lose trust for those We get back
-                  freezes"
+              title="Конные прогулки"
+              description="Избавиться от стресса, почувствовать настоящий релакс и научится владеть собственным телом."
             />
           </div>
           <div class="row justify-content-start mt-4">
             <DefaultInfoCard
               color="info"
               icon="apps"
-              title="Prebuilt components"
-              description="We get insulted by others, lose trust for those We get back
-                  freezes"
+              title="Картинг"
+              description="Спортивный картинг является для одних первой ступенью в автоспорт, для других — дорогим, но увлекательным хобби."
             />
             <DefaultInfoCard
               color="info"
               icon="3p"
-              title="Improved platform"
-              description="We get insulted by others, lose trust for those We get back
-                  freezes"
+              title="Прыжки с парашюта"
+              description="Свободный полет с высоты +4000 метров длится 60 секунд."
             />
           </div>
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6">
           <CenteredBlogCard
-            image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-            title="Get insights on Search"
-            description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
+            image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
+            title="Достопримечательности Кисловодска"
           />
         </div>
       </div>
