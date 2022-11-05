@@ -36,7 +36,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               icon="content_copy"
               title="Санатории"
               description="Санатории Кисловодска отлично подходят для лечения."
-              link="https://ya.ru"
+              link="https://www.russia-otdih.ru/"
             />
             <DefaultInfoCard
               icon="flip_to_front"
@@ -50,6 +50,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               icon="flip_to_front"
               title="Туризм"
               description="В городе Кисловодска насчитывается более 40 маршрутов"
+              link="https://ria.ru/location_Kislovodsk/"
             />
             <DefaultInfoCard
               class="mt-3"
@@ -57,6 +58,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               title="Новости"
               description="Regardless of the screen size, the website content will
                   naturally fit the given resolution."
+              link="https://ria.ru/location_Kislovodsk/"
             />
           </div>
         </div>
