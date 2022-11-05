@@ -23,7 +23,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               description="Сегодня в Кисловодске уникальное световое шоу начнётся в 21:00."
               :action="[
                 {
-                  route: './/sections/page-sections/hero-sections.html',
+                  route: '/pages/landing-pages/Events',
                   label: 'Все события',
                 },
               ]"
