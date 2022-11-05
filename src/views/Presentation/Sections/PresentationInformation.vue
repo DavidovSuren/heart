@@ -42,7 +42,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               icon="flip_to_front"
               title="Заведения"
               description="Лучшие рестораны, кафе, бары."
-              link="https://www.russia-otdih.ru/"
+              link="/pages/landing-pages/Institution"
             />
           </div>
           <div class="row justify-content-start mt-5">
