@@ -10,55 +10,55 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Представления в Кисловодском дельфинарии"
+            title="Кафе Шоколад"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Уникальная выставка картинной галереи «Art Room»"
+            title="Кафе Солнце"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Представления в Кисловодском дельфинарии"
+            title="Кафе Стеклянная струя"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Уникальная выставка картинной галереи «Art Room»"
+            title="Кафе Снежинка"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Представления в Кисловодском дельфинарии"
+            title="Кафе ЛяГурмэ"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Уникальная выставка картинной галереи «Art Room»"
+            title="Кафе PROVENCE"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Уникальная выставка картинной галереи «Art Room»"
+            title="Кафе Снежинка"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Представления в Кисловодском дельфинарии"
+            title="Кафе ЛяГурмэ"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-1">
           <CenteredBlogCard
             image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Уникальная выставка картинной галереи «Art Room»"
+            title="Кафе PROVENCE"
           />
         </div>
       </div>
