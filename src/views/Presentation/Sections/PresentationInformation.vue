@@ -49,8 +49,8 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
             <DefaultInfoCard
               class="mt-3"
               icon="flip_to_front"
-              title="Туризм"
-              description="В городе Кисловодска насчитывается более 40 маршрутов"
+              title="СПА"
+              description="Восстановительная медицина"
               link="https://www.russia-otdih.ru/"
             />
             <DefaultInfoCard

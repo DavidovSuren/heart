@@ -10,7 +10,8 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
     <div class="container">
       <div class="row">
         <div class="row text-center my-sm-5 mt-5">
-            <h2 class="">ЭКСТРИМ</h2>
+            <h2 class="">ТУРИЗМ
+            </h2>
           </div>
         </div>
       </div>
@@ -30,7 +31,7 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
         <div class="col-md-3 mx-auto mt-md-0 mt-3">
           <div class="position-sticky" style="top: 100px !important">
             <h3>
-              Нечто экстремальное, выходящее за рамки обычного.
+              В городе Кисловодска насчитывается более 40 маршрутов
             </h3>
           </div>
         </div>
