@@ -50,7 +50,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               class="mt-3"
               icon="flip_to_front"
               title="СПА"
-              description="Восстановительная медицина"
+              description="Восстановительная медицина."
               link="https://www.russia-otdih.ru/"
             />
             <DefaultInfoCard
