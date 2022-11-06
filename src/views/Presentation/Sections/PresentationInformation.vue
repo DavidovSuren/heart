@@ -57,9 +57,8 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               class="mt-3"
               icon="content_copy"
               title="Новости"
-              description="Regardless of the screen size, the website content will
-                  naturally fit the given resolution."
-                  link="https://www.russia-otdih.ru/"
+              description="КИСЛОВОДСКА."
+                  link="https://ria.ru/location_Kislovodsk/"
             />
           </div>
         </div>
