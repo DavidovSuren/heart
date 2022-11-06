@@ -176,11 +176,7 @@ watch(
                 >dashboard</i
               >
               АФИША
-              <img
-                :src="getArrowColor()"
-                alt="down-arrow"
-                class="arrow ms-2 d-lg-block d-none"
-              />
+              
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
