@@ -6,20 +6,20 @@ import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
 //image
-import bg1 from "@/assets/img/bg9.jpg";
+import bg4 from "@/assets/img/spa.jpeg";
 
 //dep
 import Typed from "typed.js";
 
 //sections
-import Information from "./Sections/EventsInformation.vue";
-import EventsTeam from "./Sections/EventsTeam.vue";
+import Information from "./Sections/SPAInformation.vue";
+import SPATeam from "./Sections/SPATeam.vue";
 
 
 const body = document.getElementsByTagName("body")[0];
 //hooks
 onMounted(() => {
-  body.classList.add("events");
+  body.classList.add("spa");
   body.classList.add("bg-gray-200");
 
   if (document.getElementById("typed")) {
@@ -36,7 +36,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  body.classList.remove("events");
+  body.classList.remove("spa");
   body.classList.remove("bg-gray-200");
 });
 </script>
@@ -52,14 +52,14 @@ onUnmounted(() => {
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
-      :style="{ backgroundImage: `url(${bg1})` }"
+      :style="{ backgroundImage: `url(${bg4})` }"
     >
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
             <h1 class="text-white">
-              МЕРОПРИЯТИЯ <span class="text-white" id="typed"></span>
+              СПА <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
               <h1>ГОРОДА</h1>

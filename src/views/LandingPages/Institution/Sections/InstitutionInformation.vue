@@ -45,13 +45,13 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-5">
           <CenteredBlogCard
-            image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Кафе Снежинка"
+            image="https://media-cdn.tripadvisor.com/media/photo-s/09/57/fe/cc/caption.jpg"
+            title="Валенсия"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-5">
           <CenteredBlogCard
-            image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
+            image="https://totrip.info/assets/Kislovodsk/Restorany/Lya-Gurme/254620.jpg"
             title="Кафе ЛяГурмэ"
           />
         </div>

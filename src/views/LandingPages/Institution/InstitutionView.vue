@@ -6,7 +6,7 @@ import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
 //image
-import bg0 from "@/assets/img/bannerchoco.jpeg";
+import bg3 from "@/assets/img/bannerchoco.jpeg";
 
 //dep
 import Typed from "typed.js";
@@ -52,7 +52,7 @@ onUnmounted(() => {
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
-      :style="{ backgroundImage: `url(${bg0})` }"
+      :style="{ backgroundImage: `url(${bg3})` }"
     >
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
