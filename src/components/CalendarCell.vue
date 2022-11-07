@@ -47,6 +47,7 @@ button {
   width: 30px;
   height: 30px;
   background-color: hsl(0, 0%, 95%);
+  width:auto;
 }
 button:not(:disabled):hover {
   cursor: pointer;
