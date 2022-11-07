@@ -130,22 +130,22 @@ onUnmounted(() => {
           </div>
           <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
             <MaterialSocialButton
-              route="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23bootstrap5&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-design-system-pro"
-              component="twitter"
-              color="twitter"
-              label="Tweet"
-            />
-            <MaterialSocialButton
-              route="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-design-system-pro"
-              component="facebook-square"
-              color="facebook"
-              label="Share"
+              route=""
+              component="vk"
+              color="instagram"
+              label="vkontakte"
             />
             <MaterialSocialButton
               route=""
-              component="pinterest"
-              color="pinterest"
-              label="Pin it"
+              component="telegram"
+              color="instagram"
+              label="TELEGRAM"
+            />
+            <MaterialSocialButton
+              route=""
+              component="instagram"
+              color="instagram"
+              label="instagram"
             />
           </div>
         </div>
