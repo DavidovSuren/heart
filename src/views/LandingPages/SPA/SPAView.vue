@@ -59,11 +59,9 @@ onUnmounted(() => {
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
             <h1 class="text-white">
-              СПА <span class="text-white" id="typed"></span>
+              ЛУЧШИЕ СПА ГОРОДА <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
-              <h1>ГОРОДА</h1>
-              <h1>КИСЛОВОДСКА</h1>
             </div>
             </div>
           </div>
