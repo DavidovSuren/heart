@@ -24,8 +24,8 @@ import WeekCalendar from '@/components/WeekCalendar.vue';
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-3">
           <CenteredBlogCard
-            image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Представления в Кисловодском дельфинарии"
+            image="https://media.1777.ru/images/images_processing/578/5788922556184791.jpeg"
+            title="Цирк"
           />
         </div>
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-3">
