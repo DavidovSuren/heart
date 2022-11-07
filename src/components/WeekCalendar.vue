@@ -1,7 +1,7 @@
 <template>
   <div class="calendar">
-    <h2>Weekly calendar picker</h2>
-    Selection:
+    <h2>Календарь событий</h2>
+    Выбор:
     <span v-for="selected of selectedDates" :key="selected.dayId">
       {{ selected.date.toLocaleDateString() }}
     </span>
