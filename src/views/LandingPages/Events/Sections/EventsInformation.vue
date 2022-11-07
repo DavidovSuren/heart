@@ -2,10 +2,13 @@
 // example components
 import DefaultInfoCard from "../../../../examples/cards/infoCards/DefaultInfoCard.vue";
 import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogCard.vue";
+import WeekCalendar from '@/components/WeekCalendar.vue';
+
 </script>
 <template>
   <section class="py-7">
     <div class="container">
+      <WeekCalendar/><hr>
       <div class="row align-items-center">
         <div class="col-lg-4 ms-auto mt-lg-0 mt-6 p-3">
           <CenteredBlogCard

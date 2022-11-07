@@ -3,6 +3,7 @@ import RotatingCard from "../../../examples/cards/rotatingCards/RotatingCard.vue
 import RotatingCardFront from "../../../examples/cards/rotatingCards/RotatingCardFront.vue";
 import RotatingCardBack from "../../../examples/cards/rotatingCards/RotatingCardBack.vue";
 import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.vue";
+
 </script>
 <template>
   <section class="my-5 py-5">
@@ -66,3 +67,4 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
     </div>
   </section>
 </template>
+
