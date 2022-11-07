@@ -35,7 +35,7 @@
 import CalendarCell from "@/components/CalendarCell.vue";
 import { useCalendar } from "vue-use-calendar";
 import { addDays } from "date-fns";
-import { fr } from "date-fns/locale";
+import { ru } from "date-fns/locale";
 
 const disabledDates = [addDays(new Date(), 10)];
 
@@ -46,7 +46,7 @@ const { useWeeklyCalendar, useWeekdays } = useCalendar({
   maxDate: addDays(new Date(), 26),
   disabled: disabledDates,
   firstDayOfWeek,
-  locale: fr,
+  locale: ru,
   preSelection: [addDays(new Date(), 2)],
 });
 
