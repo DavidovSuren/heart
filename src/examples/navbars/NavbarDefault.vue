@@ -162,67 +162,23 @@ watch(
       >
         <ul class="navbar-nav navbar-nav-hover ms-auto">
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a
-              role="button"
+            <span
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
-              :class="getTextColor()"
-              id="dropdownMenuPages"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
             >
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
                 >dashboard</i
               >
-              АФИША
+              <a href="/pages/landing-pages/Events">АФИША</a>
+              <!--@click="goto('/pages/landing-pages/Events')"-->
               
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
                 class="arrow ms-1 d-lg-none d-block ms-auto"
               />
-            </a>
-            <div
-              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
-              aria-labelledby="dropdownMenuPages"
-            >
-              <div class="row d-none d-lg-block">
-                <div class="col-12 px-4 py-2">
-                </div>
-              </div>
-              <div class="d-lg-none">
-                <RouterLink
-                  :to="{ name: 'about' }"
-                  class="dropdown-item border-radius-md"
-                >
-                  <span>О нас</span>
-                </RouterLink>
-                <RouterLink
-                  :to="{ name: 'contactus' }"
-                  class="dropdown-item border-radius-md"
-                >
-                  <span>Contact Us</span>
-                </RouterLink>
-                <RouterLink
-                  :to="{ name: 'author' }"
-                  class="dropdown-item border-radius-md"
-                >
-                  <span>Author</span>
-                </RouterLink>
-                <div
-                  class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
-                >
-                  Account
-                </div>
-                <RouterLink
-                  :to="{ name: 'signin-basic' }"
-                  class="dropdown-item border-radius-md"
-                >
-                  <span>Sign In</span>
-                </RouterLink>
-              </div>
-            </div>
+          </span>
           </li>
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
@@ -261,35 +217,7 @@ watch(
                   >
                     <a
                       class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="javascript:;"
-                    >
-                      <div class="d-flex">
-                        <div
-                          class="w-100 d-flex align-items-center justify-content-between"
-                        >
-                          <div>
-                            <RouterLink
-                        class="dropdown-item ps-3 border-radius-md mb-1"
-                        :to="{ name: 'page-headers' }"
-                      >
-                              САНАТОРИИ
-                            </RouterLink>
-                          </div>
-                          <img
-                            :src="downArrow"
-                            alt="down-arrow"
-                            class="arrow"
-                          />
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
-                  >
-                    <a
-                      class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="javascript:;"
+                      href="https://www.russia-otdih.ru/"
                     >
                       <div class="d-flex">
                         <div
@@ -298,15 +226,10 @@ watch(
                           <div>
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                            >
-                              ОТЕЛИ
+                              >
+                              САНАТОРИИ
                             </h6>
                           </div>
-                          <img
-                            :src="downArrow"
-                            alt="down-arrow"
-                            class="arrow"
-                          />
                         </div>
                       </div>
                     </a>
@@ -316,7 +239,29 @@ watch(
                   >
                     <a
                       class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="javascript:;"
+                      href="https://www.russia-otdih.ru/"
+                    >
+                      <div class="d-flex">
+                        <div
+                          class="w-100 d-flex align-items-center justify-content-between"
+                        >
+                          <div>
+                            <h6
+                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
+                              >
+                              ОТЕЛИ
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li
+                    class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
+                  >
+                    <a
+                      class="dropdown-item py-2 ps-3 border-radius-md"
+                      href="https://www.russia-otdih.ru/"
                     >
                       <div class="d-flex">
                         <div
@@ -329,11 +274,6 @@ watch(
                               АППАРТАМЕНТЫ
                             </h6>
                           </div>
-                          <img
-                            :src="downArrow"
-                            alt="down-arrow"
-                            class="arrow"
-                          />
                         </div>
                       </div>
                     </a>
@@ -343,7 +283,7 @@ watch(
                   >
                     <a
                       class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="javascript:;"
+                      href="https://www.russia-otdih.ru/"
                     >
                       <div class="d-flex">
                         <div
@@ -356,11 +296,6 @@ watch(
                               ГОСТИНИЦЫ
                             </h6>
                           </div>
-                          <img
-                            :src="downArrow"
-                            alt="down-arrow"
-                            class="arrow"
-                          />
                         </div>
                       </div>
                     </a>
@@ -370,7 +305,7 @@ watch(
                   >
                     <a
                       class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="javascript:;"
+                      href="https://www.russia-otdih.ru/"
                     >
                       <div class="d-flex">
                         <div
@@ -383,11 +318,6 @@ watch(
                               ХОСТЕЛЫ
                             </h6>
                           </div>
-                          <img
-                            :src="downArrow"
-                            alt="down-arrow"
-                            class="arrow"
-                          />
                         </div>
                       </div>
                     </a>
@@ -573,3 +503,8 @@ watch(
   </nav>
   <!-- End Navbar -->
 </template>
+<script>
+const click = (l) => {
+  window.location.href = l;
+};
+</script>
