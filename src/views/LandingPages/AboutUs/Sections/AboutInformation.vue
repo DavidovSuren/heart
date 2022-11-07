@@ -37,10 +37,9 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
             />
           </div>
         </div>
-        <div class="col-lg-4 ms-auto mt-lg-0 mt-6">
+        <div class="col-lg-6 ms-auto mt-lg-0 mt-4">
           <CenteredBlogCard
-            image="https://trippo.ru/wp-content/uploads/2020/08/foto-2.jpg"
-            title="Достопримечательности Кисловодска"
+            image="https://veloki.ru/wp-content/uploads/2017/04/park-1-1024x575.jpg"
           />
         </div>
       </div>

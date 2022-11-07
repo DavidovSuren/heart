@@ -44,7 +44,7 @@ onUnmounted(() => {
   <DefaultNavbar
     :action="{
       route: 'javascript:;',
-      label: 'Buy Now',
+      label: 'Установить',
       color: 'btn-white',
     }"
     transparent

@@ -28,11 +28,11 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
             </div>
           </div>
         </div>
-        <div class="col-md-3 mx-auto mt-md-0 mt-3">
+        <div class="col-md-3 mx-auto mt-md-3 mt-3">
           <div class="position-sticky" style="top: 100px !important">
-            <h3>
-              В городе Кисловодска насчитывается более 40 маршрутов
-            </h3>
+            <h4>
+              Крупнейший в Европе городской парк. Парк делится на три части. Нижний парк начинается от Нарзанной галереи. От Сосновой горки и Площадки роз до Храма воздуха – средний парк. От Храма воздуха начинается верхний парк.
+            </h4>
           </div>
         </div>
       </div>

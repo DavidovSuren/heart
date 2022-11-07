@@ -6,7 +6,7 @@ import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
 //image
-import bg1 from "@/assets/img/bg9.jpg";
+import bg1 from "@/assets/img/bg4.webp";
 
 //dep
 import Typed from "typed.js";
@@ -44,7 +44,7 @@ onUnmounted(() => {
   <DefaultNavbar
     :action="{
       route: 'javascript:;',
-      label: 'Buy Now',
+      label: 'Установить',
       color: 'btn-white',
     }"
     transparent
@@ -59,11 +59,10 @@ onUnmounted(() => {
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
             <h1 class="text-white">
-              МЕРОПРИЯТИЯ <span class="text-white" id="typed"></span>
+              МЕРОПРИЯТИЯ  <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
-              <h1>ГОРОДА</h1>
-              <h1>КИСЛОВОДСКА</h1>
+              <h1>г.КИСЛОВОДСКА</h1>
             </div>
             </div>
           </div>

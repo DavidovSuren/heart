@@ -28,7 +28,7 @@ onMounted(() => {
           :action="{
             route: 'https://www.creative-tim.com/product/vue-material-kit-pro',
             color: 'bg-gradient-success',
-            label: 'Buy Now',
+            label: 'Установить',
           }"
         />
       </div>
