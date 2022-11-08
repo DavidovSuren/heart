@@ -1,7 +1,6 @@
 <template>
   <div class="calendar">
     <h2>Календарь событий</h2>
-    Выбор:
     <span v-for="selected of selectedDates" :key="selected.dayId">
       {{ selected.date.toLocaleDateString() }}
     </span>
@@ -73,11 +72,11 @@ const weekdays = useWeekdays();
 .actions {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 10px 200px 0px 200px;
 }
 
 .month {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 .weeknames {
   display: inline;
