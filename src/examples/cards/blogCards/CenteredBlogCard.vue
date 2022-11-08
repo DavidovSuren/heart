@@ -37,9 +37,7 @@ defineProps({
       <h5 class="font-weight-normal">
         <a href="javascript:;">{{ title }}</a>
       </h5>
-      <p class="mb-0">
-        {{ description }}
-      </p>
+
 
       <MaterialButton
         variant="gradient"
@@ -61,28 +59,17 @@ defineProps({
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Your modal title
+                {{ title }}
               </h5>
-              <MaterialButton
-                color="none"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-              </MaterialButton>
+
             </div>
-            <div class="modal-body"
-            ><img src="https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg" alt="" style="width: 370px;
-  margin: 5%;
-  padding: 2%;">
-              Society has put up so many boundaries, so many limitations on
-              what’s right and wrong that it’s almost impossible to get a pure
-              thought out.
-              <br /><br />
-              It’s like a little kid, a little boy, looking at colors, and no
-              one told him what colors are good, before somebody tells you you
-              shouldn’t like pink because that’s for girls, or you’d instantly
-              become a gay two-year-old.
+            <div class="modal-body">
+              <img
+                :src="image"
+                :alt="title"
+                style="width: 370px; margin: 5%; padding: 2%"
+              />
+              {{ description }}
             </div>
             <div class="modal-footer justify-content-between">
               <MaterialButton
@@ -90,7 +77,7 @@ defineProps({
                 color="dark"
                 data-bs-dismiss="modal"
               >
-                Close
+                Закрыть
               </MaterialButton>
             </div>
           </div>
