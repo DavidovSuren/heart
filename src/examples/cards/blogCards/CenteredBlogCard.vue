@@ -71,7 +71,10 @@ defineProps({
               >
               </MaterialButton>
             </div>
-            <div class="modal-body">
+            <div class="modal-body"
+            ><img src="https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg" alt="" style="width: 370px;
+  margin: 5%;
+  padding: 2%;">
               Society has put up so many boundaries, so many limitations on
               what’s right and wrong that it’s almost impossible to get a pure
               thought out.
