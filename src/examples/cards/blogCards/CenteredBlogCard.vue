@@ -67,7 +67,7 @@ defineProps({
               <img
                 :src="image"
                 :alt="title"
-                style="width: 370px; margin: 5%; padding: 2%"
+                style="width: 100%; margin: 0.4%; padding: 2%"
               />
               {{ description }}
             </div>
