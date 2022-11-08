@@ -92,9 +92,6 @@ defineProps({
               >
                 Close
               </MaterialButton>
-              <MaterialButton variant="gradient" color="success" class="mb-0">
-                Save changes
-              </MaterialButton>
             </div>
           </div>
         </div>
