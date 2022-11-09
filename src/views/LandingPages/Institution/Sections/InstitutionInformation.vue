@@ -18,7 +18,7 @@ onMounted(()=>{
       <div
         v-for="Institution in Institutions"
         :key="Institution.id"
-        class="col-4 container_foto"
+        class="col-lg-4 col-md-6 col-sm-12 container_foto"
         variant="gradient"
         color="success"
         data-bs-toggle="modal"
