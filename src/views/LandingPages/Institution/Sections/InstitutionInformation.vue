@@ -1,51 +1,43 @@
 <script setup>
-// example components
+import { onMounted, ref } from  'vue';
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
-const InstitutionList = [
-  {
-    id: "m1",
-    title: "Кафе Шоколад",
-    description: "«Золотая осень»",
-    img: "https://content.kissloveodsk.ru/wp-content/uploads/2022/09/photo1662493588.jpeg",
-  },
-  {
-    id: "m2",
-    title: "Школа ИЗО для взрослых»",
-    description: "мастер-класс в технике Акварель",
-    img: "https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg",
-  },
-  {
-    id: "m3",
-    title: "ГТО",
-    description: "Выполнение нормативов ВФСК ГТО",
-    img: "https://gradkostroma.ru/i/news/gto18.jpg",
-  },
-];
+const Institutions = ref([])
+const getInstitutions = async() => {
+  return fetch ('https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=31,30')
+  .then(response => response.json())
+}
+onMounted(()=>{
+  getInstitutions().then(data=>{
+    Institutions.value = data
+  })
+})
 </script>
 <template>
   <div class="container" style="margin-top: 50px">
     <div class="row">
       <div
-        v-for="Institution in InstitutionList"
+        v-for="Institution in Institutions"
         :key="Institution.id"
         class="col-4 container_foto"
         variant="gradient"
         color="success"
         data-bs-toggle="modal"
-        :data-bs-target="`#${Institution.id}`"
+        :data-bs-target="`#m${Institution.id}`"
       >
         <ModalWindow
-          :id="Institution.id"
-          :title="Institution.title"
-          :description="Institution.description"
-          :img="Institution.img"
+          :id="`m${Institution.id}`"
+          :title="Institution.title.rendered"
+          :description="Institution.excerpt.rendered"
+          :img="Institution.fimg_url"
+          :acf="Institution.acf"
         />
         <div class="container-container">
           <article class="text-left">
-            <h2>{{ Institution.title }}</h2>
-            <h4>{{ Institution.description }}</h4>
+            <h2 v-html="Institution.title.rendered"></h2>
+            <h4 v-html="Institution.excerpt.rendered"></h4>
+
           </article>
-          <img :src="Institution.img" />
+          <img :src="Institution.fimg_url" />
         </div>
       </div>
     </div>
