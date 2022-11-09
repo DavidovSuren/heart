@@ -71,12 +71,14 @@ onMounted(()=>{
   font-weight: 800;
   font-size: 25px;
   border-bottom: #fff solid 1px;
+  background: rgba(36, 45, 81, 0.613);
 }
 
 .container_foto h4 {
   font-weight: 300;
   color: #fff;
   font-size: 20px;
+  background: rgba(36, 45, 81, 0.613);
 }
 
 .container_foto img {

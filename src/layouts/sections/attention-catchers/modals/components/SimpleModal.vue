@@ -67,6 +67,7 @@ defineProps({
                 {{ acf.рейтинг }}
                 {{ acf.телеграмм }}
                 {{ acf.телефон }}
+                {{ acf.фото }}
                 <span v-html="description"></span>
 
                 <img :src="img" :alt="description" />
