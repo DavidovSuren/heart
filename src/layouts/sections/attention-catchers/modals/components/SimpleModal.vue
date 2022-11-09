@@ -1,25 +1,28 @@
 <script setup>
-//Vue Material Kit 2 components
 import MaterialButton from "@/components/MaterialButton.vue";
+defineProps({
+  id: {
+    type: String,
+  },  
+  title: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+  img: {
+    type: String,
+  },
+});
 </script>
 <template>
-  <div class="container py-7">
-    <div class="row mt-2 flex justify-content-center">
-      <div class="col-sm-3 col-6 ms-8">
-        <!-- Button trigger modal -->
-        <MaterialButton
-          variant="gradient"
-          color="success"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Launch demo modal
-        </MaterialButton>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-6 mx-auto">
         <!-- Modal -->
         <div
           class="modal fade"
-          id="exampleModal"
+          :id="id"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -28,7 +31,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                  Your modal title
+                  {{ title }}
                 </h5>
                 <MaterialButton
                   color="none"
@@ -39,14 +42,8 @@ import MaterialButton from "@/components/MaterialButton.vue";
                 </MaterialButton>
               </div>
               <div class="modal-body">
-                Society has put up so many boundaries, so many limitations on
-                what’s right and wrong that it’s almost impossible to get a pure
-                thought out.
-                <br /><br />
-                It’s like a little kid, a little boy, looking at colors, and no
-                one told him what colors are good, before somebody tells you you
-                shouldn’t like pink because that’s for girls, or you’d instantly
-                become a gay two-year-old.
+                {{ description }}
+                <img :src="img" :alt="description" />
               </div>
               <div class="modal-footer justify-content-between">
                 <MaterialButton
@@ -54,10 +51,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
                   color="dark"
                   data-bs-dismiss="modal"
                 >
-                  Close
-                </MaterialButton>
-                <MaterialButton variant="gradient" color="success" class="mb-0">
-                  Save changes
+                  Закрыть
                 </MaterialButton>
               </div>
             </div>
@@ -67,3 +61,10 @@ import MaterialButton from "@/components/MaterialButton.vue";
     </div>
   </div>
 </template>
+<style scoped>
+.modal-body img {
+  width: 100%;
+  margin: auto;
+}
+</style>
+>
