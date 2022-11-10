@@ -62,19 +62,19 @@ defineProps({
                 
                 <MaterialBadge
                    variant="gradient" 
-                   color="success">
+                   class="btn btn-outline-light">
                     {{ acf.меню }}
                 </MaterialBadge>
 
                 <MaterialBadge
                    variant="gradient" 
-                   color="success">
+                   class="btn btn-outline-light">
                    {{ acf.адрес }}
                 </MaterialBadge>
 
                 <MaterialBadge 
                    variant="gradient" 
-                   color="success">
+                   class="btn btn-outline-light">
                     {{ acf.видео }}
                 </MaterialBadge>
 
@@ -92,7 +92,7 @@ defineProps({
 
                 <MaterialBadge
                    variant="gradient" 
-                   color="success">
+                   class="btn btn-outline-light">
                    {{ acf.телефон }}
                 </MaterialBadge>
 

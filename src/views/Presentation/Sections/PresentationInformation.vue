@@ -20,8 +20,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
 
             <RotatingCardBack
               image="https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80"
-              title="02.11.2022"
-              description="Сегодня в Кисловодске уникальное световое шоу начнётся в 21:00."
+              title="Сегодня"
               :action="[
                 {
                   route: '/pages/landing-pages/Events',
