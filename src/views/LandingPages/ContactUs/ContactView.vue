@@ -27,7 +27,7 @@ onMounted(() => {
           :sticky="true"
           :action="{
             color: 'bg-gradient-success',
-            label: 'Установить',
+            label: 'Экскурсии',
           }"
         />
       </div>

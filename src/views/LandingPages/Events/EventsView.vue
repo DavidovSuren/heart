@@ -43,7 +43,7 @@ onUnmounted(() => {
 <template>
   <DefaultNavbar
     :action="{
-      label: 'Установить',
+      label: 'Экскурсии',
       color: 'btn-white',
     }"
     transparent

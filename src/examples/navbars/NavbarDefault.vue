@@ -16,7 +16,7 @@ const props = defineProps({
     label: String,
     default: () => ({
       color: "bg-gradient-success",
-      label: "Установить"
+      label: "Экскурсии"
     })
   },
   transparent: {
@@ -137,7 +137,7 @@ watch(
       </RouterLink>
       <a
         class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
-        >Установить</a
+        >Экскурсии</a
       >
       <button
         class="navbar-toggler shadow-none ms-2"
