@@ -5,7 +5,7 @@
       class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl"
       :style="{
         backgroundImage:
-          'url(https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg)'
+          'url(https://img.freepik.com/free-photo/hand-presenting-model-house-for-home-loan-campaign_53876-104970.jpg?size=626&ext=jpg&ga=GA1.2.1704497238.1667915484&semt=sph)'
       }"
       loading="lazy"
     >
@@ -42,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 ms-lg-5">
-            <h4 class="text-white">МАССАЖ</h4>
+            <h4 class="text-white">Все виды массажа</h4>
             <h1 class="text-white">В КУРОРТНОМ ГОРОДЕ</h1>
             <p class="lead text-white opacity-8">
              На дому , выезд..
