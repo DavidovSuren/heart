@@ -19,7 +19,6 @@
               Объявления о продаже, покупке и аренде недвижимости в Кисловодске..
             </p>
             <a
-              href="https://www.creative-tim.com/learning-lab/vue/overview/material-kit/"
               class="text-white icon-move-right"
             >
               ПЕРЕЙТИ

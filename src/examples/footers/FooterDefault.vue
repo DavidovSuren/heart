@@ -26,16 +26,9 @@ defineProps({
         items: [
           {
             name: "О нас",
-            href: "https://www.creative-tim.com/presentation"
-          }
-        ]
-      },
-      {
-        name: "Сведения",
-        items: [
+          },
           {
             name: "Партнерская программа",
-            href: "https://www.creative-tim.com/affiliates/new"
           }
         ]
       },
@@ -56,7 +49,7 @@ defineProps({
         items: [
           {
             name: "Политика конфиденциальности",
-            href: "https://www.creative-tim.com/privacy"
+            href: "/pages/landing-pages/POL"
           }
         ]
       }

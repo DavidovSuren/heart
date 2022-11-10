@@ -39,7 +39,7 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
         </div>
         <div class="col-lg-6 ms-auto mt-lg-0 mt-4">
           <CenteredBlogCard
-            image="https://veloki.ru/wp-content/uploads/2017/04/park-1-1024x575.jpg"
+            image="/src/assets/img/routesskis/СХЕМА Архитектурное наследие Нарзан.png"
           />
         </div>
       </div>

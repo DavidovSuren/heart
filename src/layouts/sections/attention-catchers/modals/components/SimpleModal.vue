@@ -1,5 +1,6 @@
 <script setup>
 import MaterialButton from "@/components/MaterialButton.vue";
+import MaterialBadge from "@/components/MaterialBadge.vue";
 defineProps({
   id: {
     type: String,
@@ -48,26 +49,63 @@ defineProps({
               </div>
               <div class="modal-body">
                 <span v-html="acf.card_content"></span>
+                {{ acf.фото }}
                 {{ acf.openHour }}
                 {{ acf.openday }}
                 {{ acf.openminute }}
                 {{ acf.openmounth }}
                 {{ acf.price }}
-                {{ acf.views }}
                 {{ acf.whatsapp }}
                 {{ acf.workPeriod }}
                 {{ acf.Почта }}
-                {{ acf.адрес }}
-                {{ acf.видео }}
+
+                
+                <MaterialBadge
+                   variant="gradient" 
+                   color="success">
+                    {{ acf.меню }}
+                </MaterialBadge>
+
+                <MaterialBadge
+                   variant="gradient" 
+                   color="success">
+                   {{ acf.адрес }}
+                </MaterialBadge>
+
+                <MaterialBadge 
+                   variant="gradient" 
+                   color="success">
+                    {{ acf.видео }}
+                </MaterialBadge>
+
+                <MaterialBadge
+                   variant="gradient" 
+                   color="success">
+                   {{ acf.время_работы }}
+                </MaterialBadge>
+
+                <MaterialBadge
+                   variant="gradient" 
+                   color="success">
+                   {{ acf.награды }}
+                </MaterialBadge>
+
+                <MaterialBadge
+                   variant="gradient" 
+                   color="success">
+                   {{ acf.телефон }}
+                </MaterialBadge>
+
+                <MaterialBadge
+                   variant="gradient" 
+                   color="success">
+                   {{ acf.рейтинг }}
+                </MaterialBadge>
+
                 {{ acf.вк }}
-                {{ acf.время_работы }}
                 {{ acf.инстаграм }}
-                {{ acf.меню }}
-                {{ acf.награды }}
-                {{ acf.рейтинг }}
                 {{ acf.телеграмм }}
-                {{ acf.телефон }}
-                {{ acf.фото }}
+                
                 <span v-html="description"></span>
 
                 <img :src="img" :alt="description" />

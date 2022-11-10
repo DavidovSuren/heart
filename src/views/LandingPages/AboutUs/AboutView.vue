@@ -44,7 +44,6 @@ onUnmounted(() => {
 <template>
   <DefaultNavbar
     :action="{
-      route: 'javascript:;',
       label: 'Установить',
       color: 'btn-white',
     }"

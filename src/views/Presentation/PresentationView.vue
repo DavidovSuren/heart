@@ -130,13 +130,13 @@ onUnmounted(() => {
           </div>
           <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
             <MaterialSocialButton
-              route=""
+              route="https://vk.com/heart_city_kissloveodsk"
               component="vk"
               color="instagram"
               label="vkontakte"
             />
             <MaterialSocialButton
-              route=""
+              route="https://web.telegram.org/z/#DavydoV_Sss"
               component="telegram"
               color="instagram"
               label="TELEGRAM"

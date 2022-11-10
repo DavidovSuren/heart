@@ -1,68 +1,46 @@
 <script setup>
 // example components
-import DefaultInfoCard from "../../../../examples/cards/infoCards/DefaultInfoCard.vue";
-import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogCard.vue";
+import { onMounted, ref } from  'vue';
 import WeekCalendar from '@/components/WeekCalendar.vue';
-
+import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
+const Events = ref([])
+const getEvents = async() => {
+  return fetch ('https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29')
+  .then(response => response.json())
+}
+onMounted(()=>{
+  getEvents().then(data=>{
+    Events.value = data
+  })
+})
 </script>
 <template>
    <div class="container" style="margin-top: 50px">
     <WeekCalendar/><hr>
     <div class="row">
-      <div class="col-4 container_foto">
+      <div
+        v-for="Events in Events"
+        :key="Events.id"
+        class="col-lg-4 col-md-6 col-sm-12 container_foto"
+        variant="gradient"
+        color="success"
+        data-bs-toggle="modal"
+        :data-bs-target="`#m${Events.id}`"
+      >
+        <ModalWindow
+          :id="`m${Events.id}`"
+          :title="Events.title.rendered"
+          :description="Events.excerpt.rendered"
+          :img="Events.fimg_url"
+          :acf="Events.acf"
+        />
         <div class="container-container">
           <article class="text-left">
-            <h2>Квалификационный шахматный фестиваль </h2>
-            <h4>«Золотая осень»</h4>
+            <h2 v-html="Events.title.rendered"></h2>
+            <h4 v-html="Events.excerpt.rendered"></h4>
+
           </article>
-          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" />
-        </div>
-      </div>
-      <div class="col-4 container_foto">
-        <div class="container-container">
-          <article class="text-left">
-            <h2>«Школа ИЗО для взрослых»</h2>
-            <h4>Мастер-класс в технике Акварель</h4>
-          </article>
-          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" />
-        </div>
-      </div>
-      <div class="col-4 container_foto">
-        <div class="container-container">
-          <article class="text-left">
-            <h2>Мастер-классы по правополушарному рисованию</h2>
-          </article>
-          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4 container_foto">
-        <div class="container-container">
-          <article class="text-left">
-            <h2>Выполнение нормативов ВФСК ГТО</h2>
-            <h4>Учащихся учреждений образования (IV-VIступени) и все желающие</h4>
-          </article>
-          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" />
-        </div>
-      </div>
-      <div class="col-4 container_foto">
-        <div class="container-container">
-          <article class="text-left">
-            <h2>Сказочный час</h2>
-            <h4>«Со сказками Маршака поведешься - ума наберешься»</h4>
-          </article>
-          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" />
-        </div>
-      </div>
-      <div class="col-4 container_foto">
-        <div class="container-container">
-          <article class="text-left">
-            <h2>Квалификационный шахматный фестиваль <br />«Золотая осень»</h2>
-            <h4>Среди детей
-приуроченный ко Дню народного единства</h4>
-          </article>
-          <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" />
+          <img :src="Events.fimg_url" />
         </div>
       </div>
     </div>
@@ -72,7 +50,6 @@ import WeekCalendar from '@/components/WeekCalendar.vue';
 .container-container {
   margin: 10px;
   background-color: rgb(25, 40, 139);
-  
 }
 .container_foto {
   padding: 0;
@@ -97,12 +74,14 @@ import WeekCalendar from '@/components/WeekCalendar.vue';
   font-weight: 800;
   font-size: 25px;
   border-bottom: #fff solid 1px;
+  background: rgba(36, 45, 81, 0.613);
 }
 
 .container_foto h4 {
   font-weight: 300;
   color: #fff;
   font-size: 20px;
+  background: rgba(36, 45, 81, 0.613);
 }
 
 .container_foto img {
@@ -110,11 +89,14 @@ import WeekCalendar from '@/components/WeekCalendar.vue';
   top: 0;
   left: 0;
   opacity: 1;
-  -webkit-transition: all 4s ease;
-  -moz-transition: all 4s ease;
-  -o-transition: all 4s ease;
-  -ms-transition: all 4s ease;
-  transition: all 4s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  display: block;
+  height: 30vh;
+  object-fit: cover;
 }
 
 .container_foto:hover {

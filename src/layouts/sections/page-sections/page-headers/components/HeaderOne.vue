@@ -13,7 +13,7 @@ const bgImage =
     >
       <div class="container">
         <a class="navbar-brand text-white" href="javascript:;"
-          >Material Design</a
+          >СЕРДЦЕ ГОРОДА</a
         >
         <button
           class="navbar-toggler"
@@ -29,7 +29,7 @@ const bgImage =
         <div class="collapse navbar-collapse" id="navbar-header-2">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <RouterLink class="nav-link text-white" to="#"> Home </RouterLink>
+              <RouterLink class="nav-link text-white" to="#"> Главная </RouterLink>
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link text-white" to="#">
@@ -38,7 +38,7 @@ const bgImage =
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link text-white" to="#">
-                Contact Us
+                Контакты
               </RouterLink>
             </li>
           </ul>
@@ -85,7 +85,7 @@ const bgImage =
           <div
             class="col-lg-6 col-md-7 d-flex justify-content-center flex-column"
           >
-            <h1 class="text-white mb-4">Material Kit</h1>
+            <h1 class="text-white mb-4">Сердце города</h1>
             <p class="text-white opacity-8 lead pe-5 me-5">
               The time is now for it be okay to be great. People in this world
               shun people for being nice.

@@ -33,7 +33,6 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
             description="Good for a personal or client web/mobile app."
             :price="{ currency: '$', amount: '79' }"
             :action="{
-              route: '/',
               label: 'Установить',
               color: 'bg-gradient-dark',
             }"
@@ -84,8 +83,6 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
                     rights."
             :price="599"
             :action="{
-              route:
-                'https://secure.avangate.com/order/checkout.php?PRODS=37189144&OPTIONS37189144=ENTERPRISE&CART=1&CARD=2&CLEAN_CART=1&SHORT_FORM=1',
               label: 'Установить',
               color: 'bg-gradient-dark',
             }"

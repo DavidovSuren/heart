@@ -15,7 +15,6 @@ const props = defineProps({
     color: String,
     label: String,
     default: () => ({
-      route: "https://www.creative-tim.com/product/vue-material-kit",
       color: "bg-gradient-success",
       label: "Установить"
     })
@@ -137,7 +136,6 @@ watch(
         СЕРДЦЕ ГОРОДА
       </RouterLink>
       <a
-        href="https://www.creative-tim.com/product/vue-material-kit-pro"
         class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
         >Установить</a
       >
@@ -271,6 +269,28 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
+                            ГОСТИНИЦЫ
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li
+                    class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
+                  >
+                    <a
+                      class="dropdown-item py-2 ps-3 border-radius-md"
+                      href="https://www.russia-otdih.ru/"
+                    >
+                      <div class="d-flex">
+                        <div
+                          class="w-100 d-flex align-items-center justify-content-between"
+                        >
+                          <div>
+                            <h6
+                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
+                            >
                               АППАРТАМЕНТЫ
                             </h6>
                           </div>
@@ -278,51 +298,6 @@ watch(
                       </div>
                     </a>
                   </li>
-                  <li
-                    class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
-                  >
-                    <a
-                      class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="https://www.russia-otdih.ru/"
-                    >
-                      <div class="d-flex">
-                        <div
-                          class="w-100 d-flex align-items-center justify-content-between"
-                        >
-                          <div>
-                            <h6
-                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                            >
-                              ГОСТИНИЦЫ
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
-                  >
-                    <a
-                      class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="https://www.russia-otdih.ru/"
-                    >
-                      <div class="d-flex">
-                        <div
-                          class="w-100 d-flex align-items-center justify-content-between"
-                        >
-                          <div>
-                            <h6
-                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                            >
-                              ХОСТЕЛЫ
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  
                 </ul>
               </div>
             </div>
