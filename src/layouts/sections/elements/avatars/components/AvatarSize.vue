@@ -3,7 +3,6 @@
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
 
 // image
-import team4 from "@/assets/img/team-4.jpg";
 </script>
 <template>
   <div class="container py-6">

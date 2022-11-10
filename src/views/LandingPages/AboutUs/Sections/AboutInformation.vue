@@ -11,13 +11,13 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
           <div class="row justify-content-start">
             <DefaultInfoCard
               color="info"
-              icon="public"
+              icon="view_day"
               title="Прокат велосипедов"
               description="Что может быть приятнее легкой прогулки по парку в солнечный денек? Только велопрогулка."
             />
             <DefaultInfoCard
               color="info"
-              icon="payments"
+              icon="view_day"
               title="Конные прогулки"
               description="Избавиться от стресса, почувствовать настоящий релакс и научится владеть собственным телом."
             />
@@ -25,13 +25,13 @@ import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogC
           <div class="row justify-content-start mt-4">
             <DefaultInfoCard
               color="info"
-              icon="apps"
+              icon="view_day"
               title="Картинг"
               description="Спортивный картинг является для одних первой ступенью в автоспорт, для других — дорогим, но увлекательным хобби."
             />
             <DefaultInfoCard
               color="info"
-              icon="3p"
+              icon="view_day"
               title="Прыжки с парашюта"
               description="Свободный полет с высоты +4000 метров длится 60 секунд."
             />

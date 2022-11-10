@@ -166,7 +166,7 @@ watch(
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
-                >dashboard</i
+                >view_day</i
               >
               <a href="/pages/landing-pages/Events">АФИША</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
@@ -314,7 +314,7 @@ watch(
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
-                >article</i
+                >view_day</i
               >
               ПИТАНИЕ
               <img
