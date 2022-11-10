@@ -25,9 +25,6 @@ defineProps({
         name: "Компания",
         items: [
           {
-            name: "О нас",
-          },
-          {
             name: "Партнерская программа",
           }
         ]
@@ -40,7 +37,7 @@ defineProps({
           },
           {
             name: "Gmail",
-            href: "https://www.creative-tim.com/privacy"
+            href: "https://davidov05101996@gmail.com"
           },
         ]
       },
@@ -87,11 +84,11 @@ defineProps({
           </div>
         </div>
         <div
-          class="col-md-2 col-sm-6 col-6 mb-4"
+          class="col-md-3 col-sm-6 col-6 mb-4"
           v-for="{ name, items } of menus"
           :key="name"
         >
-          <h6 class="text-sm">{{ name }}</h6>
+          <h6 class="text-md">{{ name }}</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item" v-for="item of items" :key="item.name">
               <a class="nav-link" :href="item.href" target="_blank">
