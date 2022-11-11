@@ -1,8 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 
-import ExcursionsModal from "../../layouts/sections/attention-catchers/modals/components/ExcursionsModal.vue";
-
 //example components
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../examples/footers/FooterDefault.vue";

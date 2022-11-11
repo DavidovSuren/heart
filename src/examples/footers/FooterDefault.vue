@@ -1,5 +1,7 @@
 <script setup>
 import logoDark from "@/assets/img/logo-ct-dark.png";
+import ExcursionsModal from "../../layouts/sections/attention-catchers/modals/components/ExcursionsModal.vue";
+
 defineProps({
   brand: {
     type: Object,
@@ -113,5 +115,6 @@ defineProps({
         </div>
       </div>
     </div>
+  <ExcursionsModal/>
   </footer>
 </template>
