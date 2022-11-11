@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import { ref, watch } from "vue";
 import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
+import MaterialButton from "@/components/MaterialButton.vue";
 
 // images
 import ArrDark from "@/assets/img/down-arrow-dark.svg";
@@ -16,29 +17,29 @@ const props = defineProps({
     label: String,
     default: () => ({
       color: "bg-gradient-success",
-      label: "Бесплатные экскурсии"
-    })
+      label: "Бесплатные экскурсии",
+    }),
   },
   transparent: {
     type: Boolean,
-    default: false
+    default: false,
   },
   light: {
     type: Boolean,
-    default: false
+    default: false,
   },
   dark: {
     type: Boolean,
-    default: false
+    default: false,
   },
   sticky: {
     type: Boolean,
-    default: false
+    default: false,
   },
   darkText: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 // set arrow  color
@@ -97,7 +98,7 @@ watch(
       'my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-4 position-absolute mt-4':
         props.sticky,
       'navbar-light bg-white py-3': props.light,
-      ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark
+      ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
     }"
   >
     <div
@@ -112,7 +113,7 @@ watch(
         :class="[
           (props.transparent && textDark.value) || !props.transparent
             ? 'text-dark font-weight-bolder ms-sm-3'
-            : 'text-white font-weight-bolder ms-sm-3'
+            : 'text-white font-weight-bolder ms-sm-3',
         ]"
         :to="{ name: 'presentation' }"
         rel="tooltip"
@@ -135,8 +136,7 @@ watch(
       >
         СЕРДЦЕ ГОРОДА
       </RouterLink>
-      <a
-        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
+      <a class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
         >Бесплатные экскурсии</a
       >
       <button
@@ -170,13 +170,13 @@ watch(
               >
               <a href="/pages/landing-pages/Events">АФИША</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
-              
+
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
                 class="arrow ms-1 d-lg-none d-block ms-auto"
               />
-          </span>
+            </span>
           </li>
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
@@ -224,7 +224,7 @@ watch(
                           <div>
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                              >
+                            >
                               САНАТОРИИ
                             </h6>
                           </div>
@@ -246,7 +246,7 @@ watch(
                           <div>
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                              >
+                            >
                               ОТЕЛИ
                             </h6>
                           </div>
@@ -269,7 +269,7 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                            ГОСТИНИЦЫ
+                              ГОСТИНИЦЫ
                             </h6>
                           </div>
                         </div>
@@ -354,7 +354,7 @@ watch(
                       <h6
                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                       >
-                       КАФЕ
+                        КАФЕ
                       </h6>
                     </a>
                   </li>
@@ -386,25 +386,28 @@ watch(
                 viewBox="0 0 24 24"
                 aria-hidden="true"
                 :fill="props.transparent && '#fff'"
-              >
-              </svg>
+              ></svg>
             </a>
           </li>
         </ul>
         <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
-            <a
-              :href="action.route"
-              class="btn btn-sm mb-0"
-              :class="action.color"
-              onclick="smoothToPricing('pricing-soft-ui')"
-              >{{ action.label }}</a
+            <MaterialButton
+              style="margin-bottom:0"
+              size="sm"
+              variant="gradient"
+              color="success"
+              data-bs-toggle="modal"
+              data-bs-target="#excursionsModal"
             >
+            {{ action.label }}
+            </MaterialButton>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <!-- End Navbar -->
 </template>
 <script>

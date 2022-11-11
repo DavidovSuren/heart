@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 
+import ExcursionsModal from "../../layouts/sections/attention-catchers/modals/components/ExcursionsModal.vue";
+
 //example components
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../examples/footers/FooterDefault.vue";
@@ -72,6 +74,8 @@ onUnmounted(() => {
       </div>
     </div>
   </Header>
+  <ExcursionsModal />
+
   <!-- <section class="front-page-6" style="text-align: center;">
           <h3 class="sec-h">Партнёры</h3>
           <a href="https://artclip.ru/"><img width="100" height="100" src="images/L9bVYfpPTQuj.png"
