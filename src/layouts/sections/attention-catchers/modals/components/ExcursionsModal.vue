@@ -2,7 +2,7 @@
 //Vue Material Kit 2 components
 </script>
 <template>
-  <div class="container py-7">
+  <div class="container">
     <div class="row mt-5">
       <div class="col-sm-3 col-6 mx-auto">
         <!-- Button trigger modal -->
