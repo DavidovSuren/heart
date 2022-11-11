@@ -33,7 +33,7 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
             description="Good for a personal or client web/mobile app."
             :price="{ currency: '$', amount: '79' }"
             :action="{
-              label: 'Экскурсии',
+              label: 'Бесплатные экскурсии',
               color: 'bg-gradient-dark',
             }"
             :specifications="[
@@ -65,7 +65,7 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
             title="Компания"
             description="Perfect for web/mobile apps or SaaS projects."
             :price="249"
-            :action="{ route: '', label: 'Экскурсии', color: 'btn-white' }"
+            :action="{ route: '', label: 'Бесплатные экскурсии', color: 'btn-white' }"
             :specifications="[
               'Complete documentation',
               'Full code',
@@ -83,7 +83,7 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
                     rights."
             :price="599"
             :action="{
-              label: 'Экскурсии',
+              label: 'Бесплатные экскурсии',
               color: 'bg-gradient-dark',
             }"
             :specifications="[
