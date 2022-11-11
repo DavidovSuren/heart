@@ -3,7 +3,7 @@ import { onMounted, ref } from  'vue';
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 const Institutions = ref([])
 const getInstitutions = async() => {
-  return fetch ('https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=31,30')
+  return fetch ('https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=31,30&per_page=50')
   .then(response => response.json())
 }
 onMounted(()=>{
