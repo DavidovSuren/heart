@@ -98,7 +98,9 @@ defineProps({
 
                 <MaterialBadge
                    variant="gradient" 
-                   color="success">
+                   color="success"
+                    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
                    {{ acf.рейтинг }}
                 </MaterialBadge>
 
@@ -130,6 +132,36 @@ defineProps({
 .modal-body img {
   width: 100%;
   margin: auto;
+}
+.star-rating{
+ font-size: 0;
+}
+.star-rating__wrap{
+ display: inline-block;
+ font-size: 1rem;
+}
+.star-rating__wrap:after{
+ content: "";
+ display: table;
+ clear: both;
+}
+.star-rating__ico{
+ float: right;
+ padding-left: 2px;
+ cursor: pointer;
+ color: #FFB300;
+}
+.star-rating__ico:last-child{
+ padding-left: 0;
+}
+.star-rating__input{
+ display: none;
+}
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before
+{
+ content: "\f005";
 }
 </style>
 >
