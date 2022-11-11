@@ -41,7 +41,7 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
             <DefaultInfoCard
               icon="flip_to_front"
               title="Заведения"
-              description="Лучшие рестораны, кафе, бары."
+              description="Лучшие заведения города-курорта Кисловодска."
               link="/pages/landing-pages/Institution"
             />
           </div>

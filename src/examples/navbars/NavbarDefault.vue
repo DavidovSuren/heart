@@ -276,28 +276,6 @@ watch(
                       </div>
                     </a>
                   </li>
-                  <li
-                    class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
-                  >
-                    <a
-                      class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="https://www.russia-otdih.ru/"
-                    >
-                      <div class="d-flex">
-                        <div
-                          class="w-100 d-flex align-items-center justify-content-between"
-                        >
-                          <div>
-                            <h6
-                              class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                            >
-                              АППАРТАМЕНТЫ
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -355,18 +333,6 @@ watch(
                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                       >
                         КАФЕ
-                      </h6>
-                    </a>
-                  </li>
-                  <li class="nav-item list-group-item border-0 p-0">
-                    <a
-                      class="dropdown-item py-2 ps-3 border-radius-md"
-                      href="/pages/landing-pages/Institution"
-                    >
-                      <h6
-                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                      >
-                        БАРЫ
                       </h6>
                     </a>
                   </li>
