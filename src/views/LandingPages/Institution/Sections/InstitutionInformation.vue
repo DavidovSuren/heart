@@ -14,13 +14,15 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="text-center">
-    <button type="button" class="btn btn-success btn-lg" style="">
-      РЕСТОРАНЫ
-    </button>
-    <button type="button" class="btn btn-success btn-lg">КАФЕ</button>
+  <div class="row">
+    <div class="text-right col-lg-6" style="text-align: right">
+      <button type="button" class="btn btn-success btn-lg">РЕСТОРАНЫ</button>
+    </div>
+    <div class="col-lg-6">
+      <button type="button" class="btn btn-success btn-lg">КАФЕ</button>
+    </div>
   </div>
-  <div class="container" style="margin-top: 50px">
+  <div class="container" style="margin-top: 20px">
     <div class="row">
       <div
         v-for="Institution in Institutions"

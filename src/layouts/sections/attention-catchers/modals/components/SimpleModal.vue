@@ -24,13 +24,21 @@ defineProps({
     <div class="row">
       <div class="col-sm-3 col-6 mx-auto">
         <!-- Modal -->
-        <div class="modal fade" :id="id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div
+          class="modal fade"
+          :id="id"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body card">
                 <div class="row">
-                  <div class="avatar-container" :style="`background-image: url(${img});`">
-                  </div>
+                  <div
+                    class="avatar-container"
+                    :style="`background-image: url(${img});`"
+                  ></div>
                   <div class="details-container">
                     <div class="content">
                       <h3 v-html="title"></h3>
@@ -41,46 +49,64 @@ defineProps({
                       {{ acf.openday }}
                       {{ acf.openminute }}
                       {{ acf.openmounth }}
-                      {{ acf.price }}
                       {{ acf.whatsapp }}
-                      {{ acf.workPeriod }}
-                      {{ acf.Почта }}
 
-                      <MaterialButton variant="outline" color="info" class="w-auto me-2">
-
-                        <a :href="`${acf.адрес}`" target="_blank"> {{ acf.адрес }} </a>
+                      <MaterialButton
+                        variant="outline"
+                        color="info"
+                        class="w-auto me-2"
+                      >
+                        <a :href="`${acf.адрес}`" target="_blank">
+                          {{ acf.адрес }}
+                        </a>
                       </MaterialButton>
 
                       {{ acf.время_работы }}
 
-                      {{ acf.награды }}
-                      <MaterialButton variant="outline" color="info" class="w-auto me-2">
-
+                      <MaterialButton
+                        variant="outline"
+                        color="info"
+                        class="w-auto me-2"
+                      >
                         <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
                       </MaterialButton>
 
-                      {{ acf.рейтинг }}
+                      <MaterialButton
+                        variant="outline"
+                        color="info"
+                        class="w-auto me-2"
+                      >
+                        <b-form-rating
+                          :v-model="`${acf.рейтинг}`"
+                          :max="5"
+                          size="15px"
+                        >
+                          &nbsp;{{ acf.рейтинг }}
+                        </b-form-rating>
+                      </MaterialButton>
 
-
-                      <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
+                      <div
+                        class="btn-group btn-group-md"
+                        role="group"
+                        aria-label="Basic example"
+                      >
                         <MaterialButton variant="contained" color="success">
                           <a :href="`${acf.меню}`" target="_blank"> Меню </a>
                         </MaterialButton>
                         <MaterialButton variant="contained" color="success">
-
                           <a :href="`${acf.видео}`" target="_blank"> видео </a>
                         </MaterialButton>
-                        <MaterialButton variant="contained" color="success">
-                          Right
-                        </MaterialButton>
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
               <div class="modal-footer justify-content-between">
-                <MaterialButton variant="gradient" color="dark" data-bs-dismiss="modal">
+                <MaterialButton
+                  variant="gradient"
+                  color="dark"
+                  data-bs-dismiss="modal"
+                >
                   Закрыть
                 </MaterialButton>
               </div>
@@ -116,7 +142,7 @@ defineProps({
   float: right;
   padding-left: 2px;
   cursor: pointer;
-  color: #FFB300;
+  color: #ffb300;
 }
 
 .star-rating__ico:last-child {
@@ -128,8 +154,8 @@ defineProps({
 }
 
 .star-rating__ico:hover:before,
-.star-rating__ico:hover~.star-rating__ico:before,
-.star-rating__input:checked~.star-rating__ico:before {
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
   content: "\f005";
 }
 
@@ -139,7 +165,6 @@ defineProps({
   border-radius: 5px;
   min-height: 300px;
 }
-
 
 .row {
   display: flex;
@@ -165,4 +190,3 @@ defineProps({
   }
 }
 </style>
->
