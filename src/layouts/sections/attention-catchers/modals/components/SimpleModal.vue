@@ -95,7 +95,7 @@ defineProps({
                    class="btn btn-outline-light">
                    {{ acf.телефон }}
                 </MaterialBadge>
-
+                
                 <MaterialBadge
                    variant="gradient" 
                    color="success"
