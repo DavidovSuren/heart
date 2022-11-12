@@ -11,8 +11,8 @@ defineProps({
     default: () => ({
       name: "Сердце города",
       logo: logoDark,
-      route: "/"
-    })
+      route: "/",
+    }),
   },
   menus: {
     type: Array,
@@ -20,7 +20,7 @@ defineProps({
     items: {
       type: Array,
       name: String,
-      href: String
+      href: String,
     },
     default: () => [
       {
@@ -29,11 +29,11 @@ defineProps({
           {
             name: "Партнерская программа",
           },
-          
+
           {
             name: "Мы использьуем Cookie",
-          }
-        ]
+          },
+        ],
       },
       {
         name: "Контакты",
@@ -43,21 +43,21 @@ defineProps({
           },
           {
             name: "Gmail",
-            href: "https://davidov05101996@gmail.com"
+            href: "https://davidov05101996@gmail.com",
           },
-        ]
+        ],
       },
       {
         name: "ФЗ",
         items: [
           {
             name: "Политика конфиденциальности",
-            href: "/pages/landing-pages/POL"
-          }
-        ]
-      }
-    ]
-  }
+            href: "/pages/landing-pages/POL",
+          },
+        ],
+      },
+    ],
+  },
 });
 </script>
 <template>
@@ -115,6 +115,6 @@ defineProps({
         </div>
       </div>
     </div>
-  <ExcursionsModal/>
+    <ExcursionsModal />
   </footer>
 </template>

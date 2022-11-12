@@ -359,14 +359,14 @@ watch(
         <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
             <MaterialButton
-              style="margin-bottom:0"
+              style="margin-bottom: 0"
               size="sm"
               variant="gradient"
               color="success"
               data-bs-toggle="modal"
               data-bs-target="#excursionsModal"
             >
-            {{ action.label }}
+              {{ action.label }}
             </MaterialButton>
           </li>
         </ul>

@@ -62,11 +62,11 @@ onUnmounted(() => {
               class="text-white pt-3 mt-n5 me-2"
               :style="{ display: 'inline-block ' }"
             >
-              КИСЛОВОДСК  
+              КИСЛОВОДСК
             </h1>
             <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
-              Курортный город 
-              </p>
+              Курортный город
+            </p>
           </div>
         </div>
       </div>

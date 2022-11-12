@@ -15,7 +15,6 @@ import Typed from "typed.js";
 import Information from "./Sections/EventsInformation.vue";
 import EventsTeam from "./Sections/EventsTeam.vue";
 
-
 const body = document.getElementsByTagName("body")[0];
 //hooks
 onMounted(() => {
@@ -58,15 +57,15 @@ onUnmounted(() => {
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
             <h1 class="text-white">
-              МЕРОПРИЯТИЯ  <span class="text-white" id="typed"></span>
+              МЕРОПРИЯТИЯ <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
               <h1>г.КИСЛОВОДСКА</h1>
             </div>
-            </div>
           </div>
         </div>
       </div>
+    </div>
   </header>
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <Information />

@@ -1,26 +1,25 @@
 <script setup>
-import { onMounted, ref } from  'vue';
+import { onMounted, ref } from "vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
-const Institutions = ref([])
-const getInstitutions = async() => {
-  return fetch ('https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=31,30&per_page=50')
-  .then(response => response.json())
-}
-onMounted(()=>{
-  getInstitutions().then(data=>{
-    Institutions.value = data
-  })
-})
+const Institutions = ref([]);
+const getInstitutions = async () => {
+  return fetch(
+    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=31,30&per_page=50"
+  ).then((response) => response.json());
+};
+onMounted(() => {
+  getInstitutions().then((data) => {
+    Institutions.value = data;
+  });
+});
 </script>
 <template>
-   <div class="text-center "> <button type="button" 
-        class="btn btn-success btn-lg "
-        style=""
-         >РЕСТОРАНЫ</button>
-    <button type="button" 
-        class="btn btn-success btn-lg"
-        >КАФЕ</button>
-      </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-success btn-lg" style="">
+      РЕСТОРАНЫ
+    </button>
+    <button type="button" class="btn btn-success btn-lg">КАФЕ</button>
+  </div>
   <div class="container" style="margin-top: 50px">
     <div class="row">
       <div
@@ -43,7 +42,6 @@ onMounted(()=>{
           <article class="text-left">
             <h2 v-html="Institution.title.rendered"></h2>
             <h4 v-html="Institution.excerpt.rendered"></h4>
-
           </article>
           <img :src="Institution.fimg_url" />
         </div>
