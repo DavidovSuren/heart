@@ -13,6 +13,14 @@ onMounted(()=>{
 })
 </script>
 <template>
+   <div class="text-center "> <button type="button" 
+        class="btn btn-success btn-lg "
+        style=""
+         >РЕСТОРАНЫ</button>
+    <button type="button" 
+        class="btn btn-success btn-lg"
+        >КАФЕ</button>
+      </div>
   <div class="container" style="margin-top: 50px">
     <div class="row">
       <div
