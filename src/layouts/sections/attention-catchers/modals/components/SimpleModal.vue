@@ -24,100 +24,63 @@ defineProps({
     <div class="row">
       <div class="col-sm-3 col-6 mx-auto">
         <!-- Modal -->
-        <div
-          class="modal fade"
-          :id="id"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
+        <div class="modal fade" :id="id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <h5
-                  class="modal-title"
-                  id="exampleModalLabel"
-                  v-html="title"
-                ></h5>
-                <MaterialButton
-                  color="none"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                </MaterialButton>
-              </div>
-              <div class="modal-body">
-                <span v-html="acf.card_content"></span>
-                {{ acf.фото }}
-                {{ acf.openHour }}
-                {{ acf.openday }}
-                {{ acf.openminute }}
-                {{ acf.openmounth }}
-                {{ acf.price }}
-                {{ acf.whatsapp }}
-                {{ acf.workPeriod }}
-                {{ acf.Почта }}
+              <div class="modal-body card">
+                <div class="row">
+                  <div class="avatar-container" :style="`background-image: url(${img});`">
+                  </div>
+                  <div class="details-container">
+                    <div class="content">
+                      <h3 v-html="title"></h3>
+                      <p v-html="acf.card_content"></p>
 
-                
-                <MaterialBadge
-                   variant="gradient" 
-                   class="btn btn-outline-light">
-                    {{ acf.меню }}
-                </MaterialBadge>
+                      {{ acf.фото }}
+                      {{ acf.openHour }}
+                      {{ acf.openday }}
+                      {{ acf.openminute }}
+                      {{ acf.openmounth }}
+                      {{ acf.price }}
+                      {{ acf.whatsapp }}
+                      {{ acf.workPeriod }}
+                      {{ acf.Почта }}
 
-                <MaterialBadge
-                   variant="gradient" 
-                   class="btn btn-outline-light">
-                   {{ acf.адрес }}
-                </MaterialBadge>
+                      <MaterialButton variant="outline" color="info" class="w-auto me-2">
 
-                <MaterialBadge 
-                   variant="gradient" 
-                   class="btn btn-outline-light">
-                    {{ acf.видео }}
-                </MaterialBadge>
+                        <a :href="`${acf.адрес}`" target="_blank"> {{ acf.адрес }} </a>
+                      </MaterialButton>
 
-                <MaterialBadge
-                   variant="gradient" 
-                   color="success">
-                   {{ acf.время_работы }}
-                </MaterialBadge>
+                      {{ acf.время_работы }}
 
-                <MaterialBadge
-                   variant="gradient" 
-                   color="success">
-                   {{ acf.награды }}
-                </MaterialBadge>
+                      {{ acf.награды }}
+                      <MaterialButton variant="outline" color="info" class="w-auto me-2">
 
-                <MaterialBadge
-                   variant="gradient" 
-                   class="btn btn-outline-light">
-                   {{ acf.телефон }}
-                </MaterialBadge>
-                
-                <MaterialBadge
-                   variant="gradient" 
-                   color="success"
-                    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
+                      </MaterialButton>
 
-                   {{ acf.рейтинг }}
-                </MaterialBadge>
+                      {{ acf.рейтинг }}
 
-                {{ acf.вк }}
-                {{ acf.инстаграм }}
-                {{ acf.телеграмм }}
-                
-                <span v-html="description"></span>
 
-                <img :src="img" :alt="description" />
+                      <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
+                        <MaterialButton variant="contained" color="success">
+                          <a :href="`${acf.меню}`" target="_blank"> Меню </a>
+                        </MaterialButton>
+                        <MaterialButton variant="contained" color="success">
+
+                          <a :href="`${acf.видео}`" target="_blank"> видео </a>
+                        </MaterialButton>
+                        <MaterialButton variant="contained" color="success">
+                          Right
+                        </MaterialButton>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="modal-footer justify-content-between">
-                <MaterialButton
-                  variant="gradient"
-                  color="dark"
-                  data-bs-dismiss="modal"
-                >
+                <MaterialButton variant="gradient" color="dark" data-bs-dismiss="modal">
                   Закрыть
                 </MaterialButton>
               </div>
@@ -133,35 +96,73 @@ defineProps({
   width: 100%;
   margin: auto;
 }
-.star-rating{
- font-size: 0;
+
+.star-rating {
+  font-size: 0;
 }
-.star-rating__wrap{
- display: inline-block;
- font-size: 1rem;
+
+.star-rating__wrap {
+  display: inline-block;
+  font-size: 1rem;
 }
-.star-rating__wrap:after{
- content: "";
- display: table;
- clear: both;
+
+.star-rating__wrap:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.star-rating__ico{
- float: right;
- padding-left: 2px;
- cursor: pointer;
- color: #FFB300;
+
+.star-rating__ico {
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  color: #FFB300;
 }
-.star-rating__ico:last-child{
- padding-left: 0;
+
+.star-rating__ico:last-child {
+  padding-left: 0;
 }
-.star-rating__input{
- display: none;
+
+.star-rating__input {
+  display: none;
 }
+
 .star-rating__ico:hover:before,
-.star-rating__ico:hover ~ .star-rating__ico:before,
-.star-rating__input:checked ~ .star-rating__ico:before
-{
- content: "\f005";
+.star-rating__ico:hover~.star-rating__ico:before,
+.star-rating__input:checked~.star-rating__ico:before {
+  content: "\f005";
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  min-height: 300px;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details-container {
+  flex: 2;
+}
+
+.avatar-container {
+  flex-basis: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 </style>
 >
