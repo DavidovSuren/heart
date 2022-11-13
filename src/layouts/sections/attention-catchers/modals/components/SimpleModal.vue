@@ -61,8 +61,6 @@ defineProps({
                         </a>
                       </MaterialButton>
 
-                      {{ acf.время_работы }}
-
                       <MaterialButton
                         variant="outline"
                         color="info"
@@ -71,15 +69,13 @@ defineProps({
                         <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
                       </MaterialButton>
 
-                      <MaterialButton
-                        variant="outline"
-                        color="info"
-                        class="w-auto me-2"
-                      >
+                      <MaterialButton>
                         <b-form-rating
                           :v-model="`${acf.рейтинг}`"
                           :max="5"
                           size="15px"
+                          readonly
+                          precision="2"
                         >
                           &nbsp;{{ acf.рейтинг }}
                         </b-form-rating>
