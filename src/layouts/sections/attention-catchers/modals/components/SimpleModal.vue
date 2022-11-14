@@ -50,6 +50,7 @@ defineProps({
                         v-model="acf.рейтинг"
                       />
                       <p v-html="acf.card_content"></p>
+                      <a v-if="acf.меню" :href="`${acf.меню}`"><img src="@/assets/img/Меню.png" style="width: 20px; height: 20px"></a>
 
                       <!-- {{ acf.фото }}
                       { acf.openHour }}
@@ -78,9 +79,6 @@ defineProps({
                       >
                         <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
                       </MaterialButton>
-                      <MaterialButton   v-if="acf.меню">
-                          <a :href="`${acf.меню}`"><img src="../img/Меню.png" class="img-responsive"></a>
-                        </MaterialButton>
                       <div
                         class="btn-group btn-group-md"
                         role="group"

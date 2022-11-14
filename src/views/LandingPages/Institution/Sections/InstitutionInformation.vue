@@ -39,7 +39,7 @@ const get = async (c) => {
       <div
         v-for="Institution in Institutions"
         :key="Institution.id"
-        class="col-lg-4 col-md-6 col-sm-12 container_foto"
+        class="col-lg-4 col-md-6 col-sm-12"
         variant="gradient"
         color="success"
         data-bs-toggle="modal"
@@ -63,19 +63,19 @@ const get = async (c) => {
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .container-container {
   margin: 10px;
   background-color: rgb(25, 40, 139);
 }
-.container_foto {
+.container-container {
   padding: 0;
   overflow: hidden;
   position: relative;
   padding: 0 !important;
 }
 
-.container_foto article {
+.container-container article {
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -86,7 +86,7 @@ const get = async (c) => {
   transition: all 0.5s ease;
 }
 
-.container_foto h2 {
+.container-container h2 {
   color: #fff;
   font-weight: 800;
   font-size: 25px;
@@ -94,14 +94,14 @@ const get = async (c) => {
   background: rgba(36, 45, 81, 0.613);
 }
 
-.container_foto h4 {
+.container-container h4 {
   font-weight: 300;
   color: #fff;
   font-size: 20px;
   background: rgba(36, 45, 81, 0.613);
 }
 
-.container_foto img {
+.container-container img {
   width: 100%;
   top: 0;
   left: 0;
@@ -116,29 +116,20 @@ const get = async (c) => {
   object-fit: cover;
 }
 
-.container_foto:hover {
+.container-container:hover {
   cursor: pointer;
 }
 
-.container_foto:hover img {
+.container-container:hover img {
   opacity: 0.1;
   transform: scale(1.5);
 }
 
-.container_foto:hover article {
+.container-container:hover article {
   transform: translate(2px, -69px);
   -webkit-transform: translate(2px, -69px);
   -moz-transform: translate(2px, -69px);
   -o-transform: translate(2px, -69px);
   -ms-transform: translate(2px, -69px);
-}
-
-.container_foto:hover .ver_mas {
-  transform: translate(0px, 0px);
-  -webkit-transform: translate(0px, 0px);
-  -moz-transform: translate(0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  opacity: 1;
 }
 </style>
