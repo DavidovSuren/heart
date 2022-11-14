@@ -2,24 +2,36 @@
 import { onMounted, ref } from "vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 const Institutions = ref([]);
-const getInstitutions = async () => {
-  return fetch(
-    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=31,30&per_page=50"
-  ).then((response) => response.json());
+const getInstitutions = async (c) => {
+  let cat = "";
+  if (c === "rest") {
+    cat = "30";
+  } else if (c === "cafe") {
+    cat = "31";
+  } else {
+    cat = "31,30";
+  }
+  const url = `https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=${cat}&per_page=50`;
+  return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
-  getInstitutions().then((data) => {
+  getInstitutions("all").then((data) => {
     Institutions.value = data;
   });
 });
+const get = async (c) => {
+  getInstitutions(c).then((data) => {
+    Institutions.value = data;
+  });
+};
 </script>
 <template>
   <div class="row">
     <div class="text-right col-lg-6" style="text-align: right">
-      <button type="button" class="btn btn-success btn-lg">РЕСТОРАНЫ</button>
+      <button type="button" class="btn btn-success btn-lg" @click="get('rest')">РЕСТОРАНЫ</button>
     </div>
     <div class="col-lg-6">
-      <button type="button" class="btn btn-success btn-lg">КАФЕ</button>
+      <button type="button" class="btn btn-success btn-lg" @click="get('cafe')">КАФЕ</button>
     </div>
   </div>
   <div class="container" style="margin-top: 20px">
