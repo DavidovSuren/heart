@@ -19,3 +19,19 @@ import { RouterView } from "vue-router";
 <template>
   <router-view />
 </template>
+
+<style>
+.vue3-star-ratings__wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline !important;
+  text-align: left !important;
+}
+
+.vue3-star-ratings button {
+  display: none !important;
+}
+.vue3-star-ratings {
+  display: block !important;
+}
+</style>

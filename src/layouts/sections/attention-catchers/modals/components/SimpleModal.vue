@@ -1,6 +1,7 @@
 <script setup>
 import MaterialButton from "@/components/MaterialButton.vue";
 import MaterialBadge from "@/components/MaterialBadge.vue";
+
 defineProps({
   id: {
     type: String,
@@ -42,13 +43,19 @@ defineProps({
                   <div class="details-container">
                     <div class="content">
                       <h3 v-html="title"></h3>
+                      <vue3-star-ratings
+                        starSize="32"
+                        showControl="false"
+                        disableClick="true"
+                        v-model="acf.рейтинг"
+                      />
                       <p v-html="acf.card_content"></p>
 
-                      {{ acf.фото }}
-                      {{ acf.openHour }}
+                      <!-- {{ acf.фото }}
+                      { acf.openHour }}
                       {{ acf.openday }}
                       {{ acf.openminute }}
-                      {{ acf.openmounth }}
+                      {{ acf.openmounth }}-->
                       {{ acf.whatsapp }}
 
                       <MaterialButton
@@ -65,20 +72,9 @@ defineProps({
                         variant="outline"
                         color="info"
                         class="w-auto me-2"
+                        v-if="acf.телефон"
                       >
                         <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
-                      </MaterialButton>
-
-                      <MaterialButton>
-                        <b-form-rating
-                          :v-model="`${acf.рейтинг}`"
-                          :max="5"
-                          size="15px"
-                          readonly
-                          precision="2"
-                        >
-                          &nbsp;{{ acf.рейтинг }}
-                        </b-form-rating>
                       </MaterialButton>
 
                       <div
