@@ -50,15 +50,34 @@ defineProps({
                         v-model="acf.рейтинг"
                       />
                       <p v-html="acf.card_content"></p>
-                      <a v-if="acf.меню" :href="`${acf.меню}`"><img src="@/assets/img/Меню.png" style="width: 20px; height: 20px"></a>
+                      <a v-if="acf.меню" :href="`${acf.меню}`"
+                        ><img
+                          src="@/assets/img/Меню.png"
+                          style="width: 80px; height: 80px"
+                      /></a>
 
                       <!-- {{ acf.фото }}
                       { acf.openHour }}
                       {{ acf.openday }}
                       {{ acf.openminute }}
                       {{ acf.openmounth }}-->
-                      
+
                       {{ acf.whatsapp }}
+
+                      <MaterialButton
+                        variant="contained"
+                        color="success"
+                        v-if="acf.видео"
+                      >
+                        <a :href="`${acf.видео}`" target="_blank"> Видео </a>
+                      </MaterialButton>
+                      <MaterialButton
+                        variant="contained"
+                        color="success"
+                        v-if="acf.видео"
+                      >
+                        <a :href="`${acf.видео}`" target="_blank"> Альбом </a>
+                      </MaterialButton>
 
                       <MaterialButton
                         variant="outline"
@@ -83,15 +102,7 @@ defineProps({
                         class="btn-group btn-group-md"
                         role="group"
                         aria-label="Basic example"
-                      >
-                      
-                        <MaterialButton variant="contained" color="success" v-if="acf.видео">
-                          <a :href="`${acf.видео}`" target="_blank"> Видео </a>
-                        </MaterialButton>
-                        <MaterialButton variant="contained" color="success" v-if="acf.видео">
-                          <a :href="`${acf.видео}`" target="_blank"> Альбом </a>
-                        </MaterialButton>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                 </div>
