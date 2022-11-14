@@ -1,22 +1,24 @@
 <script setup>
 // example components
-import { onMounted, ref } from  'vue';
-import WeekCalendar from '@/components/WeekCalendar.vue';
+import { onMounted, ref } from "vue";
+import WeekCalendar from "@/components/WeekCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
-const Events = ref([])
-const getEvents = async() => {
-  return fetch ('https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29')
-  .then(response => response.json())
-}
-onMounted(()=>{
-  getEvents().then(data=>{
-    Events.value = data
-  })
-})
+const Events = ref([]);
+const getEvents = async () => {
+  return fetch(
+    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29"
+  ).then((response) => response.json());
+};
+onMounted(() => {
+  getEvents().then((data) => {
+    Events.value = data;
+  });
+});
 </script>
 <template>
-   <div class="container" style="margin-top: 50px">
-    <WeekCalendar/><hr>
+  <div class="container" style="margin-top: 50px">
+    <WeekCalendar @btnClick="getEvents(1)" />
+    <hr />
     <div class="row">
       <div
         v-for="Events in Events"
@@ -38,7 +40,6 @@ onMounted(()=>{
           <article class="text-left">
             <h2 v-html="Events.title.rendered"></h2>
             <h4 v-html="Events.excerpt.rendered"></h4>
-
           </article>
           <img :src="Events.fimg_url" />
         </div>

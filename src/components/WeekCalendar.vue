@@ -21,7 +21,7 @@
           v-for="day of currentWeek.days"
           :key="day.dayId"
           :day="day"
-          @click="listeners.selectSingle(day)"
+          @click="$emit('btn-click',listeners.selectSingle(day))"
         />
       </div>
     </div>
@@ -29,13 +29,27 @@
 </template>
 
 <script lang="ts" setup>
+import { ref, watch } from "vue";
+
 import CalendarCell from "@/components/CalendarCell.vue";
 import { useCalendar } from "vue-use-calendar";
 import { addDays } from "date-fns";
 import { ru } from "date-fns/locale";
-import { onMounted, ref } from  'vue';
 
-const nameMounth = [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ]
+const nameMounth = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь",
+];
 const disabledDates = [addDays(new Date(), 10)];
 
 const firstDayOfWeek = 1;
@@ -63,7 +77,9 @@ const weekdays = useWeekdays();
 
 
 
-
+watch(selectedDates, (newValue, oldValue) => {
+  console.log(selectedDates[0].toLocaleDateString() );
+});
 </script>
 
 <style scoped>
