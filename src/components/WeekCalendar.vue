@@ -2,16 +2,14 @@
   <div class="calendar">
     <h2>Календарь событий</h2>
     <span v-for="selected of selectedDates" :key="selected.dayId">
-      {{ selected.date.toLocaleDateString() }}
+      {{ selected.date?.toLocaleDateString() }}
     </span>
 
     <div class="month">
       <div class="actions">
         <button :disabled="!prevWeekEnabled" @click="prevWeek">-</button>
 
-        {{ currentWeek.month + 1 }} - {{ currentWeek.year }} W:{{
-          currentWeek.weekNumber + 1
-        }}
+        {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}
 
         <button :disabled="!nextWeekEnabled" @click="nextWeek">+</button>
       </div>
@@ -35,7 +33,9 @@ import CalendarCell from "@/components/CalendarCell.vue";
 import { useCalendar } from "vue-use-calendar";
 import { addDays } from "date-fns";
 import { ru } from "date-fns/locale";
+import { onMounted, ref } from  'vue';
 
+const nameMounth = [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ]
 const disabledDates = [addDays(new Date(), 10)];
 
 const firstDayOfWeek = 1;
@@ -57,9 +57,13 @@ const {
   nextWeekEnabled,
   listeners,
   selectedDates,
-} = useWeeklyCalendar();
+} = useWeeklyCalendar({ fullWeeks: false, infinite: true });
 
 const weekdays = useWeekdays();
+
+
+
+
 </script>
 
 <style scoped>
