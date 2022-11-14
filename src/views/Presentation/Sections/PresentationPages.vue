@@ -20,7 +20,7 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
         <div class="col-md-6">
               <ExampleCard
                 class="shadow-lg"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/about-us.jpg"
+                image="src/assets/img/about-us4.jpg"
                 route="about"
               />
         </div>
