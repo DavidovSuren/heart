@@ -56,12 +56,14 @@ defineProps({
                       {{ acf.openday }}
                       {{ acf.openminute }}
                       {{ acf.openmounth }}-->
+                      
                       {{ acf.whatsapp }}
 
                       <MaterialButton
                         variant="outline"
                         color="info"
                         class="w-auto me-2"
+                        v-if="acf.адрес"
                       >
                         <a :href="`${acf.адрес}`" target="_blank">
                           {{ acf.адрес }}
@@ -82,10 +84,10 @@ defineProps({
                         role="group"
                         aria-label="Basic example"
                       >
-                        <MaterialButton variant="contained" color="success">
+                        <MaterialButton variant="contained" color="success"  v-if="acf.меню">
                           <a :href="`${acf.меню}`" target="_blank"> Меню </a>
                         </MaterialButton>
-                        <MaterialButton variant="contained" color="success">
+                        <MaterialButton variant="contained" color="success" v-if="acf.видео">
                           <a :href="`${acf.видео}`" target="_blank"> видео </a>
                         </MaterialButton>
                       </div>
