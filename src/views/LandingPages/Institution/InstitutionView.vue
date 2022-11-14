@@ -42,11 +42,11 @@ onUnmounted(() => {
 </script>
 <template>
   <DefaultNavbar
+    :sticky="true"
     :action="{
       label: 'Бесплатные экскурсии',
       color: 'btn-white',
     }"
-    transparent
   />
   <header class="bg-gradient-dark">
     <div
