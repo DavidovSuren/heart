@@ -4,6 +4,9 @@ import MaterialBadge from "../../../components/MaterialBadge.vue";
 
 // images
 import imgSigninCover from "@/assets/img/signin-cover.png";
+
+import img from "@/assets/img/about-us4.jpg";
+
 </script>
 <template>
   <section class="py-1">
@@ -20,7 +23,7 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
         <div class="col-md-6">
               <ExampleCard
                 class="shadow-lg"
-                image="src/assets/img/about-us4.jpg"
+                :image=img
                 route="about"
               />
         </div>
