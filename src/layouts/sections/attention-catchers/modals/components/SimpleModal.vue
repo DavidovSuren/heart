@@ -78,17 +78,20 @@ defineProps({
                       >
                         <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
                       </MaterialButton>
-
+                      <MaterialButton   v-if="acf.меню">
+                          <a :href="`${acf.меню}`"><img src="../img/Меню.png" class="img-responsive"></a>
+                        </MaterialButton>
                       <div
                         class="btn-group btn-group-md"
                         role="group"
                         aria-label="Basic example"
                       >
-                        <MaterialButton variant="contained" color="success"  v-if="acf.меню">
-                          <a :href="`${acf.меню}`" target="_blank"> Меню </a>
+                      
+                        <MaterialButton variant="contained" color="success" v-if="acf.видео">
+                          <a :href="`${acf.видео}`" target="_blank"> Видео </a>
                         </MaterialButton>
                         <MaterialButton variant="contained" color="success" v-if="acf.видео">
-                          <a :href="`${acf.видео}`" target="_blank"> видео </a>
+                          <a :href="`${acf.видео}`" target="_blank"> Альбом </a>
                         </MaterialButton>
                       </div>
                     </div>
