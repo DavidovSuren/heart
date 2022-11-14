@@ -187,7 +187,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              <a  href="https://www.russia-otdih.ru/">ПРОЖИВАНИЕ</a>
+              <a href="https://www.russia-otdih.ru/">ПРОЖИВАНИЕ</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
 
               <img
