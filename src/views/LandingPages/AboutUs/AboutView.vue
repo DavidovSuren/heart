@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
+import NavbarDefault from "../../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
 //image
@@ -42,13 +42,13 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <DefaultNavbar
-    :action="{
-      label: 'Бесплатные экскурсии',
-      color: 'btn-white',
-    }"
-    transparent
-  />
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <NavbarDefault :sticky="true" />
+      </div>
+    </div>
+  </div>
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
