@@ -52,14 +52,14 @@ const nameMounth = [
   "Ноябрь",
   "Декабрь",
 ];
-const disabledDates = [addDays(new Date(), 10)];
+//const disabledDates = [addDays(new Date(), 10)];
 
 const firstDayOfWeek = 1;
 
 const { useWeeklyCalendar, useWeekdays } = useCalendar({
   minDate: new Date(),
   maxDate: addDays(new Date(), 26),
-  disabled: disabledDates,
+  //disabled: disabledDates,
   firstDayOfWeek,
   locale: ru,
   preSelection: [addDays(new Date(), 2)],
