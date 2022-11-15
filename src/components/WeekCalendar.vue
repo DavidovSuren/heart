@@ -9,7 +9,7 @@
       <div class="actions">
         <button :disabled="!prevWeekEnabled" @click="prevWeek" class="btn bg-gradient-success btn-sm false false m-2">-</button>
 
-       <spam class="m-3"> {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}</spam>
+       <span class="m-3"> {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}</span>
 
         <button :disabled="!nextWeekEnabled" @click="nextWeek" class="btn bg-gradient-success btn-sm false false m-2">+</button>
       </div>
