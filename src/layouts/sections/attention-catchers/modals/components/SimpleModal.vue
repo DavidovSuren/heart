@@ -15,46 +15,33 @@ defineProps({
   img: {
     type: String,
   },
+  content: {
+    type: String,
+  },
   acf: {
     type: Object,
   },
 });
+const albom = false
 </script>
 <template>
   <div class="container">
     <div class="row">
       <div class="col-sm-3 col-6 mx-auto">
         <!-- Modal -->
-        <div
-          class="modal fade"
-          :id="id"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
+        <div class="modal fade" :id="id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body card">
                 <div class="row">
-                  <div
-                    class="avatar-container"
-                    :style="`background-image: url(${img});`"
-                  ></div>
+
+                  <div class="avatar-container"   :style="`background-image: url(${img});`">
+                  </div>
                   <div class="details-container">
                     <div class="content">
                       <h3 v-html="title"></h3>
-                      <vue3-star-ratings
-                        starSize="32"
-                        showControl="false"
-                        disableClick="true"
-                        v-model="acf.рейтинг"
-                      />
+                      <vue3-star-ratings starSize="32" showControl="false" disableClick="true" v-model="acf.рейтинг" />
                       <p v-html="acf.card_content"></p>
-                      <a v-if="acf.меню" :href="`${acf.меню}`"
-                        ><img
-                          src="@/assets/img/Меню.png"
-                          style="width: 80px; height: 80px"
-                      /></a>
 
                       <!-- {{ acf.фото }}
                       { acf.openHour }}
@@ -64,58 +51,39 @@ defineProps({
 
                       {{ acf.whatsapp }}
 
-                      <MaterialButton
-                        variant="contained"
-                        color="success"
-                        v-if="acf.видео"
-                      >
-                        <a :href="`${acf.видео}`" target="_blank"> Видео </a>
-                      </MaterialButton>
-                      <MaterialButton
-                        variant="contained"
-                        color="success"
-                        v-if="acf.видео"
-                      >
-                        <a :href="`${acf.видео}`" target="_blank"> Альбом </a>
-                      </MaterialButton>
 
-                      <MaterialButton
-                        variant="outline"
-                        color="info"
-                        class="w-auto me-2"
-                        v-if="acf.адрес"
-                      >
-                        <a :href="`${acf.адрес}`" target="_blank">
-                          {{ acf.адрес }}
-                        </a>
-                      </MaterialButton>
 
-                      <MaterialButton
-                        variant="outline"
-                        color="info"
-                        class="w-auto me-2"
-                        v-if="acf.телефон"
-                      >
-                        <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
-                      </MaterialButton>
-                      <div
-                        class="btn-group btn-group-md"
-                        role="group"
-                        aria-label="Basic example"
-                      ></div>
+                      <div class="btn-group btn-group-md" role="group" aria-label="Basic example"></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="modal-footer justify-content-between">
-                <MaterialButton
-                  variant="gradient"
-                  color="dark"
-                  data-bs-dismiss="modal"
-                >
+                <MaterialButton variant="gradient" color="dark" data-bs-dismiss="modal">
                   Закрыть
                 </MaterialButton>
+
+                <MaterialButton variant="contained" color="success" v-if="acf.видео">
+                  <a :href="`${acf.видео}`" target="_blank"> Видео </a>
+                </MaterialButton>
+                <MaterialButton variant="contained" color="success" v-if="content">
+                  <span v-on:click="albom = true"> Альбом </span>
+                </MaterialButton>
+                <a v-if="acf.меню" :href="`${acf.меню}`" target="_blank">
+                  <img src="@/assets/img/Меню.png" style="width: 80px; height: 80px" /></a>
+                <MaterialButton variant="outline" color="info" class="w-auto me-2" v-if="acf.адрес">
+                  <a :href="`${acf.адрес}`" target="_blank">
+                    {{ acf.адрес }}
+                  </a>
+                </MaterialButton>
+                <MaterialButton variant="outline" color="info" class="w-auto me-2" v-if="acf.телефон">
+                  <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
+                </MaterialButton>
               </div>
+
+              <div  v-if="albom" v-html="content" class="modal-footer justify-content-between"></div>
+             
+
             </div>
           </div>
         </div>
@@ -160,9 +128,9 @@ defineProps({
 }
 
 .star-rating__ico:hover:before,
-.star-rating__ico:hover ~ .star-rating__ico:before,
-.star-rating__input:checked ~ .star-rating__ico:before {
-  content: "\f005";
+.star-rating__ico:hover~.star-rating__ico:before,
+.star-rating__input:checked~.star-rating__ico:before {
+  content: "f005";
 }
 
 .card {

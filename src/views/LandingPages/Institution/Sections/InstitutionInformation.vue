@@ -51,6 +51,7 @@ const get = async (c) => {
           :description="Institution.excerpt.rendered"
           :img="Institution.fimg_url"
           :acf="Institution.acf"
+          :content="Institution?.content.rendered"
         />
         <div class="container-container">
           <article class="text-left">
