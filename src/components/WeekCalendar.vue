@@ -79,6 +79,8 @@ const weekdays = useWeekdays();
 
 watch(selectedDates, (newValue, oldValue) => {
   console.log(selectedDates[0].toLocaleDateString() );
+  console.log(selectedDates[0].getMonth()+1,selectedDates[0].getDate()  );
+  
 });
 </script>
 

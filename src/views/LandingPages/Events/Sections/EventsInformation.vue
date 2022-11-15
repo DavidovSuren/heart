@@ -3,10 +3,14 @@
 import { onMounted, ref } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
+const mounth = ref("");
+const date = ref("");
 const Events = ref([]);
 const getEvents = async () => {
+  console.log(mounth, date)
   return fetch(
     "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29"
+    //https://content.kissloveodsk.ru/wp-json/acf/v3/posts?openday=12&openmounth=11
   ).then((response) => response.json());
 };
 onMounted(() => {
@@ -17,7 +21,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="container" style="margin-top: 50px">
-    <WeekCalendar @btnClick="getEvents(1)" />
+    <WeekCalendar @btnClick="getEvents(mounth, date)" />
     <hr />
     <div class="row">
       <div
