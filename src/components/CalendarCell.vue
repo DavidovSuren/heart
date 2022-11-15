@@ -5,7 +5,7 @@
     @mouseleave="$emit('mouseleave')"
   >
     <button
-      class="calendar-cell"
+      class="btn btn-sm false false calendar-cell"
       :class="{
         light: props.day.otherMonth,
         active: props.day.isSelected.value,

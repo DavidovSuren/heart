@@ -7,11 +7,11 @@
 
     <div class="month">
       <div class="actions">
-        <button :disabled="!prevWeekEnabled" @click="prevWeek">-</button>
+        <button :disabled="!prevWeekEnabled" @click="prevWeek" class="btn bg-gradient-success btn-sm false false m-2">-</button>
 
-        {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}
+       <spam class="m-3"> {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}</spam>
 
-        <button :disabled="!nextWeekEnabled" @click="nextWeek">+</button>
+        <button :disabled="!nextWeekEnabled" @click="nextWeek" class="btn bg-gradient-success btn-sm false false m-2">+</button>
       </div>
       <div class="weeknames grid">
         <span v-for="weekday of weekdays" :key="weekday">{{ weekday }}</span>
