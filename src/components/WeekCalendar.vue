@@ -35,7 +35,9 @@ import CalendarCell from "@/components/CalendarCell.vue";
 import { useCalendar } from "vue-use-calendar";
 import { addDays } from "date-fns";
 import { ru } from "date-fns/locale";
+import { dateEventStore } from "@/stores/pinia";
 
+const dateEvent = dateEventStore()
 const nameMounth = [
   "Январь",
   "Февраль",
@@ -75,12 +77,10 @@ const {
 
 const weekdays = useWeekdays();
 
-
-
 watch(selectedDates, (newValue, oldValue) => {
-  console.log(selectedDates[0].toLocaleDateString() );
-  console.log(selectedDates[0].getMonth()+1,selectedDates[0].getDate()  );
-  
+  console.log(selectedDates[0])
+  dateEvent.day = selectedDates[0].getDate()
+  dateEvent.mounth = selectedDates[0].getMonth()+1
 });
 </script>
 

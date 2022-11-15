@@ -15,5 +15,6 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(router);
 app.use(materialKit);
+app.use(createPinia())
 app.component("vue3-star-ratings", vue3StarRatings);
 app.mount("#app");
