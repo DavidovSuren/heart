@@ -26,7 +26,9 @@ defineProps({
     class="back back-background"
     :style="{
       backgroundImage: `url(${image})`,
-      backgroundSize: 'cover',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
     }"
   >
     <div class="card-body pt-7 text-center">
