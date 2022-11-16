@@ -1,53 +1,66 @@
 <script setup>
 // example components
-import { onMounted, ref } from "vue";
+import { onMounted, ref, reactive, computed } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 import { dateEventStore } from "@/stores/pinia";
 
-const dataFilter = dateEventStore()
-const mounth = ref("");
-const date = ref("");
+const dataFilter = dateEventStore();
+const current = new Date();
+const mounth = dataFilter?.mounth ;
+const date =  dataFilter ?  dataFilter?.day : current.getDate(); //todo not worc auto today filter
 const Events = ref([]);
 const getEvents = async () => {
-const url =     "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29"
-  return fetch(
-    url
-  ).then((response) => response.json());
+  const url =
+    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29";
+  return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
   getEvents().then((data) => {
     Events.value = data;
   });
 });
+let filtredEvents = computed(() => {
+  return Events.value.filter((todo) => todo.acf.openday === date);
+});
+
+function calculateBooksMessage(date, mounth) {
+  console.log(date)
+  return Events.value.filter(
+    (todo) =>
+      todo.acf?.openday == dataFilter?.day &&
+      todo.acf?.openmounth == dataFilter?.mounth
+  );
+}
 </script>
 <template>
   <div class="container" style="margin-top: 50px">
-    <WeekCalendar @click=getEvents()></WeekCalendar>
+    <WeekCalendar></WeekCalendar>
     <hr />
     <div class="row">
+      {{ date }}
       <div
-        v-for="Events in Events"
-        :key="Events.id"
+        v-for="Event in calculateBooksMessage()"
+        :key="Event.id"
         class="col-lg-4 col-md-6 col-sm-12 container_foto"
         variant="gradient"
         color="success"
         data-bs-toggle="modal"
-        :data-bs-target="`#m${Events.id}`"
+        :data-bs-target="`#m${Event.id}`"
       >
         <ModalWindow
-          :id="`m${Events.id}`"
-          :title="Events.title.rendered"
-          :description="Events.excerpt.rendered"
-          :img="Events.fimg_url"
-          :acf="Events.acf"
+          :id="`m${Event.id}`"
+          :title="Event.title.rendered"
+          :description="Event.excerpt.rendered"
+          :img="Event.fimg_url"
+          :acf="Event.acf"
         />
         <div class="container-container">
           <article class="text-left">
-            <h2 v-html="Events.title.rendered"></h2>
-            <h4 v-html="Events.excerpt.rendered"></h4>
+            <h2 v-html="Event.title.rendered"></h2>
+            <h4 v-html="Event.excerpt.rendered"></h4>
           </article>
-          <img :src="Events.fimg_url" />
+          <img :src="Event.fimg_url" />
         </div>
       </div>
     </div>
