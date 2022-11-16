@@ -3,6 +3,7 @@ import PresentationView from "../views/Presentation/PresentationView.vue";
 import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
 import EventsView from "../views/LandingPages/Events/EventsView.vue";
 import SPAView from "../views/LandingPages/SPA/SPAView.vue";
+import TurView from "../views/LandingPages/Tur/TurView.vue";
 import InstitutionView from "../views/LandingPages/Institution/InstitutionView.vue";
 import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
 import AuthorView from "../views/LandingPages/Author/AuthorView.vue";
@@ -48,6 +49,11 @@ const router = createRouter({
       path: "/pages/landing-pages/SPA",
       name: "spa",
       component: SPAView,
+    },
+    {
+      path: "/pages/landing-pages/Tur",
+      name: "tur",
+      component: TurView,
     },
     {
       path: "/pages/landing-pages/Institution",
