@@ -216,25 +216,7 @@ watch(
               />
             </span>
           </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
-            <span
-              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
-            >
-              <i
-                class="material-icons opacity-6 me-2 text-md"
-                :class="getTextColor()"
-                >view_day</i
-              >
-              <a   href="/pages/landing-pages/Tur">ТУРЫ</a>
-              <!--@click="goto('/pages/landing-pages/Events')"-->
 
-              <img
-                :src="getArrowColor()"
-                alt="down-arrow"
-                class="arrow ms-1 d-lg-none d-block ms-auto"
-              />
-            </span>
-          </li>
           <li class="nav-item dropdown dropdown-hover mx-2">
           </li>
         </ul>
