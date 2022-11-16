@@ -10,11 +10,7 @@ const mounth = ref("");
 const date = ref("");
 const Events = ref([]);
 const getEvents = async () => {
-  let url =     "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29"
-  console.log(dataFilter.day)
-  if ( !!dataFilter.day) {
-    url = `https://content.kissloveodsk.ru/wp-json/acf/v3/posts?openday=${dataFilter.day}&openmounth=${dataFilter.mounth}`
-  }
+const url =     "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29"
   return fetch(
     url
   ).then((response) => response.json());
@@ -27,7 +23,6 @@ onMounted(() => {
 </script>
 <template>
   <div class="container" style="margin-top: 50px">
-    {{ dataFilter }}
     <WeekCalendar @click=getEvents()></WeekCalendar>
     <hr />
     <div class="row">

@@ -24,6 +24,11 @@ const get = async (c) => {
     Institutions.value = data;
   });
 };
+function parseSrc (rendered){
+  let listArr = []
+  rendered.split("alt=\"").forEach(element => listArr.push(element.split("src=\"")[1] ));
+  return  listArr
+}
 </script>
 <template>
   <div class="row">
@@ -51,6 +56,7 @@ const get = async (c) => {
           :description="Institution.excerpt.rendered"
           :img="Institution.fimg_url"
           :acf="Institution.acf"
+          :content="parseSrc(Institution?.content.rendered)"
         />
         <div class="container-container">
           <article class="text-left">

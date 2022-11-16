@@ -15,6 +15,9 @@ defineProps({
   img: {
     type: String,
   },
+  content: {
+    type: Object,
+  },
   acf: {
     type: Object,
   },
@@ -50,11 +53,6 @@ defineProps({
                         v-model="acf.рейтинг"
                       />
                       <p v-html="acf.card_content"></p>
-                      <a v-if="acf.меню" :href="`${acf.меню}`"
-                        ><img
-                          src="@/assets/img/Меню.png"
-                          style="width: 80px; height: 80px"
-                      /></a>
 
                       <!-- {{ acf.фото }}
                       { acf.openHour }}
@@ -64,40 +62,6 @@ defineProps({
 
                       {{ acf.whatsapp }}
 
-                      <MaterialButton
-                        variant="contained"
-                        color="success"
-                        v-if="acf.видео"
-                      >
-                        <a :href="`${acf.видео}`" target="_blank"> Видео </a>
-                      </MaterialButton>
-                      <MaterialButton
-                        variant="contained"
-                        color="success"
-                        v-if="acf.видео"
-                      >
-                        <a :href="`${acf.видео}`" target="_blank"> Альбом </a>
-                      </MaterialButton>
-
-                      <MaterialButton
-                        variant="outline"
-                        color="info"
-                        class="w-auto me-2"
-                        v-if="acf.адрес"
-                      >
-                        <a :href="`${acf.адрес}`" target="_blank">
-                          {{ acf.адрес }}
-                        </a>
-                      </MaterialButton>
-
-                      <MaterialButton
-                        variant="outline"
-                        color="info"
-                        class="w-auto me-2"
-                        v-if="acf.телефон"
-                      >
-                        <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
-                      </MaterialButton>
                       <div
                         class="btn-group btn-group-md"
                         role="group"
@@ -115,6 +79,47 @@ defineProps({
                 >
                   Закрыть
                 </MaterialButton>
+
+                <MaterialButton
+                  variant="contained"
+                  color="success"
+                  v-if="acf.видео"
+                >
+                  <a :href="`${acf.видео}`" target="_blank"> Видео </a>
+                </MaterialButton>
+                <a v-if="acf.меню" :href="`${acf.меню}`" target="_blank">
+                  <img
+                    src="@/assets/img/Меню.png"
+                    style="width: 80px; height: 80px"
+                /></a>
+                <MaterialButton
+                  variant="outline"
+                  color="info"
+                  class="w-auto me-2"
+                  v-if="acf.адрес"
+                >
+                  <a :href="`${acf.адрес}`" target="_blank">
+                    {{ acf.адрес }}
+                  </a>
+                </MaterialButton>
+                <MaterialButton
+                  variant="outline"
+                  color="info"
+                  class="w-auto me-2"
+                  v-if="acf.телефон"
+                >
+                  <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
+                </MaterialButton>
+              </div>
+
+              <div class="modal-footer justify-content-between">
+                <img
+                  v-for="src in content"
+                  :src="src"
+                  :alt="src"
+                  :key="src"
+                  style="width: 100%"
+                />
               </div>
             </div>
           </div>
@@ -162,7 +167,7 @@ defineProps({
 .star-rating__ico:hover:before,
 .star-rating__ico:hover ~ .star-rating__ico:before,
 .star-rating__input:checked ~ .star-rating__ico:before {
-  content: "\f005";
+  content: "f005";
 }
 
 .card {
