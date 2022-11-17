@@ -97,24 +97,6 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
             ]"
           />
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="text-center mt-5">
-              <i class="fa fa-lock" aria-hidden="true"></i> Secured Payment by
-              <b> 2Checkout </b> with: <br /><br />
-              <i class="fa fa-cc-paypal fa-2x me-1" aria-hidden="true"></i>
-              <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
-              <i class="fa fa-cc-mastercard fa-2x mx-1" aria-hidden="true"></i>
-              <i class="fa fa-cc-amex fa-2x" aria-hidden="true"></i>
-            </p>
-            <p class="text-center max-width-500 mx-auto">
-              <b>Info:</b> If you are a Registered Компания inside the European
-              Union you will be able to add your VAT ID after your Press "Buy
-              Now"
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </template>
