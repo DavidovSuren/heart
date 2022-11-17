@@ -58,7 +58,7 @@ function parseSrc (rendered){
           :acf="Institution.acf"
           :content="parseSrc(Institution?.content.rendered)"
           :openHour="Institution.acf.openHour"
-          :workPeriod="Institution.acf.workperiod"
+          :workPeriod="Institution.acf.openPeriod"
         />
         <div class="container-container">
           <article class="text-left">

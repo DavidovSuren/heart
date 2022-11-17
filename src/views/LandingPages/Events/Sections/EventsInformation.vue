@@ -51,7 +51,7 @@ function calculateBooksMessage(date, mounth) {
           :img="Event.fimg_url"
           :acf="Event.acf"
           :openHour="Event.acf.openHour"
-          :workPeriod="Event.acf.workperiod"
+          :workPeriod="Event.acf.openPeriod"
         />
         <div class="container-container">
           <article class="text-left">
