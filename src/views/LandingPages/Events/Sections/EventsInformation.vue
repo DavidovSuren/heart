@@ -6,9 +6,9 @@ import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/
 import { dateEventStore } from "@/stores/pinia";
 
 const dataFilter = dateEventStore();
-const current = new Date();
-const mounth = dataFilter?.mounth ;
-const date =  dataFilter ?  dataFilter?.day : current.getDate(); //todo not worc auto today filter
+
+const mounth =  dataFilter?.mounth ; 
+const date =  dataFilter?.day ; 
 const Events = ref([]);
 const getEvents = async () => {
   const url =
@@ -19,6 +19,7 @@ onMounted(() => {
   getEvents().then((data) => {
     Events.value = data;
   });
+  
 });
 function calculateBooksMessage(date, mounth) {
   console.log(date)
@@ -34,7 +35,6 @@ function calculateBooksMessage(date, mounth) {
     <WeekCalendar></WeekCalendar>
     <hr />
     <div class="row">
-      {{ date }}
       <div
         v-for="Event in calculateBooksMessage()"
         :key="Event.id"

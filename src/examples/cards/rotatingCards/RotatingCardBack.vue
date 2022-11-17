@@ -26,7 +26,9 @@ defineProps({
     class="back back-background"
     :style="{
       backgroundImage: `url(${image})`,
-      backgroundSize: 'cover',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
     }"
   >
     <div class="card-body pt-7 text-center">
@@ -48,3 +50,12 @@ defineProps({
     </div>
   </div>
 </template>
+
+<style>
+.back::after {
+  background-image: none !important;
+}
+.back h3 {
+  font-size: 1.5rem;
+}
+</style>
