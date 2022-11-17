@@ -51,3 +51,11 @@ defineProps({
   </div>
 </template>
 
+<style>
+.back::after {
+  background-image: none !important;
+}
+.back h3 {
+  font-size: 1.5rem;
+}
+</style>
