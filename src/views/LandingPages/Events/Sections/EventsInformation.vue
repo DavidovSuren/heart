@@ -1,6 +1,6 @@
 <script setup>
 // example components
-import { onMounted, ref, reactive, computed } from "vue";
+import { onMounted, ref } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 import { dateEventStore } from "@/stores/pinia";
@@ -20,10 +20,6 @@ onMounted(() => {
     Events.value = data;
   });
 });
-let filtredEvents = computed(() => {
-  return Events.value.filter((todo) => todo.acf.openday === date);
-});
-
 function calculateBooksMessage(date, mounth) {
   console.log(date)
   return Events.value.filter(
@@ -54,6 +50,8 @@ function calculateBooksMessage(date, mounth) {
           :description="Event.excerpt.rendered"
           :img="Event.fimg_url"
           :acf="Event.acf"
+          :openHour="Event.acf.openHour"
+          :workPeriod="Event.acf.workperiod"
         />
         <div class="container-container">
           <article class="text-left">

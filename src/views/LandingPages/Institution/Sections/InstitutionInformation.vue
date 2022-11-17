@@ -57,6 +57,8 @@ function parseSrc (rendered){
           :img="Institution.fimg_url"
           :acf="Institution.acf"
           :content="parseSrc(Institution?.content.rendered)"
+          :openHour="Institution.acf.openHour"
+          :workPeriod="Institution.acf.workperiod"
         />
         <div class="container-container">
           <article class="text-left">

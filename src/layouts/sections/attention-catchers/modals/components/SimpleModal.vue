@@ -1,8 +1,9 @@
 <script setup>
+import { computed } from "vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 import MaterialBadge from "@/components/MaterialBadge.vue";
 
-defineProps({
+const modalProps = defineProps({
   id: {
     type: String,
   },
@@ -15,12 +16,28 @@ defineProps({
   img: {
     type: String,
   },
+  openHour: {
+    type: String,
+  },
+  workPeriod: {
+    type: String,
+  },
   content: {
     type: Object,
   },
   acf: {
     type: Object,
   },
+});
+const clouseHour = computed(() => {
+  return (modalProps.openHour + modalProps.workPeriod) % 24; // date.getHours() < openHour.value + workPeriod.value ? 'green' : 'red'
+});
+const isOpen = computed(() => {
+  const date = new Date();
+  return date.getHours() &&
+    date.getHours() < modalProps.openHour + modalProps.workPeriod
+    ? 1
+    : 0;
 });
 </script>
 <template>
@@ -52,10 +69,24 @@ defineProps({
                         disableClick="true"
                         v-model="acf.рейтинг"
                       />
+
+                      <div class="col">
+                        <p class="pTime sTitle" v-if="openHour && workPeriod">
+                          <i v-if="isOpen" class="material-icons text-gradient text-success text-2xl">done</i>
+                          <span style="color: red" v-if="!isOpen">
+                            Закрыто
+                          </span>
+                          {{ openHour }}:00 -{{ clouseHour }}:00
+                        </p>
+                        <p class="pTime sTitle" v-if="!openHour">
+                          {{ opentime }}
+                        </p>
+                      </div>
+
                       <p v-html="acf.card_content"></p>
 
                       <!-- {{ acf.фото }}
-                      { acf.openHour }}
+                      
                       {{ acf.openday }}
                       {{ acf.openminute }}
                       {{ acf.openmounth }}-->
