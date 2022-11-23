@@ -12,7 +12,7 @@ const date =  dataFilter?.day ;
 const Events = ref([]);
 const getEvents = async () => {
   const url =
-    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29";
+    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29&per_page=100";
   return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
