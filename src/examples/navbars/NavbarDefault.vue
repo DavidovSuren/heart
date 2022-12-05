@@ -120,7 +120,7 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        СЕРДЦЕ ГОРОДА
+        СЕРДЦЕ ГОРОДА КИСЛОВОДСКА
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -206,7 +206,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              <a   href="/pages/landing-pages/Institution">ПИТАНИЕ</a>
+              <a   href="/pages/landing-pages/Institution">ГДЕ ПОЕСТЬ</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
 
               <img

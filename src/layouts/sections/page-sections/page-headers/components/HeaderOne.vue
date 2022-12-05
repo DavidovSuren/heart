@@ -13,7 +13,7 @@ const bgImage =
     >
       <div class="container">
         <a class="navbar-brand text-white" href="javascript:;"
-          >СЕРДЦЕ ГОРОДА</a
+          >СЕРДЦЕ ГОРОДА КИСЛОВОДСКА</a
         >
         <button
           class="navbar-toggler"
