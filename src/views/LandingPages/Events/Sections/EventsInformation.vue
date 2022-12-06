@@ -4,9 +4,21 @@ import { onMounted, ref } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 import { dateEventStore } from "@/stores/pinia";
-
+const nameMounth = [
+  "января",
+  "февраля",
+  "марта",
+  "апреля",
+  "мая",
+  "июня",
+  "июля",
+  "августа",
+  "сентября",
+  "октября",
+  "ноября",
+  "декабря",
+];
 const dataFilter = dateEventStore();
-
 const mounth =  dataFilter?.mounth ; 
 const date =  dataFilter?.day ; 
 const Events = ref([]);
@@ -21,14 +33,18 @@ onMounted(() => {
   });
   
 });
-function calculateBooksMessage(date, mounth) {
-  console.log(date)
-  return Events.value.filter(
+function calculateBooksMessage() {
+  let EventsList = Events.value.filter(
     (todo) =>
       todo.acf?.openday == dataFilter?.day &&
       todo.acf?.openmounth == dataFilter?.mounth
   );
+  if (EventsList.length == 0) {
+    EventsList = Events.value
+  }
+  return EventsList
 }
+
 </script>
 <template>
   <div class="container" style="margin-top: 50px">
@@ -58,6 +74,9 @@ function calculateBooksMessage(date, mounth) {
             <h2 v-html="Event.title.rendered"></h2>
             <h4 v-html="Event.excerpt.rendered"></h4>
           </article>
+          <span class="text-right">
+            {{ Event.acf.openday }} {{nameMounth[Event.acf.openmounth-1]}}
+          </span>
           <img :src="Event.fimg_url" />
         </div>
       </div>
@@ -85,6 +104,17 @@ function calculateBooksMessage(date, mounth) {
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.text-right {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color:white;
+  z-index: 100;
+  background-color: rgba(36, 45, 81, 1);
+  padding: 3px;
 }
 
 .container_foto h2 {
