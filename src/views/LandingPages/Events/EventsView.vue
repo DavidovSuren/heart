@@ -52,7 +52,7 @@ onUnmounted(() => {
       class="page-header min-vh-75"
       :style="{ backgroundImage: `url(${bg1})` }"
     >
-      <span class="mask bg-gradient-dark opacity-6"></span>
+      <span class="mask bg-gradient-dark opacity-4"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
