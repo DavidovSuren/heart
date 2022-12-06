@@ -58,7 +58,7 @@ import imageSrc from "@/assets/img/Gorod.jpeg"
               icon="content_copy"
               title="Новости"
               description="КИСЛОВОДСКА."
-                  link="https://ria.ru/location_Kislovodsk/"
+                  link="https://kislovodsk-kurort.org/press-tsentr/news"
             />
           </div>
         </div>
