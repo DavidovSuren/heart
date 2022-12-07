@@ -73,7 +73,7 @@ const {
   nextWeekEnabled,
   listeners,
   selectedDates,
-} = useWeeklyCalendar({ fullWeeks: false, infinite: true });
+} = useWeeklyCalendar({ fullWeeks: true, infinite: true });
 
 const weekdays = useWeekdays();
 
