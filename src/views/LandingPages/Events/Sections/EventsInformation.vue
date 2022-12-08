@@ -1,9 +1,15 @@
 <script setup>
 // example components
+/*
+https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/
+*/
 import { onMounted, ref } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 import { dateEventStore } from "@/stores/pinia";
+import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
+
 const nameMounth = [
   "января",
   "февраля",
@@ -40,13 +46,73 @@ function calculateBooksMessage() {
       todo.acf?.openmounth == dataFilter?.mounth
   );
   if (EventsList.length == 0) {
-    EventsList = Events.value
+    EventsList = Events.value.filter(
+      (todo) =>
+        todo.acf?.openday > dataFilter?.day &&
+        todo.acf?.openmounth >= 12
+    );
   }
-  return EventsList
+  console.log(dataFilter?.day, dataFilter.mounth, EventsList);
+  return EventsList;
 }
+
+const places = [
+  {
+    title: "11",
+    img: "https://vitest.dev/logo-shadow.svg",
+    url: "http://1",
+  },
+  {
+    title: "12",
+    img: "https://vitest.dev/logo-shadow.svg",
+    url: "http://1",
+  },
+  {
+    title: "13",
+    img: "https://vitest.dev/logo-shadow.svg",
+    url: "http://1",
+  },
+  {
+    title: "14",
+    img: "https://vitest.dev/logo-shadow.svg",
+    url: "http://1",
+  },
+  {
+    title: "15",
+    img: "https://vitest.dev/logo-shadow.svg"
+  },
+  {
+    title: "16",
+    img: "https://vitest.dev/logo-shadow.svg"
+  },
+  {
+    title: "17",
+    img: "https://vitest.dev/logo-shadow.svg"
+  },
+  {
+    title: "18",
+    img: "https://vitest.dev/logo-shadow.svg"
+  },
+];
 
 </script>
 <template>
+  <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
+    <Slide v-for="slide in places" :key="slide.title">
+      <div class="carousel__item container_foto">
+        <div class="container-container">
+          <article class="text-left">
+            <h2 style="color: #fff">{{ slide.title }}</h2>
+          </article>
+          <a :href="slide.url"><img :src="slide.img" /></a>
+        </div>
+      </div>
+    </Slide>
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </Carousel>
   <div class="container" style="margin-top: 50px">
     <WeekCalendar></WeekCalendar>
     <hr />
@@ -84,6 +150,45 @@ function calculateBooksMessage() {
   </div>
 </template>
 <style>
+.carousel__slide {
+  padding: 5px;
+}
+
+.carousel__viewport {
+  perspective: 2000px;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: 0.5s;
+}
+
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
+}
+
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1.1);
+}
 .container-container {
   margin: 10px;
   background-color: rgb(25, 40, 139);
