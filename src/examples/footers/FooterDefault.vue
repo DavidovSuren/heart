@@ -43,7 +43,7 @@ defineProps({
           },
           {
             name: "Gmail",
-            href: "https://davidov05101996@gmail.com",
+            href: "post@artclip.ru",
           },
         ],
       },
