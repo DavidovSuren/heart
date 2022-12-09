@@ -5,6 +5,7 @@ https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/
 */
 import { onMounted, ref } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
+import MonthCalendar from "@/components/MonthCalendar.vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 import { dateEventStore } from "@/stores/pinia";
 import { Carousel, Pagination, Slide, Navigation } from "vue3-carousel";
@@ -116,7 +117,7 @@ const places = [
     </template>
   </Carousel>
   <div class="container" style="margin-top: 50px">
-    <WeekCalendar></WeekCalendar>
+    <MonthCalendar></MonthCalendar>
     <hr />
     <div class="row">
       <div
