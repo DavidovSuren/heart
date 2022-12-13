@@ -32,7 +32,7 @@ function parseSrc (rendered){
 </script>
 <template>
   <div class="row">
-    <div class="text-right col-lg-6" style="text-align: right">
+    <div class="col-lg-6" style="text-align: right">
       <button type="button" class="btn btn-success btn-lg" @click="get('rest')">РЕСТОРАНЫ</button>
     </div>
     <div class="col-lg-6">
