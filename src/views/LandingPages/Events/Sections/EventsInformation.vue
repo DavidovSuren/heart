@@ -101,7 +101,7 @@ const places = [
 const museums = ref(false);
 </script>
 <template>
-  <span @click="museums = true">Музеи</span>
+  <button class="btn bg-gradient-success btn-lg" style="width: 150px" @click="museums = true">МУЗЕИ</button>
   <div v-if="museums">
     <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
       <Slide v-for="slide in places" :key="slide.title">
