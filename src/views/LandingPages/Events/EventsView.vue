@@ -49,18 +49,18 @@ onUnmounted(() => {
   </div>
   <header class="bg-gradient-dark">
     <div
-      class="page-header min-vh-90"
+      class="page-header min-vh-95"
       :style="{ backgroundImage: `url(${bg1})` }"
     >
-      <span class="mask bg-gradient-dark opacity-2"></span>
+      <span class="mask bg-gradient-dark opacity-0"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
-            <h1 class="text-white">
-              ЧТО ДЕЛАТЬ В  <span class="text-white" id="typed"></span>
+            <h1 class="text-white" style="font-size: 6em; text-shadow: 1px 1px 2px gold, 0 0 0em black, 0 0 0.2em black;">
+              ЧТО ДЕЛАТЬ В КИСЛОВОДСКЕ <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
-              <h1>КИСЛОВОДСКЕ</h1>
+              <h1></h1>
             </div>
           </div>
         </div>
