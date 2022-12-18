@@ -245,3 +245,10 @@ const click = (l) => {
   window.location.href = l;
 };
 </script>
+<style>
+@media (orientation: portrait) {
+  .navbar-brand.d-block {
+    display: none !important;
+  }
+}
+</style>

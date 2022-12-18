@@ -40,7 +40,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-<div class="container position-sticky z-index-sticky top-0">
+  <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
         <NavbarDefault :sticky="true" />
@@ -48,15 +48,12 @@ onUnmounted(() => {
     </div>
   </div>
   <header class="bg-gradient-dark">
-    <div
-      class="page-header min-vh-95"
-      :style="{ backgroundImage: `url(${bg1})` }"
-    >
+    <div class="page-header" :style="{ backgroundImage: `url(${bg1})` }">
       <span class="mask bg-gradient-dark opacity-0"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
-            <h1 class="text-white" style="font-size: 6em; text-shadow: 1px 1px 2px gold, 0 0 0em black, 0 0 0.2em black;">
+            <h1 class="text-white">
               ЧТО ДЕЛАТЬ В КИСЛОВОДСКЕ <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
@@ -75,3 +72,30 @@ onUnmounted(() => {
   </div>
   <DefaultFooter />
 </template>
+<style>
+h1 {
+  font-size: 6em !important;
+  text-shadow: 1px 1px 2px gold, 0 0 0em black, 0 0 0.2em black;
+}
+
+.page-header {
+  min-height: 95vh !important;
+}
+
+@media (orientation: portrait) {
+  h1 {
+    font-size: 1.75em !important;
+    margin-top: 6em !important;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgb(99, 89, 31), 0 0 0em black, 0 0 0.2em black;
+  }
+
+  .page-header {
+    min-height: 30vh !important;
+  }
+  .avatar-container {display: none;}
+  .card-body.mt-n6 {
+    margin-top: 0 !important;
+  }
+}
+</style>

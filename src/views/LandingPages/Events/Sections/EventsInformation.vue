@@ -99,11 +99,26 @@ const places = [
   },
 ];
 const museums = ref(false);
+let carouselToShow = 3.95;
+switch (screen.orientation.type) {
+  case 'landscape-secondary':
+  case 'landscape-primary':
+  carouselToShow = 3.95;
+    console.log('landscape')
+    break
+  case 'portrait-secondary':
+  case 'portrait-primary':
+    carouselToShow = 1;
+    console.log('portrait')
+    break
+  default:
+    console.log('The orientation API isn`t supported in this browser :(')
+}
 </script>
 <template>
   <button class="btn bg-gradient-success btn-lg" style="width: 300px" @click="museums = true">МУЗЕИ, ЦИРК, ДЕЛЬФИНАРИЙ</button>
   <div v-if="museums">
-    <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
+    <Carousel :itemsToShow="carouselToShow" :wrapAround="true" :transition="500">
       <Slide v-for="slide in places" :key="slide.title">
         <div class="carousel__item container_foto">
           <div class="container-container">
