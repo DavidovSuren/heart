@@ -136,7 +136,10 @@ watch(
       >
         СЕРДЦЕ ГОРОДА
       </RouterLink>
-      <a class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
+      <a
+        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
+        data-bs-toggle="modal"
+        data-bs-target="#excursionsModal"
         >Бесплатные экскурсии</a
       >
       <button
