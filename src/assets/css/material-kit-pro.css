@@ -19068,9 +19068,7 @@ label,
   background-image: linear-gradient(195deg, #747b8a 0%, #495361 100%);
 }
 
-.bg-gradient-success {
-  background-image: linear-gradient(195deg, #66BB6A 0%, #43A047 100%);
-}
+
 
 .bg-gradient-info {
   background-image: linear-gradient(195deg, #49a3f1 0%, #1A73E8 100%);

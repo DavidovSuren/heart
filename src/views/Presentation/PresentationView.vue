@@ -138,7 +138,7 @@ onUnmounted(() => {
               label="vkontakte"
             />
             <MaterialSocialButton
-              route="https://web.telegram.org/z/#DavydoV_Sss"
+              route="https://web.telegram.org/z/#"
               component="telegram"
               color="instagram"
               label="TELEGRAM"
