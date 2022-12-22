@@ -22,7 +22,7 @@ import { RouterView } from "vue-router";
 
 <style>
 .bg-gradient-success {
-   background-image: linear-gradient(195deg, rgba(31, 101, 119, 0.771) 10%, #EEE757 100%)!important;
+   background-image: linear-gradient(195deg, rgba(14, 43, 76, 0.919) 70%, #EEE757 100%)!important;
 
 }
 .vue3-star-ratings__wrapper {
