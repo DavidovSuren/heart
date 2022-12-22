@@ -114,6 +114,11 @@ switch (screen.orientation.type) {
   default:
     console.log('The orientation API isn`t supported in this browser :(')
 }
+const calItems = ref();
+const calClick = () => {
+  console.log('ClickCal');
+  calItems.value.scrollIntoView({ behavior: "smooth" });
+}
 </script>
 <template>
   <button class="btn bg-gradient-success btn-lg" style="width: 300px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
@@ -136,9 +141,9 @@ switch (screen.orientation.type) {
     </Carousel>
   </div>
   <div class="container" style="margin-top: 10px">
-    <MonthCalendar></MonthCalendar>
+    <MonthCalendar @click="calClick"></MonthCalendar>
     <hr />
-    <div class="row">
+    <div class="row" ref="calItems">
       <div
         v-for="Event in calculateBooksMessage()"
         :key="Event.id"
