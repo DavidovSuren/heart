@@ -135,7 +135,7 @@ switch (screen.orientation.type) {
       </template>
     </Carousel>
   </div>
-  <div class="container" style="margin-top: 50px">
+  <div class="container" style="margin-top: 10px">
     <MonthCalendar></MonthCalendar>
     <hr />
     <div class="row">
