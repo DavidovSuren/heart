@@ -116,7 +116,7 @@ switch (screen.orientation.type) {
 }
 </script>
 <template>
-  <button class="btn bg-gradient-success btn-lg" style="width: 300px" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
+  <button class="btn bg-gradient-success btn-lg" style="width: 300px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
   <div v-if="museums">
     <Carousel :itemsToShow="carouselToShow" :wrapAround="true" :transition="500">
       <Slide v-for="slide in places" :key="slide.title">
