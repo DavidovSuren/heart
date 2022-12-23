@@ -129,7 +129,7 @@ const isOpen = computed(() => {
                   class="w-auto me-2"
                   v-if="acf.адрес"
                 >
-                  <a :href="`${acf.адрес}`" target="_blank">
+                  <a :href="`https://www.google.com/maps/dir//${acf.адрес}`" target="_blank">
                     {{ acf.адрес }}
                   </a>
                 </MaterialButton>
