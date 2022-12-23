@@ -1,16 +1,13 @@
 <script setup>
-import logoDark from "@/assets/img/logo-ct-dark.png";
 import ExcursionsModal from "../../layouts/sections/attention-catchers/modals/components/ExcursionsModal.vue";
 
 defineProps({
   brand: {
     type: Object,
     name: String,
-    logo: String,
     route: "",
     default: () => ({
-      name: "Сердце города",
-      logo: logoDark,
+      name: "Сердце города КИСЛОВОДСКА",
       route: "/",
     }),
   },
@@ -24,14 +21,11 @@ defineProps({
     },
     default: () => [
       {
-        name: "Компания",
+        name: "Мы использьуем Cookie",
         items: [
-          {
-            name: "Партнерская программа",
-          },
 
           {
-            name: "Мы использьуем Cookie",
+            name: "",
           },
         ],
       },
@@ -39,11 +33,11 @@ defineProps({
         name: "Контакты",
         items: [
           {
-            name: "+7 (984) 444 4068 ",
+            name: "+7 (905) 467 3086 ",
           },
           {
             name: "Gmail",
-            href: "post@artclip.ru",
+            href: "",
           },
         ],
       },
@@ -66,9 +60,6 @@ defineProps({
       <div class="row">
         <div class="col-md-3 mb-4 ms-auto">
           <div>
-            <a :href="brand.route">
-              <img :src="brand.logo" class="mb-3 footer-logo" alt="main_logo" />
-            </a>
             <h6 class="font-weight-bolder mb-4">{{ brand.name }}</h6>
           </div>
           <div>
@@ -109,7 +100,7 @@ defineProps({
             <p class="text-dark my-4 text-sm font-weight-normal">
               Все права защищены. Авторские права ©
               {{ new Date().getFullYear() }}
-              Сердце города
+              Сердце города КИСЛОВОДСКА
             </p>
           </div>
         </div>
