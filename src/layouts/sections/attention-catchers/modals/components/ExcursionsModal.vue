@@ -28,7 +28,7 @@
                 </MaterialButton>
               </div>
               <div class="modal-body" color="green"
-              ><!--<img src="@/assets/img/adm.jpeg" style="margin-left: 0px; margin-right: auto; width: 100px" >--><img src="@/assets/img/adm1.jpeg" style="margin-left: 8px; margin-right: auto; width: 350px" >
+              ><!--<img src="@/assets/img/adm.jpeg" style="margin-left: 0px; margin-right: auto; width: 100px" >--><img src="@/assets/img/adm.jpeg" style="margin-left: 8px; margin-right: auto; width: 350px" >
               <h5 class="modal-title" id="exampleModalLabel">
                   Администрация города-курорта Кисловодск 
                 </h5>
