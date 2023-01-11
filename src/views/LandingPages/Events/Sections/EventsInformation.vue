@@ -48,7 +48,7 @@ function calculateBooksMessage() {
   if (EventsList.length == 0) {
     EventsList = Events.value.filter(
       (todo) =>
-        todo.acf?.openday > dataFilter?.day && todo.acf?.openmounth >= 12
+        todo.acf?.openday > dataFilter?.day && todo.acf?.openmounth >= 1 && todo.acf?.openmounth <= 3
     );
   }
   console.log(dataFilter?.day, dataFilter.mounth, EventsList);
@@ -141,7 +141,7 @@ const calClick = () => {
     </Carousel>
   </div>
   <div class="container" style="margin-top: 10px">
-    <MonthCalendar @click="calClick"></MonthCalendar>
+    <WeekCalendar @click="calClick"></WeekCalendar>
     <hr />
     <div class="row" ref="calItems">
       <div
