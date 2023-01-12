@@ -9,7 +9,7 @@
       <div class="actions">
         <button :disabled="!prevWeekEnabled" @click="prevWeek" class="btn bg-gradient-success btn-sm false false m-2">-</button>
 
-       <span class="m-3"> {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}</span>
+        <span class="m-3"> {{ nameMounth[currentWeek.month] }} - {{ currentWeek.year }}</span>
 
         <button :disabled="!nextWeekEnabled" @click="nextWeek" class="btn bg-gradient-success btn-sm false false m-2">+</button>
       </div>
@@ -94,7 +94,7 @@ watch(selectedDates, (newValue, oldValue) => {
 .actions {
   display: flex;
   justify-content: space-between;
-  margin: 10px 200px 0px 200px;
+  margin: 10px 0;
 }
 
 .month {
