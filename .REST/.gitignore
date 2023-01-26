@@ -1,0 +1,4 @@
+env/
+upload/
+__pycache__
+db.sqlite3
