@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from "vue";
 import MaterialButton from "@/components/MaterialButton.vue";
-import MaterialBadge from "@/components/MaterialBadge.vue";
 
 const modalProps = defineProps({
   id: {

@@ -5,13 +5,12 @@ https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/
 */
 import { onMounted, ref } from "vue";
 import WeekCalendar from "@/components/WeekCalendar.vue";
-import MonthCalendar from "@/components/MonthCalendar.vue";
-import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
+import ModalWindow from "./EventsModal.vue";
 import { dateEventStore } from "@/stores/pinia";
 import { Carousel, Pagination, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 
-const nameMounth = [
+const nameMonth = [
   "января",
   "февраля",
   "марта",
@@ -25,13 +24,12 @@ const nameMounth = [
   "ноября",
   "декабря",
 ];
-const dataFilter = dateEventStore();
-const mounth = dataFilter?.mounth;
-const date = dataFilter?.day;
+
+const dateFilter = dateEventStore();
 const Events = ref([]);
 const getEvents = async () => {
   const url =
-    "https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=29&per_page=100";
+    "https://кисловодск.онлайн/rest/api/events/?format=json&ordering=date";
   return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
@@ -39,21 +37,35 @@ onMounted(() => {
     Events.value = data;
   });
 });
-function calculateBooksMessage() {
-  let EventsList = Events.value.filter(
-    (todo) =>
-      todo.acf?.openday == dataFilter?.day &&
-      todo.acf?.openmounth == dataFilter?.mounth
-  );
-  if (EventsList.length == 0) {
-    EventsList = Events.value.filter(
-      (todo) =>
-        todo.acf?.openday > dataFilter?.day && todo.acf?.openmounth >= 1 && todo.acf?.openmounth <= 3
-    );
+
+const calcEvents = () => {
+  const thisMonth = dateFilter.month;
+  const thisDay = dateFilter.day;
+  let EventsList = Events.value.filter((e) => {
+    let cur = new Date(e.date);
+    let day = cur.getDate();
+    let month = cur.getMonth() + 1;
+    if (day === thisDay && month === thisMonth) {
+      e.day = day;
+      e.month = nameMonth[month - 1];
+      return e;
+    }
+  });
+  if (EventsList.length === 0) {
+    EventsList = Events.value.filter((e) => {
+      let cur = new Date(e.date);
+      let day = cur.getDate();
+      let month = cur.getMonth() + 1;
+      if (month === thisMonth) {
+        e.day = day;
+        e.month = nameMonth[month - 1];
+        return e;
+      }
+    });
   }
-  console.log(dataFilter?.day, dataFilter.mounth, EventsList);
+  console.log(thisDay, thisMonth, EventsList);
   return EventsList;
-}
+};
 
 const places = [
   {
@@ -103,7 +115,7 @@ let carouselToShow = 3.95;
 switch (screen.orientation.type) {
   case 'landscape-secondary':
   case 'landscape-primary':
-  carouselToShow = 3.95;
+    carouselToShow = 3.95;
     console.log('landscape')
     break
   case 'portrait-secondary':
@@ -116,12 +128,14 @@ switch (screen.orientation.type) {
 }
 const calItems = ref();
 const calClick = () => {
+  // calcEvents();
   console.log('ClickCal');
   calItems.value.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 <template>
-  <button class="btn bg-gradient-success btn-lg" style="width: 300px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
+  <button class="btn bg-gradient-success btn-lg" style="width: 300px; margin-left: 20px;"
+    @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
   <div v-if="museums">
     <Carousel :itemsToShow="carouselToShow" :wrapAround="true" :transition="500">
       <Slide v-for="slide in places" :key="slide.title">
@@ -144,33 +158,19 @@ const calClick = () => {
     <WeekCalendar @click="calClick"></WeekCalendar>
     <hr />
     <div class="row" ref="calItems">
-      <div
-        v-for="Event in calculateBooksMessage()"
-        :key="Event.id"
-        class="col-lg-4 col-md-6 col-sm-12 container_foto"
-        variant="gradient"
-        color="success"
-        data-bs-toggle="modal"
-        :data-bs-target="`#m${Event.id}`"
-      >
-        <ModalWindow
-          :id="`m${Event.id}`"
-          :title="Event.title.rendered"
-          :description="Event.excerpt.rendered"
-          :img="Event.fimg_url"
-          :acf="Event.acf"
-          :openHour="Event.acf.openHour"
-          :workPeriod="Event.acf.openPeriod"
-        />
+      <div v-for="Event in calcEvents()" :key="Event.id" class="col-lg-4 col-md-6 col-sm-12 container_foto"
+        variant="gradient" color="success" data-bs-toggle="modal" :data-bs-target="`#m${Event.id}`">
+        <ModalWindow :id="`m${Event.id}`" :title="Event.title" :description="Event.description" :img="Event.img"
+          :date="Event.day + ' ' + Event.month" />
         <div class="container-container">
           <article class="text-left">
-            <h2 v-html="Event.title.rendered"></h2>
-            <h4 v-html="Event.excerpt.rendered"></h4>
+            <h2 v-html="Event.title"></h2>
           </article>
           <span class="text-right">
-            {{ Event.acf.openday }} {{ nameMounth[Event.acf.openmounth - 1] }}
+            {{ Event.day }}
+            {{ Event.month }}
           </span>
-          <img :src="Event.fimg_url" />
+          <img :src="Event.img" />
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@ const calClick = () => {
   transform: rotateY(-20deg) scale(0.9);
 }
 
-.carousel__slide--active ~ .carousel__slide {
+.carousel__slide--active~.carousel__slide {
   transform: rotateY(20deg) scale(0.9);
 }
 
@@ -216,10 +216,12 @@ const calClick = () => {
   opacity: 1;
   transform: rotateY(0) scale(1.1);
 }
+
 .container-container {
   margin: 10px;
   background-color: rgb(25, 40, 139);
 }
+
 .container_foto {
   padding: 0;
   overflow: hidden;

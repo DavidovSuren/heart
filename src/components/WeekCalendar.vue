@@ -80,7 +80,7 @@ const weekdays = useWeekdays();
 watch(selectedDates, (newValue, oldValue) => {
   console.log(selectedDates[0])
   dateEvent.day = selectedDates[0].getDate()
-  dateEvent.mounth = selectedDates[0].getMonth()+1
+  dateEvent.month = selectedDates[0].getMonth()+1
 });
 </script>
 
