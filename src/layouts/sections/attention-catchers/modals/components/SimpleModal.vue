@@ -24,9 +24,30 @@ const modalProps = defineProps({
   content: {
     type: Object,
   },
-  acf: {
+  gallery: {
     type: Object,
+  },  
+  whatsapp: {
+    type: String,
   },
+  card_content: {
+    type: String,
+  },
+  video: {
+    type: String,
+  },
+  menu: {
+    type: String,
+  },  
+  rating: {
+    type: Number,
+  },
+  address: {
+    type: String,
+  },
+  phone: {
+    type: String,
+  },  
 });
 const clouseHour = computed(() => {
   return (modalProps.openHour + modalProps.workPeriod) % 24; // date.getHours() < openHour.value + workPeriod.value ? 'green' : 'red'
@@ -66,7 +87,7 @@ const isOpen = computed(() => {
                         starSize="32"
                         showControl="false"
                         disableClick="true"
-                        v-model="acf.рейтинг"
+                        v-model="rating"
                       />
 
                       <div class="col">
@@ -82,15 +103,9 @@ const isOpen = computed(() => {
                         </p>
                       </div>
 
-                      <p v-html="acf.card_content"></p>
+                      <p v-html="card_content"></p>
 
-                      <!-- {{ acf.фото }}
-                      
-                      {{ acf.openday }}
-                      {{ acf.openminute }}
-                      {{ acf.openmounth }}-->
-
-                      {{ acf.whatsapp }}
+                      {{ whatsapp }}
 
                       <div
                         class="btn-group btn-group-md"
@@ -113,11 +128,11 @@ const isOpen = computed(() => {
                 <MaterialButton
                   variant="contained"
                   color="success"
-                  v-if="acf.видео"
+                  v-if="video"
                 >
-                  <a :href="`${acf.видео}`" target="_blank"> Видео </a>
+                  <a :href="`${video}`" target="_blank"> Видео </a>
                 </MaterialButton>
-                <a v-if="acf.меню" :href="`${acf.меню}`" target="_blank">
+                <a v-if="menu" :href="`${menu}`" target="_blank">
                   <img
                     src="@/assets/img/Меню.png"
                     style="width: 80px; height: 80px"
@@ -126,28 +141,28 @@ const isOpen = computed(() => {
                   variant="outline"
                   color="info"
                   class="w-auto me-2"
-                  v-if="acf.адрес"
+                  v-if="address"
                 >
-                  <a :href="`https://www.google.com/maps/dir//${acf.адрес}`" target="_blank">
-                    {{ acf.адрес }}
+                  <a :href="`https://www.google.com/maps/dir//${address}`" target="_blank">
+                    {{ address }}
                   </a>
                 </MaterialButton>
                 <MaterialButton
                   variant="outline"
                   color="info"
                   class="w-auto me-2"
-                  v-if="acf.телефон"
+                  v-if="phone"
                 >
-                  <a :href="`tel:${acf.телефон}`">{{ acf.телефон }}</a>
+                  <a :href="`tel:${phone}`">{{phone }}</a>
                 </MaterialButton>
               </div>
 
               <div class="modal-footer justify-content-between">
                 <img
-                  v-for="src in content"
-                  :src="src"
-                  :alt="src"
-                  :key="src"
+                  v-for="img in gallery"
+                  :src="img.src"
+                  :alt="img.alt"
+                  :key="img.id"
                   style="width: 100%"
                 />
               </div>
