@@ -1,4 +1,5 @@
 env/
 upload/
+static/
 __pycache__
 db.sqlite3

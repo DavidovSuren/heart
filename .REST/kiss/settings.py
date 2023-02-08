@@ -18,7 +18,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 USE_X_FORWARDED_HOST = True
-FORCE_SCRIPT_NAME = "/rest"
+#FORCE_SCRIPT_NAME = "/rest"
 
 CSRF_TRUSTED_ORIGINS = [
     'https://xn--b1aekhddvbxf.xn--80asehdb'
@@ -42,7 +42,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 SECRET_KEY = 'django-insecure-hi6jweuj!swgfa+kt$l749y)pkl!$a%4ik%f^y0h3pdc9rv)lx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
