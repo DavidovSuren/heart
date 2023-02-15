@@ -1,7 +1,7 @@
 
-from .models import Event, Food
+from .models import Event, Food, FoodGalery
 from rest_framework import filters, viewsets, permissions
-from .serializers import EventSerializer, FoodSerializer
+from .serializers import EventSerializer, FoodSerializer, GalerySerializer
 from django_filters.rest_framework import DjangoFilterBackend
 
 class EventViewSet(viewsets.ModelViewSet):
@@ -20,3 +20,11 @@ class FoodViewSet(viewsets.ModelViewSet):
     serializer_class = FoodSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['category']
+
+class GaleryViewSet(viewsets.ModelViewSet):
+    queryset = FoodGalery.objects.all()
+    permission_classes = [permissions.AllowAny]
+    http_method_names = ['get']
+    serializer_class = GalerySerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['show']

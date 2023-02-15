@@ -45,7 +45,12 @@ class Food(models.Model):
         ]
     )
     category = models.CharField(max_length=1, choices=FOOD_CHOICES, default='с')
-    #galery
 
     def __str__(self):
         return self.title
+
+class FoodGalery(models.Model):
+    show = models.ForeignKey(
+        Food, on_delete=models.CASCADE, related_name="photos"
+    )
+    photo = models.ImageField(upload_to='upload')
