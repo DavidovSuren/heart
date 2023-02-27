@@ -5,17 +5,18 @@ const Institutions = ref([]);
 const getInstitutions = async (c) => {
   let cat = "";
   if (c === "rest") {
-    cat = "30";
+    cat = "r";
   } else if (c === "cafe") {
-    cat = "31";
+    cat = "c";
   } else {
-    cat = "31,30";
+    cat = "";
   }
-  const url = `https://content.kissloveodsk.ru/wp-json/wp/v2/posts?categories=${cat}&per_page=50`;
+  const url = `https://кисловодск.онлайн/rest/api/catering/?format=json&category=${cat}`;
   return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
   getInstitutions("all").then((data) => {
+    console.log(data);
     Institutions.value = data;
   });
 });
@@ -24,23 +25,30 @@ const get = async (c) => {
     Institutions.value = data;
   });
 };
-function parseSrc (rendered){
-  let listArr = []
-  rendered.split("alt=\"").forEach(element => listArr.push(element.split("src=\"")[1] ));
-  return  listArr
+function parseSrc(rendered) {
+  let listArr = [];
+  rendered
+    .split('alt="')
+    .forEach((element) => listArr.push(element.split('src="')[1]));
+  return listArr;
 }
 </script>
 <template>
   <div class="row">
     <div class="col-lg-6" style="text-align: right">
-      <button type="button" class="btn btn-success btn-lg" @click="get('rest')">РЕСТОРАНЫ</button>
+      <button type="button" class="btn btn-success btn-lg" @click="get('rest')">
+        РЕСТОРАНЫ
+      </button>
     </div>
     <div class="col-lg-6">
-      <button type="button" class="btn btn-success btn-lg" @click="get('cafe')">КАФЕ</button>
+      <button type="button" class="btn btn-success btn-lg" @click="get('cafe')">
+        КАФЕ
+      </button>
     </div>
   </div>
   <div class="container" style="margin-top: 20px">
     <div class="row">
+      {{ Institutions.value }}
       <div
         v-for="Institution in Institutions"
         :key="Institution.id"
@@ -52,20 +60,28 @@ function parseSrc (rendered){
       >
         <ModalWindow
           :id="`m${Institution.id}`"
-          :title="Institution.title.rendered"
-          :description="Institution.excerpt.rendered"
-          :img="Institution.fimg_url"
-          :acf="Institution.acf"
-          :content="parseSrc(Institution?.content.rendered)"
-          :openHour="Institution.acf.openHour"
-          :workPeriod="Institution.acf.openPeriod"
+          :title="Institution.title"
+          :description="Institution.description"
+          :img="Institution.img"
+          :rating="Institution.rating"
+          :content="Institution.description"
+          :card_content="Institution.description"
+          :whatsapp="Institution.whatsapp"
+          :openHour="Institution.open"
+          :video = "Institution.video"
+          :menu = "Institution.menu"
+          :workPeriod="Institution?.openPeriod"
+          :phone="Institution?.phone"
+          :address="Institution?.address"
+          :gallery="Institution?.gallery"
+          
         />
         <div class="container-container">
           <article class="text-left">
-            <h2 v-html="Institution.title.rendered"></h2>
-            <h4 v-html="Institution.excerpt.rendered"></h4>
+            <h2 v-html="Institution.title"></h2>
+            <!-- <h4 v-html="Institution.description"></h4> -->
           </article>
-          <img :src="Institution.fimg_url" />
+          <img :src="Institution.img" />
         </div>
       </div>
     </div>
