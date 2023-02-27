@@ -134,12 +134,8 @@ const calClick = () => {
 }
 </script>
 <template>
-<<<<<<< HEAD
-  <button class="btn bg-gradient-success btn-lg" style="width: 305px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
-=======
-  <button class="btn bg-gradient-success btn-lg" style="width: 300px; margin-left: 20px;"
-    @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
->>>>>>> 15e0cd3040d63683105713a4ebecbdb201c7d9ac
+  <button class="btn bg-gradient-success btn-lg" style="width: 320px; margin-left: 20px;" @click="museums = true">10 ПРИЧИН ПОСЕТИТЬ КИСЛОВОДСК </button>
+  <button class="btn bg-gradient-success btn-lg" style="width: 320px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
   <div v-if="museums">
     <Carousel :itemsToShow="carouselToShow" :wrapAround="true" :transition="500">
       <Slide v-for="slide in places" :key="slide.title">
