@@ -49,22 +49,9 @@ onUnmounted(() => {
   </div>
   <header class="bg-gradient-dark">
     <div class="page-header" :style="{ backgroundImage: `url(${bg1})` }">
-      <span class="mask bg-gradient-dark opacity-0"></span>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center mx-auto my-auto">
-            <h1 class="text-white">
-              ЧТО ДЕЛАТЬ В КИСЛОВОДСКЕ <span class="text-white" id="typed"></span>
-            </h1>
-            <div id="typed-strings">
-              <h1></h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div> 
   </header>
-  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+  <div class="card card-body shadow-xl mx-3 mx-md-6 mt-n6">
     <Information />
     <AboutTeam />
     <Featuring />

@@ -33,7 +33,7 @@ defineProps({
         name: "Контакты",
         items: [
           {
-            name: "+7 (905) 467 3086 ",
+            name: "+7 (928) 007 5243 ",
           },
           {
             name: "Gmail",

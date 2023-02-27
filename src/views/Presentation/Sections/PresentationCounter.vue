@@ -6,13 +6,13 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
   <section class="pt-3 pb-4" id="count-stats">
     <div class="container">
       <div class="row">
-        <div class="col-lg-9 z-index-2 border-radius-xl mx-auto py-3">
+        <div class="col-lg-9 z-index-2 border-radius-xl mx-auto py-2">
           <div class="row">
-            <div class="col-md-4 position-relative">
+            <div class="col-md-3 position-relative">
               <DefaultCounterCard
                 color="success"
                 title="Пользователей нам доверяют"
-                :count="190000"
+                :count="250000"
                 suffix="+"
                 :duration="3000"
                 divider="vertical"

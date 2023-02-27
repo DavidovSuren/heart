@@ -86,10 +86,7 @@ const bgImage =
             class="col-lg-6 col-md-7 d-flex justify-content-center flex-column"
           >
             <h1 class="text-white mb-4">Сердце города</h1>
-            <p class="text-white opacity-8 lead pe-5 me-5">
-              The time is now for it be okay to be great. People in this world
-              shun people for being nice.
-            </p>
+           
             <div class="buttons">
               <MaterialButton color="white" class="mt-4"
                 >Get Started</MaterialButton

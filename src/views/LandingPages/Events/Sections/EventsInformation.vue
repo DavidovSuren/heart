@@ -121,7 +121,7 @@ const calClick = () => {
 }
 </script>
 <template>
-  <button class="btn bg-gradient-success btn-lg" style="width: 300px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
+  <button class="btn bg-gradient-success btn-lg" style="width: 305px; margin-left: 20px;" @click="museums = true">УЧРЕЖДЕНИЕ КУЛЬТУРЫ</button>
   <div v-if="museums">
     <Carousel :itemsToShow="carouselToShow" :wrapAround="true" :transition="500">
       <Slide v-for="slide in places" :key="slide.title">
@@ -140,7 +140,7 @@ const calClick = () => {
       </template>
     </Carousel>
   </div>
-  <div class="container" style="margin-top: 10px">
+  <div class="container" style="margin-top: 20px">
     <WeekCalendar @click="calClick"></WeekCalendar>
     <hr />
     <div class="row" ref="calItems">
@@ -178,7 +178,7 @@ const calClick = () => {
 </template>
 <style>
 .carousel__slide {
-  padding: 5px;
+  padding: 3px;
 }
 
 .carousel__viewport {
@@ -194,7 +194,7 @@ const calClick = () => {
 }
 
 .carousel__slide {
-  opacity: 0.9;
+  opacity: 1.9;
   transform: rotateY(-20deg) scale(0.9);
 }
 
@@ -205,6 +205,14 @@ const calClick = () => {
 .carousel__slide--prev {
   opacity: 1;
   transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__prev {
+  width: 40px;
+}
+
+.carousel__icon {
+  width: 100%;
 }
 
 .carousel__slide--next {
