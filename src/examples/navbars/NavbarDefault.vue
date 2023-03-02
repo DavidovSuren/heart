@@ -120,7 +120,7 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        СЕРДЦЕ ГОРОДА КИСЛОВОДСКА
+        СЕРДЦЕ ГОРОДА
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -171,7 +171,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              <a href="/pages/landing-pages/Events">АФИША</a>
+              <a href="/pages/landing-pages/Events">ЧТО ДЕЛАТЬ В КИСЛОВОДСКЕ</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
 
               <img
@@ -190,7 +190,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              <a href="https://www.russia-otdih.ru/">ЖИЛЬЁ</a>
+              <a href="https://www.russia-otdih.ru/">ПРОЖИВАНИЕ</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
 
               <img

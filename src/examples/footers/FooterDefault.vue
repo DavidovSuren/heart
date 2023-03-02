@@ -7,7 +7,7 @@ defineProps({
     name: String,
     route: "",
     default: () => ({
-      name: "Сердце города КИСЛОВОДСКА",
+      name: "Сердце города ",
       route: "/",
     }),
   },

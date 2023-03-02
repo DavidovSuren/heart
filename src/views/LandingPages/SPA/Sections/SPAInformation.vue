@@ -16,36 +16,7 @@ onMounted(()=>{
 })
 </script>
 <template>
-   <div class="container" style="margin-top: 50px">
-    <WeekCalendar/><hr>
-    <div class="row">
-      <div
-        v-for="SPA in SPA"
-        :key="SPA.id"
-        class="col-lg-4 col-md-6 col-sm-12 container_foto"
-        variant="gradient"
-        color="success"
-        data-bs-toggle="modal"
-        :data-bs-target="`#m${SPA.id}`"
-      >
-        <ModalWindow
-          :id="`m${SPA.id}`"
-          :title="SPA.title.rendered"
-          :description="SPA.excerpt.rendered"
-          :img="SPA.fimg_url"
-          :acf="SPA.acf"
-        />
-        <div class="container-container">
-          <article class="text-left">
-            <h2 v-html="SPA.title.rendered"></h2>
-            <h4 v-html="SPA.excerpt.rendered"></h4>
-
-          </article>
-          <img :src="SPA.fimg_url" />
-        </div>
-      </div>
-    </div>
-  </div>
+  
 </template>
 <style>
 .container-container {

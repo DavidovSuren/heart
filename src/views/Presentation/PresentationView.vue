@@ -58,16 +58,52 @@ onUnmounted(() => {
       <div class="container">
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
-            <h1
-              class="text-white pt-3 mt-n5 me-2"
-              :style="{ display: 'inline-block ' }"
-            >
-              КИСЛОВОДСК
-            </h1>
-            <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
-              Курортный город
-            </p>
-          </div>
+            <div id="intro">
+            <h2 class="title">уникальный курортный город  </h2>
+            <div class="slides">
+                <div id="slide-accommodation" class="slide">
+                    <div class="row-main">
+                        <p></p>
+                        <p class="link">
+                            <a href="/ru/prozhivanie" class="btn btn-blue btn-l"><span>Изобразить проживание</span></a>
+                        </p>
+                        <p class="desc"><a href="/ru/prozhivanie">151 <span>здравниц</span></a></p>
+                    </div>
+                </div>
+               <ul> <div id="slide-fountain" class="slide">
+                    <div class="row-main">
+                        <p></p>
+                        <p class="link">
+                            <a href="/ru/interesnye-punkty" class="btn btn-blue btn-l"><span>Показать места</span></a>
+                        </p>
+                        <p class="desc"><a href="/ru/interesnye-punkty">128 <span>интересных мест</span></a></p>
+                    </div>
+                </div>
+              </ul>
+                <ul><div id="slide-trip" class="slide">
+                    <div class="row-main">
+                        <p></p>
+                        <p class="link">
+                            <a href="/ru/ekskursii-v-okresnosti" class="btn btn-blue btn-l"><span>Показать экскурсии</span></a>
+                        </p>
+                        <p class="desc"><a href="/ru/ekskursii-v-okresnosti">17 <span>поездок</span></a></p>
+                    </div>
+                </div>
+              </ul>
+                <ul><div id="slide-tenreason" class="slide">
+                    <div class="row-main">
+                        <p></p>
+                        <p class="link">
+                            <a href="/pages/landing-pages/SPA" class="btn btn-blue btn-l"><span>Изобразить причины</span></a>
+                        </p>
+                        <p class="desc"><a href="/pages/landing-pages/SPA">10<span>причин</span></a></p>
+                    </div>
+                </div>
+          </ul>
+            </div>
+         
+        </div>
+        </div>
         </div>
       </div>
     </div>
@@ -87,42 +123,6 @@ onUnmounted(() => {
     <PresentationPages />
     <BuiltByDevelopers />
     <PresentationTestimonials />
-    <div class="container">
-      <div class="row">
-        <div class="d-flex flex-column w-100 text-center p-5 mb-8">
-          <h3>ПАРТНЁРЫ</h3>
-          <div class="d-flex justify-content-center mt-3 flex-wrap">
-            <a
-              href="https://artclip.ru"
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              title="ВИДЕО И ФОТОСЪЕМКА НА КМВ"
-            >
-              <img
-                :src="logoBootstrap"
-                alt="title"
-                loading="lazy"
-                :style="{ height: '90px' }"
-              />
-            </a>
-            <a
-              class="opacity-5 ms-3"
-              href="https://www.russia-otdih.ru/"
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              title="ТУРИСТИЧЕСКОЕ АГЕНСТВО"
-            >
-              <img
-                :src="logoTailwind"
-                alt="title"
-                loading="lazy"
-                :style="{ height: '90px' }"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="py-1">
       <div class="container">
         <div class="row">
@@ -156,3 +156,21 @@ onUnmounted(() => {
   </div>
   <DefaultFooter />
 </template>
+<style>
+.slides {
+  display: flex;
+  width: 10em;
+  height: 10em;
+  border: 3px solid rgb(155, 46, 180);
+  border-radius: 50%;
+
+}
+.row-main {
+  width: 10em;
+  height: 10em;
+  border: 3px solid rgb(155, 46, 180);
+  border-radius: 50%;
+  background: url(src/assets/img/bg4.webp); /* Путь к файлу с исходным  рисунком */
+}
+
+</style>

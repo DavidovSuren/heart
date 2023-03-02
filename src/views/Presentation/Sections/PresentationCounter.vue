@@ -3,7 +3,7 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
 </script>
 
 <template>
-  <section class="pt-3 pb-4" id="count-stats">
+  <section class="pt-4 pb-4" id="count-stats">
     <div class="container">
       <div class="row">
         <div class="col-lg-9 z-index-2 border-radius-xl mx-auto py-2">
@@ -12,8 +12,8 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
               <DefaultCounterCard
                 color="success"
                 title="Пользователей нам доверяют"
-                :count="250000"
-                suffix="+"
+                :count="250"
+                suffix="K+"
                 :duration="3000"
                 divider="vertical"
               />
