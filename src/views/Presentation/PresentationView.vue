@@ -21,6 +21,10 @@ import PresentationInformation from "./Sections/PresentationInformation.vue";
 
 //images
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
+import vueMkHeader1 from "@/assets/img/GLAV/go.jpeg";
+import vueMkHeader2 from "@/assets/img/GLAV/prich.jpg";
+import vueMkHeader3 from "@/assets/img/GLAV/wow.jpeg";
+import vueMkHeader4 from "@/assets/img/GLAV/zrdav.jpg";
 import wavesWhite from "@/assets/img/waves-white.svg";
 import logoBootstrap from "@/assets/img/logos/bootstrap5.jpg";
 import logoTailwind from "@/assets/img/logos/icon-tailwind.jpg";
@@ -40,11 +44,11 @@ onUnmounted(() => {
   body.classList.remove("bg-gray-200");
 });
 
-const header = ref(vueMkHeader)
+const header = ref(vueMkHeader);
 
 const changeBack = (i) => {
-  header.value = i
-}
+  header.value = i;
+};
 </script>
 
 <template>
@@ -65,40 +69,84 @@ const changeBack = (i) => {
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
             <div id="intro">
-            <h2 class="title">уникальный курортный город</h2>
-            <div class="slides">
-                <div id="slide-accommodation" class="slide" @mouseover="changeBack(logoBootstrap)" @mouseleave="changeBack(vueMkHeader)">
-                        <p></p>
-                        <p class="link">
-                            <a href="/ru/prozhivanie" class="btn btn-blue btn-l"><span>Изобразить проживание</span></a>
-                        </p>
-                        <p class="desc"><a href="/ru/prozhivanie">151 <span>здравниц</span></a></p>
+              <h2 class="title">уникальный курортный город</h2>
+              <div class="slides">
+                <div
+                  id="slide-accommodation"
+                  class="slide"
+                  @mouseover="changeBack(vueMkHeader4)"
+                  @mouseleave="changeBack(vueMkHeader)"
+                >
+                  <p></p>
+                  <p class="link">
+                    <a href="/ru/prozhivanie" class="btn btn-blue btn-l"
+                      ><span>Изобразить проживание</span></a
+                    >
+                  </p>
+                  <p class="desc">
+                    <a href="/ru/prozhivanie">40 <span>здравниц</span></a>
+                  </p>
                 </div>
-               <div id="slide-fountain" class="slide">
-                        <p></p>
-                        <p class="link">
-                            <a href="/ru/interesnye-punkty" class="btn btn-blue btn-l"><span>Показать места</span></a>
-                        </p>
-                        <p class="desc"><a href="/ru/interesnye-punkty">128 <span>интересных мест</span></a></p>
+                <div
+                  id="slide-fountain"
+                  class="slide"
+                  @mouseover="changeBack(vueMkHeader1)"
+                  @mouseleave="changeBack(vueMkHeader)"
+                >
+                  <p></p>
+                  <p class="link">
+                    <a href="/ru/interesnye-punkty" class="btn btn-blue btn-l"
+                      ><span>Показать места</span></a
+                    >
+                  </p>
+                  <p class="desc">
+                    <a href="/ru/interesnye-punkty"
+                      >128 <span>интересных мест</span></a
+                    >
+                  </p>
                 </div>
-                <div id="slide-trip" class="slide">
-                        <p></p>
-                        <p class="link">
-                            <a href="/ru/ekskursii-v-okresnosti" class="btn btn-blue btn-l"><span>Показать экскурсии</span></a>
-                        </p>
-                        <p class="desc"><a href="/ru/ekskursii-v-okresnosti">17 <span>поездок</span></a></p>
+                <div
+                  id="slide-trip"
+                  class="slide"
+                  @mouseover="changeBack(vueMkHeader3)"
+                  @mouseleave="changeBack(vueMkHeader)"
+                >
+                  <p></p>
+                  <p class="link">
+                    <a
+                      href="/ru/ekskursii-v-okresnosti"
+                      class="btn btn-blue btn-l"
+                      ><span>Показать экскурсии</span></a
+                    >
+                  </p>
+                  <p class="desc">
+                    <a href="/ru/ekskursii-v-okresnosti"
+                      >17 <span>поездок</span></a
+                    >
+                  </p>
                 </div>
-                <div id="slide-tenreason" class="slide">
-                        <p></p>
-                        <p class="link">
-                            <a href="/pages/landing-pages/SPA" class="btn btn-blue btn-l"><span>Изобразить причины</span></a>
-                        </p>
-                        <p class="desc"><a href="/pages/landing-pages/SPA">10<span>причин</span></a></p>
+                <div
+                  id="slide-tenreason"
+                  class="slide"
+                  @mouseover="changeBack(vueMkHeader2)"
+                  @mouseleave="changeBack(vueMkHeader)"
+                >
+                  <p></p>
+                  <p class="link">
+                    <a
+                      href="/pages/landing-pages/SPA"
+                      class="btn btn-blue btn-l"
+                      ><span>Изобразить причины</span></a
+                    >
+                  </p>
+                  <p class="desc">
+                    <a href="/pages/landing-pages/SPA">10<span>причин</span></a>
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
-    </div>
       </div>
     </div>
   </Header>
@@ -167,5 +215,4 @@ const changeBack = (i) => {
   border-radius: 50%;
   background: url(src/assets/img/bg4.webp); /* Путь к файлу с исходным  рисунком */
 }
-
 </style>
