@@ -20,7 +20,7 @@ import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
 import PresentationInformation from "./Sections/PresentationInformation.vue";
 
 //images
-import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
+import vueMkHeader from "@/assets/img/GLAV/head.jpg";
 import vueMkHeader1 from "@/assets/img/GLAV/kol.webp";
 import vueMkHeader2 from "@/assets/img/GLAV/prich.jpg";
 import vueMkHeader3 from "@/assets/img/GLAV/wow.jpeg";
