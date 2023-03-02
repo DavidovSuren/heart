@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 //example components
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
@@ -39,6 +39,12 @@ onUnmounted(() => {
   body.classList.remove("presentation-page");
   body.classList.remove("bg-gray-200");
 });
+
+const header = ref(vueMkHeader)
+
+const changeBack = (i) => {
+  header.value = i
+}
 </script>
 
 <template>
@@ -52,59 +58,47 @@ onUnmounted(() => {
   <Header>
     <div
       class="page-header min-vh-75"
-      :style="`background-image: url(${vueMkHeader})`"
+      :style="`background-image: url(${header})`"
       loading="lazy"
     >
       <div class="container">
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
             <div id="intro">
-            <h2 class="title">уникальный курортный город  </h2>
+            <h2 class="title">уникальный курортный город</h2>
             <div class="slides">
-                <div id="slide-accommodation" class="slide">
-                    <div class="row-main">
+                <div id="slide-accommodation" class="slide" @mouseover="changeBack(logoBootstrap)" @mouseleave="changeBack(vueMkHeader)">
                         <p></p>
                         <p class="link">
                             <a href="/ru/prozhivanie" class="btn btn-blue btn-l"><span>Изобразить проживание</span></a>
                         </p>
                         <p class="desc"><a href="/ru/prozhivanie">151 <span>здравниц</span></a></p>
-                    </div>
                 </div>
-               <ul> <div id="slide-fountain" class="slide">
-                    <div class="row-main">
+               <div id="slide-fountain" class="slide">
                         <p></p>
                         <p class="link">
                             <a href="/ru/interesnye-punkty" class="btn btn-blue btn-l"><span>Показать места</span></a>
                         </p>
                         <p class="desc"><a href="/ru/interesnye-punkty">128 <span>интересных мест</span></a></p>
-                    </div>
                 </div>
-              </ul>
-                <ul><div id="slide-trip" class="slide">
-                    <div class="row-main">
+                <div id="slide-trip" class="slide">
                         <p></p>
                         <p class="link">
                             <a href="/ru/ekskursii-v-okresnosti" class="btn btn-blue btn-l"><span>Показать экскурсии</span></a>
                         </p>
                         <p class="desc"><a href="/ru/ekskursii-v-okresnosti">17 <span>поездок</span></a></p>
-                    </div>
                 </div>
-              </ul>
-                <ul><div id="slide-tenreason" class="slide">
-                    <div class="row-main">
+                <div id="slide-tenreason" class="slide">
                         <p></p>
                         <p class="link">
                             <a href="/pages/landing-pages/SPA" class="btn btn-blue btn-l"><span>Изобразить причины</span></a>
                         </p>
                         <p class="desc"><a href="/pages/landing-pages/SPA">10<span>причин</span></a></p>
-                    </div>
                 </div>
-          </ul>
             </div>
-         
         </div>
-        </div>
-        </div>
+      </div>
+    </div>
       </div>
     </div>
   </Header>
@@ -159,11 +153,12 @@ onUnmounted(() => {
 <style>
 .slides {
   display: flex;
+}
+.slide {
   width: 10em;
   height: 10em;
   border: 3px solid rgb(155, 46, 180);
   border-radius: 50%;
-
 }
 .row-main {
   width: 10em;
