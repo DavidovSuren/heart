@@ -58,7 +58,7 @@ onUnmounted(() => {
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center mx-auto my-auto">
             <h1 class="text-white">
-              10 ПРИЧИН ПОСЕТИТЬ КИСЛОВОДСК <span class="text-white" id="typed"></span>
+              10 ПРИЧИН  <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
             </div>

@@ -67,9 +67,9 @@ const changeBack = (i) => {
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 text-center mx-auto position-relative">
+          <div class="col-lg-6 text-center mx-auto position-relative">
             <div id="intro">
-              <h2 class="title">УНИКАЛЬНЫЙ ГОРОД-КУРОРТ</h2>
+              <h2 class="title">ГОРОД-КУРОРТ ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ  </h2>
               <div class="slides">
                 <div
                   id="slide-accommodation"
@@ -205,7 +205,7 @@ const changeBack = (i) => {
 .slide {
   width: 10em;
   height: 10em;
-  border: 3px solid rgb(155, 46, 180);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
 }
 .row-main {

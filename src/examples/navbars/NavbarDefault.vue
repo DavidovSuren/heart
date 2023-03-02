@@ -171,7 +171,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              <a href="/pages/landing-pages/Events">ЧТО ДЕЛАТЬ В КИСЛОВОДСКЕ</a>
+              <a href="/pages/landing-pages/Events">АФИША</a>
               <!--@click="goto('/pages/landing-pages/Events')"-->
 
               <img
