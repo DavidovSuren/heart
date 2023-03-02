@@ -21,7 +21,7 @@ import PresentationInformation from "./Sections/PresentationInformation.vue";
 
 //images
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
-import vueMkHeader1 from "@/assets/img/GLAV/go.jpeg";
+import vueMkHeader1 from "@/assets/img/GLAV/kol.webp";
 import vueMkHeader2 from "@/assets/img/GLAV/prich.jpg";
 import vueMkHeader3 from "@/assets/img/GLAV/wow.jpeg";
 import vueMkHeader4 from "@/assets/img/GLAV/zrdav.jpg";
@@ -61,7 +61,7 @@ const changeBack = (i) => {
   </div>
   <Header>
     <div
-      class="page-header min-vh-75"
+      class="page-header min-vh-95"
       :style="`background-image: url(${header})`"
       loading="lazy"
     >
@@ -69,7 +69,7 @@ const changeBack = (i) => {
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
             <div id="intro">
-              <h2 class="title">уникальный курортный город</h2>
+              <h2 class="title">УНИКАЛЬНЫЙ ГОРОД-КУРОРТ</h2>
               <div class="slides">
                 <div
                   id="slide-accommodation"
@@ -79,12 +79,12 @@ const changeBack = (i) => {
                 >
                   <p></p>
                   <p class="link">
-                    <a href="/ru/prozhivanie" class="btn btn-blue btn-l"
+                    <a href="" class="btn btn-blue btn-l"
                       ><span>Изобразить проживание</span></a
                     >
                   </p>
                   <p class="desc">
-                    <a href="/ru/prozhivanie">40 <span>здравниц</span></a>
+                    <a href="">40 <span>здравниц</span></a>
                   </p>
                 </div>
                 <div
@@ -95,12 +95,12 @@ const changeBack = (i) => {
                 >
                   <p></p>
                   <p class="link">
-                    <a href="/ru/interesnye-punkty" class="btn btn-blue btn-l"
+                    <a href="" class="btn btn-blue btn-l"
                       ><span>Показать места</span></a
                     >
                   </p>
                   <p class="desc">
-                    <a href="/ru/interesnye-punkty"
+                    <a href=""
                       >128 <span>интересных мест</span></a
                     >
                   </p>
@@ -114,13 +114,13 @@ const changeBack = (i) => {
                   <p></p>
                   <p class="link">
                     <a
-                      href="/ru/ekskursii-v-okresnosti"
+                      href=""
                       class="btn btn-blue btn-l"
                       ><span>Показать экскурсии</span></a
                     >
                   </p>
                   <p class="desc">
-                    <a href="/ru/ekskursii-v-okresnosti"
+                    <a href=""
                       >17 <span>поездок</span></a
                     >
                   </p>
