@@ -215,4 +215,11 @@ const changeBack = (i) => {
   border-radius: 50%;
   background: url(src/assets/img/bg4.webp); /* Путь к файлу с исходным  рисунком */
 }
+.title {
+  color: white;
+  font-weight: 900;
+  font-stretch: normal;
+  font-size: xx-large;
+  font-family: monospace;
+}
 </style>
