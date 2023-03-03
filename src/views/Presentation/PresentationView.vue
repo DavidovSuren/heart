@@ -69,7 +69,7 @@ const changeBack = (i) => {
         <div class="row">
           <div class="col-lg-6 text-center mx-auto position-relative">
             <div id="intro">
-              <h2 class="title">ГОРОД-КУРОРТ ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ  </h2>
+            <h2 class="title">ГОРОД-КУРОРТ ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ  </h2>
               <div class="slides">
                 <div
                   id="slide-accommodation"
@@ -217,9 +217,9 @@ const changeBack = (i) => {
 }
 .title {
   color: white;
-  font-weight: 900;
+  font-weight: 600;
   font-stretch: normal;
-  font-size: xx-large;
-  font-family: monospace;
+  font-size: 60px;
+  font-family: Paris Typeface;
 }
 </style>
