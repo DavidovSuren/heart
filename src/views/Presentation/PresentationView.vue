@@ -65,7 +65,7 @@ const changeBack = (i) => {
       :style="`background-image: url(${header})`"
       loading="lazy"
     >
-      <div class="container">
+      <div class="container flex-grow flex-shrink">
         <div class="row">
           <div class="col-lg-6 text-center mx-auto position-relative">
             <div id="intro">
@@ -92,7 +92,7 @@ const changeBack = (i) => {
                   class="slide"
                   @mouseover="changeBack(vueMkHeader1)"
                   @mouseleave="changeBack(vueMkHeader)"
-                >
+                > 
                   <p></p>
                   <p class="link">
                     <a href="" class="btn btn-blue btn-l"

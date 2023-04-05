@@ -50,13 +50,13 @@ onUnmounted(() => {
   </div>
   <header class="bg-gradient-dark">
     <div
-      class="page-header min-vh-75"
+      class="page-header min-vh-85"
       :style="{ backgroundImage: `url(${bg3})` }"
     >
-      <span class="mask bg-gradient-dark opacity-5"></span>
+      <span class="mask bg-gradient-dark opacity-2"></span>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-10 text-center mx-auto my-auto">
+          <div class="col-lg-12 text-center mx-auto my-auto">
             <h1 class="text-white">
              ЛУЧШИЕ ЗАВЕДЕНИЯ КИСЛОВОДСКА<span class="text-white" id="typed"></span>
             </h1>
