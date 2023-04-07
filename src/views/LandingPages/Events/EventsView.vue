@@ -48,7 +48,7 @@ onUnmounted(() => {
     </div>
   </div>
   <header class="bg-gradient-dark">
-    <div class="page-header" :style="{ backgroundImage: `url(${bg1})` }">
+    <div class="page-header min-vh-40" :style="{ backgroundImage: `url(${bg1})` }">
     </div> 
   </header>
   <div class="card card-body shadow-xl mx-3 mx-md-6 mt-n6">

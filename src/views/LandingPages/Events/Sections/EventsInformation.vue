@@ -154,7 +154,7 @@ const calClick = () => {
       </template>
     </Carousel>
   </div>
-  <div class="container" style="margin-top: 20px">
+  <div class="container" style="margin-top: 30px">
     <WeekCalendar @click="calClick"></WeekCalendar>
     <hr />
     <div class="row" ref="calItems">
