@@ -26,7 +26,10 @@ const modalProps = defineProps({
   },
   gallery: {
     type: Object,
-  },  
+  },
+  photos: {
+    type: Object,
+  },   
   whatsapp: {
     type: String,
   },
@@ -158,9 +161,10 @@ const isOpen = computed(() => {
               </div>
 
               <div class="modal-footer justify-content-between">
+                {{ photos }}
                 <img
-                  v-for="img in gallery"
-                  :src="img.src"
+                  v-for="img in photos"
+                  :src="img.photo"
                   :alt="img.alt"
                   :key="img.id"
                   style="width: 100%"

@@ -24,7 +24,7 @@ import vueMkHeader from "@/assets/img/GLAV/head.jpg";
 import vueMkHeader1 from "@/assets/img/GLAV/kol.webp";
 import vueMkHeader2 from "@/assets/img/GLAV/prich.jpg";
 import vueMkHeader3 from "@/assets/img/GLAV/wow.jpeg";
-import vueMkHeader4 from "@/assets/img/GLAV/zrdav.jpg";
+//import vueMkHeader4 from "@/assets/img/GLAV/zrdav.jpg";
 import wavesWhite from "@/assets/img/waves-white.svg";
 import logoBootstrap from "@/assets/img/logos/bootstrap5.jpg";
 import logoTailwind from "@/assets/img/logos/icon-tailwind.jpg";
@@ -74,7 +74,6 @@ const changeBack = (i) => {
                 <div
                   id="slide-accommodation"
                   class="slide"
-                  @mouseover="changeBack(vueMkHeader4)"
                   @mouseleave="changeBack(vueMkHeader)"
                 >
                   <p></p>

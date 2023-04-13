@@ -11,7 +11,9 @@ const getInstitutions = async (c) => {
   } else {
     cat = "";
   }
-  const url = `https://кисловодск.онлайн/rest/api/catering/?format=json&category=${cat}`;
+const url = `https://кисловодск.онлайн/rest/api/catering/?format=json&category=${cat}`;
+//const url = `http://127.0.0.1:8000/api/catering/?format=json&category=${cat}`;
+
   return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
@@ -74,6 +76,7 @@ function parseSrc(rendered) {
           :phone="Institution?.phone"
           :address="Institution?.address"
           :gallery="Institution?.gallery"
+          :photos="Institution?.photos"
           
         />
         <div class="container-container">
