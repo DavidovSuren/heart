@@ -33,6 +33,9 @@ STATIC_URL = '/static/'
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+MEDIA_ROOT = f'{BASE_DIR}/upload'
+MEDIA_URL = '/upload/'
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Quick-start development settings - unsuitable for production

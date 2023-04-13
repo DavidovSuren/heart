@@ -53,4 +53,4 @@ class FoodGalery(models.Model):
     show = models.ForeignKey(
         Food, on_delete=models.CASCADE, related_name="photos"
     )
-    photo = models.ImageField(upload_to='upload')
+    photo = models.ImageField(upload_to='static/upload')
