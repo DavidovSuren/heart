@@ -161,7 +161,6 @@ const isOpen = computed(() => {
               </div>
 
               <div class="modal-footer justify-content-between">
-                {{ photos }}
                 <img
                   v-for="img in photos"
                   :src="img.photo"
