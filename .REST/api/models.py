@@ -8,7 +8,7 @@ FOOD_CHOICES = (
 
 class Event(models.Model):
     title = models.CharField(max_length=250)
-    img = models.FileField(upload_to='upload')
+    img = models.FileField(upload_to='static/upload')
     description = models.TextField(max_length=10000)
     date = models.DateTimeField()
 
@@ -18,7 +18,7 @@ class Event(models.Model):
 
 class Food(models.Model):
     title = models.CharField(max_length=250)
-    img = models.FileField(upload_to='upload')
+    img = models.FileField(upload_to='static/upload')
     description = models.TextField(max_length=10000)
     address = models.CharField(max_length=500)
     menu = models.CharField(max_length=500, blank=True)
