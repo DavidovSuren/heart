@@ -80,7 +80,6 @@ h1 {
   .page-header {
     min-height: 30vh !important;
   }
-  .avatar-container {display: none;}
   .card-body.mt-n6 {
     margin-top: 0 !important;
   }

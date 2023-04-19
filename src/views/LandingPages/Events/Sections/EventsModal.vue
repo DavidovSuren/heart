@@ -24,40 +24,33 @@ defineProps({
     <div class="row">
       <div class="col-sm-3 col-6 mx-auto">
         <!-- Modal -->
-        <div
-          class="modal fade"
-          :id="id"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
+        <div class="modal fade" :id="id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body card">
-                <div class="row">
-                  <div
-                    class="avatar-container"
-                    :style="`background-image: url(${img});`"
-                  ></div>
-                  <div class="details-container">
-                    <div class="content">
-                      <h3 v-html="title"></h3>
-                      <div class="col">
-                        <p class="date">{{ date }}</p>
-                      </div>
-                      <div class="col">
-                        <p>{{ description }}</p>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 col-sm-6 avatar-container" :style="`background-image: url(${img});`">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div class="details-container">
+                        <div class="content">
+                          <h3 v-html="title"></h3>
+                          <div class="col">
+                            <p class="date">{{ date }}</p>
+                          </div>
+                          <div class="col">
+                            <p>{{ description }}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
               <div class="modal-footer justify-content-between">
-                <MaterialButton
-                  variant="gradient"
-                  color="dark"
-                  data-bs-dismiss="modal"
-                >
+                <MaterialButton variant="gradient" color="dark" data-bs-dismiss="modal">
                   Закрыть
                 </MaterialButton>
               </div>
@@ -95,13 +88,19 @@ defineProps({
 }
 
 .avatar-container {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
+  height: 54vh;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 @media (min-width: 576px) {
+  .avatar-container {
+    /* flex-basis: 50%; */
+    height: 100vh;
+  }
+
   .modal-dialog {
     max-width: 70%;
     margin-right: auto;
