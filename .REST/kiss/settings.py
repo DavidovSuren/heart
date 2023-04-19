@@ -18,7 +18,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 USE_X_FORWARDED_HOST = True
-#FORCE_SCRIPT_NAME = "/rest"
+FORCE_SCRIPT_NAME = "/rest"
 
 CSRF_TRUSTED_ORIGINS = [
     'https://xn--b1aekhddvbxf.xn--80asehdb'
@@ -134,9 +134,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
