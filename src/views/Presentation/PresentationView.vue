@@ -70,31 +70,32 @@ const changeBack = (i) => {
           <div class="col-lg-6 text-center mx-auto position-relative">
             <div id="intro">
               <h2 class="title">ГОРОД-КУРОРТ ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ</h2>
-              <div class="slides">
+
+              <div class="scrollmenu slides overflow-scroll">
                 <div
                   id="slide-accommodation"
-                  class="slide"
+                  class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
                   @mouseleave="changeBack(vueMkHeader)"
                 >
                   <p></p>
                   <p class="link">
-                    <a href="" class="btn btn-blue btn-l"
-                      ><span>Изобразить проживание</span></a
+                    <a href="" class="btn btn-blue btn-l text-dark"
+                      ><span> Проживание</span></a
                     >
                   </p>
-                  <p class="desc">
+                  <p class="desc  ">
                     <a href="">40 <span>здравниц</span></a>
                   </p>
                 </div>
                 <div
                   id="slide-fountain"
-                  class="slide"
+                  class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
                   @mouseover="changeBack(vueMkHeader1)"
                   @mouseleave="changeBack(vueMkHeader)"
                 > 
                   <p></p>
                   <p class="link">
-                    <a href="" class="btn btn-blue btn-l"
+                    <a href="" class="btn btn-blue btn-l text-dark"
                       ><span>Показать места</span></a
                     >
                   </p>
@@ -104,13 +105,13 @@ const changeBack = (i) => {
                 </div>
                 <div
                   id="slide-trip"
-                  class="slide"
+                  class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
                   @mouseover="changeBack(vueMkHeader3)"
                   @mouseleave="changeBack(vueMkHeader)"
                 >
                   <p></p>
                   <p class="link">
-                    <a href="" class="btn btn-blue btn-l"
+                    <a href="" class="btn btn-blue btn-l text-dark"
                       ><span>Показать экскурсии</span></a
                     >
                   </p>
@@ -120,7 +121,7 @@ const changeBack = (i) => {
                 </div>
                 <div
                   id="slide-tenreason"
-                  class="slide"
+                  class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
                   @mouseover="changeBack(vueMkHeader2)"
                   @mouseleave="changeBack(vueMkHeader)"
                 >
@@ -128,15 +129,17 @@ const changeBack = (i) => {
                   <p class="link">
                     <a
                       href="/pages/landing-pages/SPA"
-                      class="btn btn-blue btn-l"
-                      ><span>Изобразить причины</span></a
+                      class="btn btn-blue btn-l text-dark"
+                      ><span>Причины</span></a
                     >
                   </p>
                   <p class="desc">
                     <a href="/pages/landing-pages/SPA">10<span>причин</span></a>
                   </p>
                 </div>
-              </div>
+</div>
+
+
             </div>
           </div>
         </div>
@@ -152,6 +155,7 @@ const changeBack = (i) => {
           <a href="https://www.russia-otdih.ru/"><img width="100" height="100" src="images/part.jpeg" /></a>
         </section>-->
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    
     <PresentationCounter />
     <PresentationInformation />
     <PresentationExample :data="data" />
@@ -195,11 +199,55 @@ const changeBack = (i) => {
 .slides {
   display: flex;
 }
+
 .slide {
+}
+  /*
   width: 10em;
   height: 10em;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
+  background-color: aqua;
+  background: rgb(63,94,251);
+  background-image: linear-gradient(195deg, rgba(0, 4, 8, 0.919) 30%, #6667AB 100%)!important;
+  background-position-x: 25%;
+  font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+padding: 1em;
+margin: 1em;
+border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+
+}
+*/
+div.scrollmenu {
+  background-color: #ffffff14;
+  /*overflow: scroll;
+  white-space: nowrap; */
+  position: absolute;
+  left:-1em;
+  right: -1em;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0px 14px;
+  text-decoration: none;
+  background-color: white;
+  color:black
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
 }
 .row-main {
   width: 10em;
@@ -208,11 +256,30 @@ const changeBack = (i) => {
   border-radius: 50%;
   background: url(src/assets/img/bg4.webp); /* Путь к файлу с исходным  рисунком */
 }
+.slide {
+  flex: 0 0 12em;
+}
+/*
+.slides:after {
+  content: '>';
+  position: absolute;
+  right: 3px;
+  top: 72px;
+  width: 26px;
+  height: 25px;
+  font-size: 1em;
+  color: white;
+  background: #ffffff14;
+  border-radius: 50%;
+  clear: both;
+
+}
+*/
 .title {
   color: white;
   font-weight: 600;
   font-stretch: normal;
-  font-size: 60px;
+  font-size: 2.7em;
   font-family: Paris Typeface;
 }
 </style>
