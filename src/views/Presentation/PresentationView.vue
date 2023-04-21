@@ -60,11 +60,7 @@ const changeBack = (i) => {
     </div>
   </div>
   <Header>
-    <div
-      class="page-header min-vh-95"
-      :style="`background-image: url(${header})`"
-      loading="lazy"
-    >
+    <div class="page-header min-vh-95" :style="`background-image: url(${header})`" loading="lazy">
       <div class="container flex-grow flex-shrink">
         <div class="row">
           <div class="col-lg-6 text-center mx-auto position-relative">
@@ -72,72 +68,56 @@ const changeBack = (i) => {
               <h2 class="title">ГОРОД-КУРОРТ ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ</h2>
 
               <div class="scrollmenu slides overflow-scroll">
-                <div
-                  id="slide-accommodation"
+                <div id="slide-accommodation"
                   class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
-                  @mouseleave="changeBack(vueMkHeader)"
-                >
+                  @mouseleave="changeBack(vueMkHeader)">
                   <p></p>
-                  <p class="link">
-                    <a href="" class="btn btn-blue btn-l text-dark"
-                      ><span> Проживание</span></a
-                    >
-                  </p>
-                  <p class="desc  ">
+                <p class="link">
+                  <a href="https://www.russia-otdih.ru/" class="btn btn-blue btn-l text-dark"><span>
+                      Проживание</span></a>
+                </p>
+                <p class="desc  ">
                     <a href="">40 <span>здравниц</span></a>
                   </p>
                 </div>
-                <div
-                  id="slide-fountain"
+                <div id="slide-fountain"
                   class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
-                  @mouseover="changeBack(vueMkHeader1)"
-                  @mouseleave="changeBack(vueMkHeader)"
-                > 
+                  @mouseover="changeBack(vueMkHeader1)" @mouseleave="changeBack(vueMkHeader)">
+                  <router-link to="/pages/landing-pages/points">
+
                   <p></p>
                   <p class="link">
-                    <a href="" class="btn btn-blue btn-l text-dark"
-                      ><span>Показать места</span></a
-                    >
+                    <a href="" class="btn btn-blue btn-l text-dark"><span>Показать места</span></a>
                   </p>
                   <p class="desc">
                     <a href="">128 <span>интересных мест</span></a>
                   </p>
+                </router-link>
                 </div>
-                <div
-                  id="slide-trip"
+
+                <div id="slide-trip"
                   class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
-                  @mouseover="changeBack(vueMkHeader3)"
-                  @mouseleave="changeBack(vueMkHeader)"
-                >
+                  @mouseover="changeBack(vueMkHeader3)" @mouseleave="changeBack(vueMkHeader)">
                   <p></p>
                   <p class="link">
-                    <a href="" class="btn btn-blue btn-l text-dark"
-                      ><span>Показать экскурсии</span></a
-                    >
+                    <a href="" class="btn btn-blue btn-l text-dark"><span>Показать экскурсии</span></a>
                   </p>
                   <p class="desc">
                     <a href="">17 <span>поездок</span></a>
                   </p>
                 </div>
-                <div
-                  id="slide-tenreason"
+                <div id="slide-tenreason"
                   class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
-                  @mouseover="changeBack(vueMkHeader2)"
-                  @mouseleave="changeBack(vueMkHeader)"
-                >
+                  @mouseover="changeBack(vueMkHeader2)" @mouseleave="changeBack(vueMkHeader)">
                   <p></p>
                   <p class="link">
-                    <a
-                      href="/pages/landing-pages/SPA"
-                      class="btn btn-blue btn-l text-dark"
-                      ><span>Причины</span></a
-                    >
+                    <a href="/pages/landing-pages/SPA" class="btn btn-blue btn-l text-dark"><span>Причины</span></a>
                   </p>
                   <p class="desc">
                     <a href="/pages/landing-pages/SPA">10<span>причин</span></a>
                   </p>
                 </div>
-</div>
+              </div>
 
 
             </div>
@@ -149,13 +129,13 @@ const changeBack = (i) => {
   <ExcursionsModal />
 
   <!-- <section class="front-page-6" style="text-align: center;">
-          <h3 class="sec-h">Партнёры</h3>
-          <a href="https://artclip.ru/"><img width="100" height="100" src="images/L9bVYfpPTQuj.png"
-              style="margin-right: 30px;" /></a>
-          <a href="https://www.russia-otdih.ru/"><img width="100" height="100" src="images/part.jpeg" /></a>
-        </section>-->
+            <h3 class="sec-h">Партнёры</h3>
+            <a href="https://artclip.ru/"><img width="100" height="100" src="images/L9bVYfpPTQuj.png"
+                style="margin-right: 30px;" /></a>
+            <a href="https://www.russia-otdih.ru/"><img width="100" height="100" src="images/part.jpeg" /></a>
+          </section>-->
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    
+
     <PresentationCounter />
     <PresentationInformation />
     <PresentationExample :data="data" />
@@ -170,24 +150,11 @@ const changeBack = (i) => {
             <p class="lead mb-0">СОЦИАЛЬНЫЕ СЕТИ</p>
           </div>
           <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
-            <MaterialSocialButton
-              route="https://vk.com/heart_city_kissloveodsk"
-              component="vk"
-              color="instagram"
-              label="vkontakte"
-            />
-            <MaterialSocialButton
-              route="https://web.telegram.org/z/#"
-              component="telegram"
-              color="instagram"
-              label="TELEGRAM"
-            />
-            <MaterialSocialButton
-              route=""
-              component="instagram"
-              color="instagram"
-              label="instagram"
-            />
+            <MaterialSocialButton route="https://vk.com/heart_city_kissloveodsk" component="vk" color="instagram"
+              label="vkontakte" />
+            <MaterialSocialButton route="https://web.telegram.org/z/#" component="telegram" color="instagram"
+              label="TELEGRAM" />
+            <MaterialSocialButton route="" component="instagram" color="instagram" label="instagram" />
           </div>
         </div>
       </div>
@@ -200,39 +167,12 @@ const changeBack = (i) => {
   display: flex;
 }
 
-.slide {
-}
-  /*
-  width: 10em;
-  height: 10em;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  background-color: aqua;
-  background: rgb(63,94,251);
-  background-image: linear-gradient(195deg, rgba(0, 4, 8, 0.919) 30%, #6667AB 100%)!important;
-  background-position-x: 25%;
-  font-family: var(--bs-btn-font-family);
-    font-size: var(--bs-btn-font-size);
-    font-weight: var(--bs-btn-font-weight);
-padding: 1em;
-margin: 1em;
-border-width: 3px;
-  border-style: solid;
-  border-image: 
-    linear-gradient(
-      to bottom, 
-      red, 
-      rgba(0, 0, 0, 0)
-    ) 1 100%;
-
-}
-*/
 div.scrollmenu {
   background-color: #ffffff14;
   /*overflow: scroll;
   white-space: nowrap; */
   position: absolute;
-  left:-1em;
+  left: -1em;
   right: -1em;
 }
 
@@ -242,23 +182,22 @@ div.scrollmenu a {
   text-align: center;
   padding: 0px 14px;
   text-decoration: none;
-  background-color: white;
-  color:black
+  color: black
 }
 
-div.scrollmenu a:hover {
-  background-color: #777;
-}
 .row-main {
   width: 10em;
   height: 10em;
   border: 3px solid rgb(155, 46, 180);
   border-radius: 50%;
-  background: url(src/assets/img/bg4.webp); /* Путь к файлу с исходным  рисунком */
+  background: url(src/assets/img/bg4.webp);
+  /* Путь к файлу с исходным  рисунком */
 }
+
 .slide {
   flex: 0 0 12em;
 }
+
 /*
 .slides:after {
   content: '>';

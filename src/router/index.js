@@ -5,6 +5,7 @@ import EventsView from "../views/LandingPages/Events/EventsView.vue";
 import SPAView from "../views/LandingPages/SPA/SPAView.vue";
 /**import TurView from "../views/LandingPages/Tur/TurView.vue";*/
 import InstitutionView from "../views/LandingPages/Institution/InstitutionView.vue";
+import PointsView from  "../views/LandingPages/Institution/PointsView.vue";
 import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
 import AuthorView from "../views/LandingPages/Author/AuthorView.vue";
 import SignInBasicView from "../views/LandingPages/SignIn/BasicView.vue";
@@ -61,6 +62,11 @@ const router = createRouter({
       path: "/pages/landing-pages/Institution",
       name: "institution",
       component: InstitutionView,
+    },
+    {
+      path: "/pages/landing-pages/points",
+      name: "Points",
+      component: PointsView,
     },
     {
       path: "/pages/landing-pages/contact-us",
