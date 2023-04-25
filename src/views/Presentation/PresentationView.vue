@@ -35,6 +35,8 @@ import logoSketch from "@/assets/img/logos/sketch.jpg";
 
 //hooks
 const body = document.getElementsByTagName("body")[0];
+const slideshow = document.getElementById("slideshow");
+
 onMounted(() => {
   body.classList.add("presentation-page");
   body.classList.add("bg-gray-200");
@@ -45,9 +47,14 @@ onUnmounted(() => {
 });
 
 const header = ref(vueMkHeader);
+var animName = ref('head');
 
 const changeBack = (i) => {
   header.value = i;
+
+  animName.value = i.substring(i.lastIndexOf('/')+1).split('.')[0]
+    console.log(animName)
+
 };
 </script>
 
@@ -60,14 +67,14 @@ const changeBack = (i) => {
     </div>
   </div>
   <Header>
-    <div class="page-header min-vh-95" :style="`background-image: url(${header})`" loading="lazy">
+    <div id="slideshow" class="page-header min-vh-95" :style="`background-image: url(${header}); animation-name: ${animName}; animation-duration: 3s; animation-iteration-count: 1;`" loading="lazy">
       <div class="container flex-grow flex-shrink">
         <div class="row">
           <div class="col-lg-6 text-center mx-auto position-relative">
             <div id="intro">
               <h2 class="title">ГОРОД-КУРОРТ ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ</h2>
 
-              <div class="scrollmenu slides overflow-scroll">
+              <div class="scrollmenu slides">
                 <div id="slide-accommodation"
                   class="slide navbar-expand-lg top-0 my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-3 mt-4"
                   @mouseleave="changeBack(vueMkHeader)">
@@ -169,8 +176,8 @@ const changeBack = (i) => {
 
 div.scrollmenu {
   background-color: #ffffff14;
-  /*overflow: scroll;
-  white-space: nowrap; */
+  overflow-x: scroll;
+  white-space: nowrap;
   position: absolute;
   left: -1em;
   right: -1em;
@@ -220,5 +227,27 @@ div.scrollmenu a {
   font-stretch: normal;
   font-size: 2.7em;
   font-family: Paris Typeface;
+}
+/*
+.page-header{ animation: changeBg 30s infinite;}
+
+*/
+@keyframes head{
+   0%,100%  {background-image: url("@/assets/img/GLAV/head.jpg");}
+
+}
+@keyframes kol{
+   0%  {background-image: url("@/assets/img/GLAV/head.jpg");}
+  100% {background-image: url("@/assets/img/GLAV/kol.webp");}
+
+}
+@keyframes prich{
+     0%  {background-image: url("@/assets/img/GLAV/head.jpg");}
+    100%  {background-image: url("@/assets/img/GLAV/prich.jpg");}
+   }
+@keyframes wow{
+   0%  {background-image: url("@/assets/img/GLAV/head.jpg");}
+   100%  {background-image: url("@/assets/img/GLAV/wow.jpeg");}
+
 }
 </style>
