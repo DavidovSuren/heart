@@ -71,10 +71,10 @@ h1 {
 
 @media (orientation: portrait) {
   h1 {
-    font-size: 1.75em !important;
-    margin-top: 6em !important;
+    font-size: 2em !important;
+    margin-top: 4em !important;
     opacity: 0.9;
-    text-shadow: 1px 1px 2px rgb(99, 89, 31), 0 0 0em black, 0 0 0.2em black;
+    text-shadow: 1px 1px 2px gold, 0 0 0em black, 0 0 0.2em black;
   }
 
   .page-header {

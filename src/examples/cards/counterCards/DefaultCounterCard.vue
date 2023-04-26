@@ -57,3 +57,6 @@ defineProps({
   </div>
   <hr :class="`${divider ? divider : ''} dark`" />
 </template>
+<style scoped>
+
+</style>

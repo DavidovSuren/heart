@@ -35,8 +35,6 @@ import logoSketch from "@/assets/img/logos/sketch.jpg";
 
 //hooks
 const body = document.getElementsByTagName("body")[0];
-const slideshow = document.getElementById("slideshow");
-
 onMounted(() => {
   body.classList.add("presentation-page");
   body.classList.add("bg-gray-200");
@@ -47,14 +45,9 @@ onUnmounted(() => {
 });
 
 const header = ref(vueMkHeader);
-var animName = ref('head');
 
 const changeBack = (i) => {
   header.value = i;
-
-  animName.value = i.substring(i.lastIndexOf('/')+1).split('.')[0]
-    console.log(animName)
-
 };
 </script>
 
@@ -67,7 +60,7 @@ const changeBack = (i) => {
     </div>
   </div>
   <Header>
-    <div id="slideshow" class="page-header min-vh-95" :style="`background-image: url(${header}); animation-name: ${animName}; animation-duration: 3s; animation-iteration-count: 1;`" loading="lazy">
+    <div class="page-header min-vh-95" :style="`background-image: url(${header})`" loading="lazy">
       <div class="container flex-grow flex-shrink">
         <div class="row">
           <div class="col-lg-6 text-center mx-auto position-relative">
@@ -228,26 +221,18 @@ div.scrollmenu a {
   font-size: 2.7em;
   font-family: Paris Typeface;
 }
-/*
-.page-header{ animation: changeBg 30s infinite;}
-
-*/
-@keyframes head{
+.page-header{ animation: changeBg 20s infinite}
+@keyframes changeBg{
    0%,100%  {background-image: url("@/assets/img/GLAV/head.jpg");}
-
+   25% {background-image: url("@/assets/img/GLAV/kol.webp");}
+   50% {background-image: url("@/assets/img/GLAV/prich.jpg");}
+   75% {background-image: url("@/assets/img/GLAV/wow.jpeg");}
 }
-@keyframes kol{
-   0%  {background-image: url("@/assets/img/GLAV/head.jpg");}
-  100% {background-image: url("@/assets/img/GLAV/kol.webp");}
-
-}
-@keyframes prich{
-     0%  {background-image: url("@/assets/img/GLAV/head.jpg");}
-    100%  {background-image: url("@/assets/img/GLAV/prich.jpg");}
-   }
-@keyframes wow{
-   0%  {background-image: url("@/assets/img/GLAV/head.jpg");}
-   100%  {background-image: url("@/assets/img/GLAV/wow.jpeg");}
-
+@media (orientation: portrait) {
+  h2 {
+    font-size: 2em !important;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(255, 217, 0, 0.59), 0 0 0em black, 0 0 0.2em black;
+  }
 }
 </style>
