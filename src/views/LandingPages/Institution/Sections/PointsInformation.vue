@@ -9,12 +9,14 @@ const getInstitutions = async (c) => {
   } else if (c === "bike") {
     cat = "b";
   } else if (c === "auto") {
-    cat = "a";    
+    cat = "a";
+  } else if (c === "guide") {
+    cat = "g";    
   } else {
     cat = "";
   }
   const url = `https://кисловодск.онлайн/rest/api/points/?format=json&category=${cat}`;
-  //const url = `http://127.0.0.1:1188/api/points/?format=json&category=${cat}`;
+ // const url = `http://127.0.0.1:1188/api/points/?format=json&category=${cat}`;
 
   return fetch(url).then((response) => response.json());
 };
@@ -39,21 +41,29 @@ function parseSrc(rendered) {
 </script>
 <template>
   <div class="row">
-    <div class="col-lg-6" style="text-align: right">
+    <div class="col-6 col-lg-4" >
       <button type="button" class="btn btn-success btn-lg" @click="get('foot')">
         Пешком
       </button>
-    </div>
-    <div class="col-lg-6">
-      <button type="button" class="btn btn-success btn-lg" @click="get('bike')">
-        Велосипед
-      </button>
-    </div>
-    <div class="col-lg-6">
+    </div>    
+        <div class="col-6 col-lg-4" >
       <button type="button" class="btn btn-success btn-lg" @click="get('auto')">
         Авто
       </button>
     </div>
+
+    <div class="col-6 col-lg-4">
+      <button type="button" class="btn btn-success btn-lg" @click="get('bike')">
+        Велосипед
+      </button>
+    </div>
+    <div class="col-6 col-lg-4" >
+      <button type="button" class="btn btn-success btn-lg" @click="get('guide')">
+        Экскурсия
+      </button>
+    </div>       
+
+ 
   </div>
   <div class="container" style="margin-top: 20px">
     <div class="row">

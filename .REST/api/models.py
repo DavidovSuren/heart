@@ -7,8 +7,9 @@ FOOD_CHOICES = (
 )
 POINT_CHOICES = (
     ('f','Пешком'),
+    ('a', 'Авто'),
     ('b','Вело'),
-    ('a', 'Авто')
+    ('g','Гид')
 )
 class Event(models.Model):
     title = models.CharField(max_length=250)
