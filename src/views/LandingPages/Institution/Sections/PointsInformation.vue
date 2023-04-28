@@ -41,23 +41,23 @@ function parseSrc(rendered) {
 </script>
 <template>
   <div class="row">
-    <div class="col-6 col-lg-4" >
+    <div class="col-6 col-lg-3 justify-content-md-center " >
       <button type="button" class="btn btn-success btn-lg" @click="get('foot')">
         Пешком
       </button>
     </div>    
-        <div class="col-6 col-lg-4" >
+        <div class="col-6 col-lg-3 justify-content-md-center " >
       <button type="button" class="btn btn-success btn-lg" @click="get('auto')">
         Авто
       </button>
     </div>
 
-    <div class="col-6 col-lg-4">
+    <div class="col-6 col-lg-3 justify-content-md-center ">
       <button type="button" class="btn btn-success btn-lg" @click="get('bike')">
         Велосипед
       </button>
     </div>
-    <div class="col-6 col-lg-4" >
+    <div class="col-6 col-lg-3 justify-content-md-center " >
       <button type="button" class="btn btn-success btn-lg" @click="get('guide')">
         Экскурсия
       </button>
@@ -88,6 +88,10 @@ function parseSrc(rendered) {
   </div>
 </template>
 <style scoped>
+.justify-content-md-center {
+  display: flex;
+  justify-content: center;
+}
 .container-container {
   margin: 10px;
   background-color: rgb(25, 40, 139);
