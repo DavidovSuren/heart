@@ -49,6 +49,16 @@ class Food(models.Model):
             MinValueValidator(0)
         ]
     )
+
+    @property
+    def workPeriod(self):
+        workPeriod= 0
+        if (self.close - self.open < 0 ):
+            workPeriod = 24 - self.open + self.close
+        else:
+            workPeriod = self.close - self.open
+        return workPeriod
+
     category = models.CharField(max_length=1, choices=FOOD_CHOICES, default='с')
 
     def __str__(self):
