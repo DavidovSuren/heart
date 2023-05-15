@@ -53,10 +53,10 @@ class Food(models.Model):
     @property
     def workPeriod(self):
         workPeriod= 0
-        if (self.close - self.open < 0 ):
-            workPeriod = 24 - self.open + self.close
+        if (self.closeHour - self.openHour < 0 ):
+            workPeriod = 24 - self.openHour + self.closeHour
         else:
-            workPeriod = self.close - self.open
+            workPeriod = self.closeHour - self.openHour
         return workPeriod
 
     category = models.CharField(max_length=1, choices=FOOD_CHOICES, default='с')
@@ -103,10 +103,10 @@ class Point(models.Model):
     @property
     def workPeriod(self):
         workPeriod= 0
-        if (self.close - self.open < 0 ):
-            workPeriod = 24 - self.open + self.close
+        if (self.closeHour - self.openHour < 0 ):
+            workPeriod = 24 - self.openHour + self.closeHour
         else:
-            workPeriod = self.close - self.open
+            workPeriod = self.closeHour - self.openHour
         return workPeriod
 
     category = models.CharField(max_length=1, choices=POINT_CHOICES, default='f')
