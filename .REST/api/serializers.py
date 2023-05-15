@@ -33,5 +33,5 @@ class PointSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Point
-        fields = ["id","title","img","description","address","menu","video","rating","openHour","closeHour","category","photos"]
+        fields = ["id","title","img","description","address","menu","video","rating","openHour","closeHour","workPeriod","category","photos"]
         extra_kwargs = {'img': {'use_url' : True}}
