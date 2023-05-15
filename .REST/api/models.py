@@ -35,14 +35,14 @@ class Food(models.Model):
             MinValueValidator(1)
         ]
     )
-    open = models.IntegerField(
+    openHour = models.IntegerField(
         default=9,
         validators=[
             MaxValueValidator(24),
             MinValueValidator(0)
         ]
     )
-    close = models.IntegerField(
+    closeHour = models.IntegerField(
         default=18,
         validators=[
             MaxValueValidator(24),
@@ -85,20 +85,30 @@ class Point(models.Model):
             MinValueValidator(1)
         ]
     )
-    open = models.IntegerField(
+    openHour = models.IntegerField(
         default=9,
         validators=[
             MaxValueValidator(24),
             MinValueValidator(0)
         ]
     )
-    close = models.IntegerField(
+    closeHour = models.IntegerField(
         default=18,
         validators=[
             MaxValueValidator(24),
             MinValueValidator(0)
         ]
     )
+
+    @property
+    def workPeriod(self):
+        workPeriod= 0
+        if (self.close - self.open < 0 ):
+            workPeriod = 24 - self.open + self.close
+        else:
+            workPeriod = self.close - self.open
+        return workPeriod
+
     category = models.CharField(max_length=1, choices=POINT_CHOICES, default='f')
 
     def __str__(self):
