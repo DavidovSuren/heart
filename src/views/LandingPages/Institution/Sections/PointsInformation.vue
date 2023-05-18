@@ -70,12 +70,24 @@ function parseSrc(rendered) {
       {{ Institutions.value }}
       <div v-for="Institution in Institutions" :key="Institution.id" class="col-lg-4 col-md-6 col-sm-12"
         variant="gradient" color="success" data-bs-toggle="modal" :data-bs-target="`#m${Institution.id}`">
-        <ModalWindow :id="`m${Institution.id}`" :title="Institution.title" :description="Institution.description"
-          :img="Institution.img" :rating="Institution.rating" :content="Institution.description"
-          :card_content="Institution.description" :whatsapp="Institution.whatsapp" :openHour="Institution.open"
-          :video="Institution.video" :menu="Institution.menu" :workPeriod="Institution?.openPeriod"
-          :phone="Institution?.phone" :address="Institution?.address" :gallery="Institution?.gallery"
-          :photos="Institution?.photos" />
+        <ModalWindow
+          :id="`m${Institution.id}`"
+          :title="Institution.title"
+          :description="Institution.description"
+          :img="Institution.img"
+          :rating="Institution.rating"
+          :content="Institution.description"
+          :card_content="Institution.description"
+          :whatsapp="Institution.whatsapp"
+          :openHour="Institution.openHour"
+          :video = "Institution.video"
+          :menu = "Institution.menu"
+          :workPeriod="Institution?.workPeriod"
+          :phone="Institution?.phone"
+          :address="Institution?.address"
+          :gallery="Institution?.gallery"
+          :photos="Institution?.photos"
+        />
         <div class="container-container">
           <article class="text-left">
             <h2 v-html="Institution.title"></h2>

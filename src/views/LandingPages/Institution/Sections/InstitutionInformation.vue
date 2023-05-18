@@ -50,7 +50,7 @@ function parseSrc(rendered) {
   </div>
   <div class="container" style="margin-top: 20px">
     <div class="row">
-      {{ Institutions.value }}
+      {{ Institutions?.workPeriod }}
       <div
         v-for="Institution in Institutions"
         :key="Institution.id"
@@ -69,15 +69,14 @@ function parseSrc(rendered) {
           :content="Institution.description"
           :card_content="Institution.description"
           :whatsapp="Institution.whatsapp"
-          :openHour="Institution.open"
+          :openHour="Institution.openHour"
           :video = "Institution.video"
           :menu = "Institution.menu"
-          :workPeriod="Institution?.openPeriod"
+          :workPeriod="Institution?.workPeriod"
           :phone="Institution?.phone"
           :address="Institution?.address"
           :gallery="Institution?.gallery"
           :photos="Institution?.photos"
-          
         />
         <div class="container-container">
           <article class="text-left">

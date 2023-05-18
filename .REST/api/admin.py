@@ -17,7 +17,7 @@ class EventAdmin(admin.ModelAdmin):
 
 
 class FoodAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'img', 'description', 'category', 'address', 'menu', 'video', 'rating', 'open', 'close')
+    list_display = ('id', 'title', 'img', 'description', 'category', 'address', 'menu', 'video', 'rating', 'openHour', 'closeHour')
     list_display_links = ('id', 'title', 'category')
     search_fields = ('title',)
     list_editable = ('rating',)
@@ -30,7 +30,7 @@ class FoodAdmin(admin.ModelAdmin):
         form.save_photos(form.instance)
 
 class PointAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'img', 'description', 'category', 'address', 'menu', 'video', 'rating', 'open', 'close')
+    list_display = ('id', 'title', 'img', 'description', 'category', 'address', 'menu', 'video', 'rating', 'openHour', 'closeHour')
     list_display_links = ('id', 'title', 'category')
     search_fields = ('title',)
     list_editable = ('rating',)
