@@ -17,7 +17,7 @@ class EventAdmin(admin.ModelAdmin):
 
 
 class FoodAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'img', 'description', 'category', 'address', 'menu', 'video', 'rating', 'openHour', 'closeHour')
+    list_display = ('id', 'title', 'img', 'description', 'category', 'address','phone', 'menu', 'video', 'rating', 'openHour', 'closeHour')
     list_display_links = ('id', 'title', 'category')
     search_fields = ('title',)
     list_editable = ('rating',)
