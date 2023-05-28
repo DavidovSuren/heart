@@ -26,7 +26,7 @@ class Food(models.Model):
     img = models.FileField(upload_to='static/upload')
     description = models.TextField(max_length=10000)
     address = models.CharField(max_length=500)
-    phone = models.CharField(max_length=20,default=None,blank=True)
+    phone = models.CharField(max_length=20,default=None,null=True,blank=True)
     menu = models.FileField(upload_to='static/upload')
     video = models.CharField(max_length=500, blank=True)
     rating = models.IntegerField(
