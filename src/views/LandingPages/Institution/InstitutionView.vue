@@ -50,7 +50,7 @@ onUnmounted(() => {
   </div>
   <header class="bg-gradient-dark">
     <div
-      class="page-header min-vh-85"
+      class="page-header min-vh-35"
       :style="{ backgroundImage: `url(${bg3})` }"
     >
       <span class="mask bg-gradient-dark opacity-2"></span>
