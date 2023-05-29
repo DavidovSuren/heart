@@ -20,6 +20,17 @@ class FoodViewSet(viewsets.ModelViewSet):
     serializer_class = FoodSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['category']
+    def get_object(self):
+        obj = super().get_object()
+        obj.count += 1
+        obj.save()
+        return obj
+    #Food.objects.filter(pk=3.pk).update(views=F('views') + 1)
+
+
+    #def get_queryset(self):
+    #
+    #     return self #.request.user.accounts.all()
 
 class PointsViewSet(viewsets.ModelViewSet):
     queryset = Point.objects.all()

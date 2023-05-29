@@ -18,7 +18,7 @@ class FoodSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Food
-        fields = ["id","title","img","description","address","phone","menu","video","rating","openHour","closeHour","workPeriod","category","photos"]
+        fields = ["id","title","img","description","address","phone","menu","video","count","rating","openHour","closeHour","workPeriod","category","photos"]
         extra_kwargs = {'img': {'use_url' : True}}
 
 

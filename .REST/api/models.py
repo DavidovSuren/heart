@@ -29,6 +29,7 @@ class Food(models.Model):
     phone = models.CharField(max_length=20,default=None,null=True,blank=True)
     menu = models.FileField(upload_to='static/upload')
     video = models.CharField(max_length=500, blank=True)
+    count = models.IntegerField(default=0)
     rating = models.IntegerField(
         default=5,
         validators=[
