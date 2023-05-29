@@ -2,6 +2,10 @@
 import { onMounted, ref } from "vue";
 import ModalWindow from "../../../../layouts/sections/attention-catchers/modals/components/SimpleModal.vue";
 const Institutions = ref([]);
+const BaseUrl = `https://кисловодск.онлайн/rest`;
+const id = "";
+const itemUrl = `${BaseUrl}/api/catering/${id}`;
+
 const getInstitutions = async (c) => {
   let cat = "";
   if (c === "rest") {
@@ -11,22 +15,27 @@ const getInstitutions = async (c) => {
   } else {
     cat = "";
   }
-const url = `https://кисловодск.онлайн/rest/api/catering/?format=json&category=${cat}`;
+const url = `${BaseUrl}/api/catering/?format=json&category=${cat}`;
 //const url = `http://127.0.0.1:8000/api/catering/?format=json&category=${cat}`;
 
   return fetch(url).then((response) => response.json());
 };
 onMounted(() => {
   getInstitutions("all").then((data) => {
-    console.log(data);
     Institutions.value = data;
   });
 });
+
+const counter = async (id) => {
+  fetch(itemUrl+id);
+ };
 const get = async (c) => {
   getInstitutions(c).then((data) => {
     Institutions.value = data;
   });
 };
+
+
 function parseSrc(rendered) {
   let listArr = [];
   rendered
@@ -50,7 +59,6 @@ function parseSrc(rendered) {
   </div>
   <div class="container" style="margin-top: 20px">
     <div class="row">
-      {{ Institutions?.workPeriod }}
       <div
         v-for="Institution in Institutions"
         :key="Institution.id"
@@ -78,9 +86,10 @@ function parseSrc(rendered) {
           :gallery="Institution?.gallery"
           :photos="Institution?.photos"
         />
-        <div class="container-container">
+        <div class="container-container"         @click="counter(Institution.id)">
           <article class="text-left">
             <h2 v-html="Institution.title"></h2>
+            <h4>👁‍🗨 {{ Institution.count}}</h4>
             <!-- <h4 v-html="Institution.description"></h4> -->
           </article>
           <img :src="Institution.img" />
