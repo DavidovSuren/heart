@@ -46,12 +46,12 @@ function parseSrc(rendered) {
 </script>
 <template>
   <div class="row">
-    <div class="col-lg-6" style="text-align: right">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right">
       <button type="button" class="btn btn-success btn-lg" @click="get('rest')">
         РЕСТОРАНЫ
       </button>
     </div>
-    <div class="col-lg-6">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
       <button type="button" class="btn btn-success btn-lg" @click="get('cafe')">
         КАФЕ
       </button>
@@ -89,10 +89,11 @@ function parseSrc(rendered) {
         <div class="container-container"         @click="counter(Institution.id)">
           <article class="text-left">
             <h2 v-html="Institution.title"></h2>
-            <h4>👁‍🗨 {{ Institution.count}}</h4>
-            <!-- <h4 v-html="Institution.description"></h4> -->
+                    
+            <h4><i class="large material-icons me-2 m-1 pb-1 " aria-hidden="true">remove_red_eye</i>{{ Institution.count}}</h4> 
           </article>
           <img :src="Institution.img" />
+          
         </div>
       </div>
     </div>
