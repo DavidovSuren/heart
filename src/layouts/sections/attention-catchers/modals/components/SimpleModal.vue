@@ -80,10 +80,10 @@ const isOpen = computed(() => {
               <div class="modal-body card">
                 <div class="row">
                   <div
-                    class="avatar-container"
+                    class="avatar-container col-6 col-sm-12 col-md-6 col-lg-6 col-xl-5"
                     :style="`background-image: url(${img});`"
                   ></div>
-                  <div class="details-container">
+                  <div class="details-container col-6 col-sm-12 col-md-6 col-lg-6 col-xl-7">
                     <div class="content">
                       <h3 v-html="title"></h3>
                       <vue3-star-ratings
@@ -235,17 +235,12 @@ const isOpen = computed(() => {
 }
 
 .avatar-container {
-  flex-basis: 50%;
+  min-height: 36vh;
+  width: 100%;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
+
 </style>
