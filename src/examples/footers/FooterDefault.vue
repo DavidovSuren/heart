@@ -21,7 +21,7 @@ defineProps({
     },
     default: () => [
       {
-        name: "Мы использьуем Cookie",
+        name: "Мы используем Cookie",
         items: [
 
           {
