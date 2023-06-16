@@ -90,7 +90,7 @@ const isOpen = computed(() => {
                         starSize="32"
                         showControl="false"
                         disableClick="true"
-                        v-model="rating"
+                        value="rating"
                       />
 
                       <div class="col">
