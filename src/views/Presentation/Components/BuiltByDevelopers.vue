@@ -1,6 +1,6 @@
-<!--<script setup></script>
+<!--<script setup></script> -->
 <template>
-  <div class="container mt-sm-5">
+  <div class="container mt-sm-5" style="display:none">
     <div
       class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl"
       :style="{
@@ -30,4 +30,3 @@
     </div>
   </div>
 </template>
--->
