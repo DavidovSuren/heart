@@ -12,7 +12,7 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
               <DefaultCounterCard
                 color="success"
                 title="Пользователей нам доверяют"
-                :count="250"
+                :count="500"
                 suffix="K+"
                 :duration="3000"
                 divider="vertical"
