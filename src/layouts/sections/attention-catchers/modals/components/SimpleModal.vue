@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import MaterialButton from "@/components/MaterialButton.vue";
+import ratingStars from "@/components/ratingStars.vue";
 
 const modalProps = defineProps({
   id: {
@@ -86,13 +87,7 @@ const isOpen = computed(() => {
                   <div class="details-container col-6 col-sm-12 col-md-6 col-lg-6 col-xl-7">
                     <div class="content">
                       <h3 v-html="title"></h3>
-                      <vue3-star-ratings
-                        starSize="32"
-                        showControl="false"
-                        disableClick="true"
-                        value="rating"
-                      />
-
+                      <ratingStars :value="rating" />
                       <div class="col">
                         <p class="pTime sTitle" v-if="openHour && workPeriod">
                           <i v-if="isOpen" class="material-icons text-gradient text-success text-2xl">done</i>
